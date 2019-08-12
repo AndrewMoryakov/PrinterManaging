@@ -61,6 +61,7 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="FilesWaitsPrinting.cs" />
         <Compile Include="JobController.cs" />
         <Compile Include="LogMessages.cs" />
         <Compile Include="Models\FileInfoEventArgs.cs" />

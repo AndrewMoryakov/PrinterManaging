@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="080fcdab-3c0d-4d34-878a-437d269d6fed" name="Default Changelist" comment="" />
+    <list default="true" id="080fcdab-3c0d-4d34-878a-437d269d6fed" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Project53/FilesWaitsPrinting.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PrintersManaging/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PrintersManaging/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PrintersManaging/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PrintersManaging/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hook/Hook.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Hook/Hook.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hook/Hooks/Library/PrintSpoolAPI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hook/Hooks/Library/PrintSpoolAPI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hook/Hooks/PrintQueueHook.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hook/Hooks/PrintQueueHook.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hook/packages.config" beforeDir="false" afterPath="$PROJECT_DIR$/Hook/packages.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project53/JobController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Project53/JobController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project53/MsWordHandle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Project53/MsWordHandle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project53/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Project53/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project53/Project53.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Project53/Project53.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project53/TicketRegistry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Project53/TicketRegistry.cs" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -10,58 +23,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Project53/JobController.cs">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project53/Project53.csproj">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="70" column="64" lean-forward="true" selection-start-line="70" selection-start-column="64" selection-end-line="70" selection-end-column="64" />
-              <folding>
-                <marker date="1561747960944" expanded="false" signature="6:150" ph="..." />
-                <marker date="1561747960944" expanded="true" signature="171:4586" ph="{...}" />
-                <marker date="1561747960944" expanded="true" signature="204:4584" ph="{...}" />
-                <marker date="1561747960944" expanded="true" signature="408:492" ph="{...}" />
-                <marker date="1561747960944" expanded="true" signature="537:1338" ph="{...}" />
-                <marker date="1561747960944" expanded="true" signature="563:1171" ph="{...}" />
-                <marker date="1561747960944" expanded="true" signature="762:1157" ph="{...}" />
-                <marker date="1561747960944" expanded="true" signature="1204:1328" ph="{...}" />
-                <marker date="1561747960944" expanded="true" signature="1348:1517" ph="/// It's main handler of printers queue hooks ... " />
-                <marker date="1561747960944" expanded="true" signature="1598:2927" ph="{...}" />
-                <marker date="1561747960944" expanded="true" signature="2004:2213" ph="/* if (!isManagedDoc)//Unmanaged doc - MsOffice without ticket ... */" />
-                <marker date="1561747960944" expanded="true" signature="2996:3252" ph="{...}" />
-                <marker date="1561747960944" expanded="true" signature="3398:3502" ph="{...}" />
-                <marker date="1561747960944" expanded="true" signature="3565:4076" ph="{...}" />
-                <marker date="1561747960944" expanded="true" signature="3896:4039" ph="{...}" />
-                <marker date="1561747960944" expanded="true" signature="4077:4181" ph="/* private PrintEventArgs UpdateJobPropertyAboutValid() ... */" />
-                <marker date="1561747960944" expanded="true" signature="4240:4551" ph="{...}" />
-              </folding>
+            <state relative-caret-position="32">
+              <caret line="2" column="58" selection-start-line="2" selection-start-column="58" selection-end-line="2" selection-end-column="58" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Project53/MsWordHandle.cs">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Project53/JobController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="32" column="62" selection-start-line="32" selection-start-column="62" selection-end-line="32" selection-end-column="62" />
+            <state relative-caret-position="552">
+              <caret line="53" column="28" selection-start-line="53" selection-start-column="28" selection-end-line="53" selection-end-column="28" />
               <folding>
-                <marker date="1561740396552" expanded="true" signature="6:292" ph="..." />
-                <marker date="1561740396552" expanded="true" signature="313:6129" ph="{...}" />
-                <marker date="1561740396552" expanded="true" signature="342:6127" ph="{...}" />
-                <marker date="1561740396552" expanded="true" signature="518:587" ph="{...}" />
-                <marker date="1561740396552" expanded="true" signature="664:1206" ph="{...}" />
-                <marker date="1561740396552" expanded="true" signature="1281:2288" ph="{...}" />
-                <marker date="1561740396552" expanded="true" signature="1607:1701" ph="/* reloadedDoc.Close(false, null, null); ... */" />
-                <marker date="1561740396552" expanded="true" signature="2098:2283" ph="/* msWordDoc.Close(0, null, null); ... */" />
-                <marker date="1561740396552" expanded="true" signature="2367:2763" ph="{...}" />
-                <marker date="1561740396552" expanded="true" signature="2813:4127" ph="{...}" />
-                <marker date="1561740396552" expanded="true" signature="3196:4123" ph="{...}" />
-                <marker date="1561740396552" expanded="true" signature="4186:5676" ph="{...}" />
-                <marker date="1561740396552" expanded="true" signature="4210:4338" ph="/* string docName = Path.GetFileName(fileInfo.FullFileName); ... */" />
-                <marker date="1561740396552" expanded="true" signature="4882:4937" ph="/* d.Application.Quit(0, null, null); ... */" />
-                <marker date="1561740396552" expanded="true" signature="4988:5150" ph="/* var application = new Application(); ... */" />
-                <marker date="1561740396552" expanded="true" signature="5180:5664" ph="/* var pathCurrDoc = Path.Combine(Environment.CurrentDirectory, tempFileName); ... */" />
-                <marker date="1561740396552" expanded="true" signature="5774:6124" ph="{...}" />
-                <marker date="1561740396552" expanded="true" signature="5882:5958" ph="{...}" />
+                <marker date="1562795695969" expanded="false" signature="6:150" ph="..." />
+                <marker date="1562795695969" expanded="true" signature="171:5194" ph="{...}" />
+                <marker date="1562795695969" expanded="true" signature="204:5192" ph="{...}" />
+                <marker date="1562795695969" expanded="true" signature="408:492" ph="{...}" />
+                <marker date="1562795695969" expanded="true" signature="537:1338" ph="{...}" />
+                <marker date="1562795695969" expanded="true" signature="563:1171" ph="{...}" />
+                <marker date="1562795695969" expanded="true" signature="762:1157" ph="{...}" />
+                <marker date="1562795695969" expanded="true" signature="1204:1328" ph="{...}" />
+                <marker date="1562795695969" expanded="true" signature="1348:1517" ph="/// It's main handler of printers queue hooks ... " />
+                <marker date="1562795695969" expanded="true" signature="1598:2977" ph="{...}" />
+                <marker date="1562795695969" expanded="true" signature="2049:2126" ph="{...}" />
+                <marker date="1562795695969" expanded="true" signature="2190:2967" ph="{...}" />
+                <marker date="1562795695969" expanded="true" signature="3046:3302" ph="{...}" />
+                <marker date="1562795695969" expanded="true" signature="3441:3537" ph="{...}" />
+                <marker date="1562795695969" expanded="true" signature="3600:4111" ph="{...}" />
+                <marker date="1562795695969" expanded="true" signature="3931:4074" ph="{...}" />
+                <marker date="1562795695969" expanded="true" signature="4184:4684" ph="{...}" />
+                <marker date="1562795695969" expanded="true" signature="4527:4648" ph="{...}" />
+                <marker date="1562795695969" expanded="true" signature="4685:4789" ph="/* private PrintEventArgs UpdateJobPropertyAboutValid() ... */" />
+                <marker date="1562795695969" expanded="true" signature="4848:5159" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -70,133 +66,38 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Project53/TicketRegistry.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="22" column="59" selection-start-line="22" selection-start-column="59" selection-end-line="22" selection-end-column="59" />
+            <state relative-caret-position="320">
+              <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
               <folding>
-                <marker date="1561747679551" expanded="true" signature="6:66" ph="..." />
-                <marker date="1561747679551" expanded="true" signature="87:1379" ph="{...}" />
-                <marker date="1561747679551" expanded="true" signature="128:1377" ph="{...}" />
-                <marker date="1561747679551" expanded="true" signature="267:439" ph="{...}" />
-                <marker date="1561747679551" expanded="true" signature="496:617" ph="{...}" />
-                <marker date="1561747679551" expanded="true" signature="653:996" ph="{...}" />
-                <marker date="1561747679551" expanded="true" signature="738:859" ph="{...}" />
-                <marker date="1561747679551" expanded="true" signature="876:949" ph="{...}" />
-                <marker date="1561747679551" expanded="true" signature="1048:1118" ph="{...}" />
-                <marker date="1561747679551" expanded="true" signature="1187:1371" ph="{...}" />
+                <marker date="1561804056233" expanded="true" signature="6:66" ph="..." />
+                <marker date="1561804056233" expanded="true" signature="87:1378" ph="{...}" />
+                <marker date="1561804056233" expanded="true" signature="128:1376" ph="{...}" />
+                <marker date="1561804056233" expanded="true" signature="267:439" ph="{...}" />
+                <marker date="1561804056233" expanded="true" signature="496:617" ph="{...}" />
+                <marker date="1561804056233" expanded="true" signature="653:995" ph="{...}" />
+                <marker date="1561804056233" expanded="true" signature="737:858" ph="{...}" />
+                <marker date="1561804056233" expanded="true" signature="875:948" ph="{...}" />
+                <marker date="1561804056233" expanded="true" signature="1047:1117" ph="{...}" />
+                <marker date="1561804056233" expanded="true" signature="1186:1370" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/00A78D6D-663C-4F46-9D5F-BC222D4BFE01/c5/3f65ad75/Delegate.cs">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/851F7F57-9033-407F-ACDB-54D96398BA10/fb/d3630957/Enumerable.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1728">
-              <caret line="114" column="6" selection-start-line="114" selection-start-column="6" selection-end-line="114" selection-end-column="6" />
+            <state>
+              <caret line="2155" column="28" selection-start-line="2155" selection-start-column="28" selection-end-line="2155" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Project53/Models/FileInfoEventArgs.cs">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/21879DDF-90C2-48A9-83F6-29F18DE58511/79/8dbb0941/ApplicationEvents4_SinkHelper.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="25" column="15" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
-              <folding>
-                <marker date="1561734037917" expanded="true" signature="6:50" ph="..." />
-                <marker date="1561734037917" expanded="true" signature="78:1011" ph="{...}" />
-                <marker date="1561734037917" expanded="true" signature="124:1009" ph="{...}" />
-                <marker date="1561734037917" expanded="true" signature="130:414" ph="/* public FileInfoEventArgs(Document doc, string fullFileName, string fileExtension, int count) ... */" />
-                <marker date="1561734037917" expanded="true" signature="511:654" ph="{...}" />
-                <marker date="1561734037917" expanded="true" signature="928:1006" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Hook/Hooks/WindowHook.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
-              <folding>
-                <marker date="1535667238900" expanded="false" signature="6:38" ph="..." />
-                <marker date="1535667238900" expanded="true" signature="65:1842" ph="{...}" />
-                <marker date="1535667238900" expanded="true" signature="182:1840" ph="{...}" />
-                <marker date="1535667238900" expanded="true" signature="197:342" ph="/// A top-level, unowned window has been created. The window exists when the system calls this hook. ... " />
-                <marker date="1535667238900" expanded="true" signature="425:584" ph="/// A top-level, unowned window is about to be destroyed. The window still exists when the system calls this hook ... " />
-                <marker date="1535667238900" expanded="true" signature="670:788" ph="/// The activation has changed to a different top-level, unowned window.  ... " />
-                <marker date="1535667238900" expanded="true" signature="931:1354" ph="{...}" />
-                <marker date="1535667238900" expanded="true" signature="969:1343" ph="{...}" />
-                <marker date="1535667238900" expanded="true" signature="1437:1512" ph="{...}" />
-                <marker date="1535667238900" expanded="true" signature="1597:1673" ph="{...}" />
-                <marker date="1535667238900" expanded="true" signature="1758:1834" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Hook/Hooks/PrintQueueHook.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3440">
-              <caret line="270" column="21" selection-start-line="270" selection-start-column="21" selection-end-line="270" selection-end-column="21" />
-              <folding>
-                <marker date="1561727143756" expanded="false" signature="6:217" ph="..." />
-                <marker date="1561727143756" expanded="true" signature="244:13736" ph="{...}" />
-                <marker date="1561727143756" expanded="true" signature="332:1175" ph="{...}" />
-                <marker date="1561727143756" expanded="true" signature="1201:1255" ph="{...}" />
-                <marker date="1561727143756" expanded="true" signature="1262:1383" ph="///  //http://www.codeproject.com/Articles/51085/Monitor-jobs-in-a-printer-queue-NET ... " />
-                <marker date="1561727143756" expanded="true" signature="1438:2520" ph="{...}" />
-                <marker date="1561727143756" expanded="true" signature="1586:1774" ph="{...}" />
-                <marker date="1561727143756" expanded="true" signature="1802:1857" ph="{...}" />
-                <marker date="1561727143756" expanded="true" signature="1890:1947" ph="{...}" />
-                <marker date="1561727143756" expanded="true" signature="1985:2044" ph="{...}" />
-                <marker date="1561727143756" expanded="true" signature="2089:2146" ph="{...}" />
-                <marker date="1561727143756" expanded="true" signature="2222:2278" ph="{...}" />
-                <marker date="1561727143756" expanded="false" signature="2288:2514" ph="private variables" />
-                <marker date="1561727143756" expanded="true" signature="2648:13734" ph="{...}" />
-                <marker date="1561727143756" expanded="false" signature="2663:2763" ph="Constants" />
-                <marker date="1561727143756" expanded="false" signature="2773:2993" ph="constructor" />
-                <marker date="1561727143756" expanded="true" signature="2846:2973" ph="{...}" />
-                <marker date="1561727143756" expanded="true" signature="3003:3102" ph="Events" />
-                <marker date="1561727143756" expanded="true" signature="3112:3217" ph="destructor" />
-                <marker date="1561727143756" expanded="true" signature="3157:3197" ph="{...}" />
-                <marker date="1561727143756" expanded="true" signature="3227:4368" ph="StartMonitoring" />
-                <marker date="1561727143756" expanded="true" signature="3281:4348" ph="{...}" />
-                <marker date="1561727143756" expanded="true" signature="3399:4109" ph="{...}" />
-                <marker date="1561727143756" expanded="true" signature="4251:4338" ph="{...}" />
-                <marker date="1561727143756" expanded="false" signature="4378:4722" ph="StopMonitoring" />
-                <marker date="1561727143756" expanded="true" signature="4430:4708" ph="{...}" />
-                <marker date="1561727143756" expanded="true" signature="4456:4676" ph="{...}" />
-                <marker date="1561727143756" expanded="true" signature="4521:4662" ph="{...}" />
-                <marker date="1561727143756" expanded="true" signature="4769:5850" ph="{...}" />
-                <marker date="1561727143756" expanded="true" signature="4932:5127" ph="{...}" />
-                <marker date="1561727143756" expanded="true" signature="5135:5788" ph="{...}" />
-                <marker date="1561727143756" expanded="true" signature="5539:5567" ph="{...}" />
-                <marker date="1561727143756" expanded="true" signature="5569:5783" ph="/* Console.ForegroundColor = ConsoleColor.Yellow; ... */" />
-                <marker date="1561727143756" expanded="true" signature="5853:10368" ph="Callback Function" />
-                <marker date="1561727143756" expanded="true" signature="5882:6083" ph="/// Отлавливается нужное задание и вызывается событие, на которое подписались в вызывающем коде ... " />
-                <marker date="1561727143756" expanded="true" signature="6154:10352" ph="{...}" />
-                <marker date="1561727143756" expanded="true" signature="6233:7547" ph="read notification details" />
-                <marker date="1561727143756" expanded="true" signature="7561:8286" ph="populate Notification Information" />
-                <marker date="1561727143756" expanded="true" signature="8010:8262" ph="{...}" />
-                <marker date="1561727143756" expanded="true" signature="8300:10099" ph="iterate through all elements in the data array" />
-                <marker date="1561727143756" expanded="true" signature="8406:10075" ph="{...}" />
-                <marker date="1561727143756" expanded="true" signature="8684:10061" ph="{...}" />
-                <marker date="1561727143756" expanded="true" signature="8978:9335" ph="{...}" />
-                <marker date="1561727143756" expanded="true" signature="9375:9605" ph="{...}" />
-                <marker date="1561727143756" expanded="true" signature="9657:10043" ph="{...}" />
-                <marker date="1561727143756" expanded="false" signature="10113:10342" ph="reset the Event and wait for the next event" />
-                <marker date="1561727143756" expanded="true" signature="10465:11132" ph="{...}" />
-                <marker date="1561727143756" expanded="true" signature="11136:13184" ph="DLL Import Functions" />
-                <marker date="1561727143756" expanded="true" signature="11168:11350" ph="[...]" />
-                <marker date="1561727143756" expanded="true" signature="11491:11673" ph="[...]" />
-                <marker date="1561727143756" expanded="true" signature="11760:12000" ph="[...]" />
-                <marker date="1561727143756" expanded="true" signature="12291:12519" ph="[...]" />
-                <marker date="1561727143756" expanded="true" signature="12845:12989" ph="[...]" />
-                <marker date="1561727143756" expanded="false" signature="13188:13728" ph="private variables" />
-              </folding>
+            <state>
+              <caret line="91" column="6" selection-start-line="91" selection-start-column="6" selection-end-line="91" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -204,34 +105,34 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Hook/Hooks/Library/PrintSpoolAPI.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2608">
-              <caret line="175" column="8" selection-start-line="175" selection-start-column="8" selection-end-line="175" selection-end-column="8" />
+            <state relative-caret-position="64">
+              <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
               <folding>
-                <marker date="1535667238870" expanded="false" signature="6:79" ph="..." />
-                <marker date="1535667238870" expanded="true" signature="114:15775" ph="{...}" />
-                <marker date="1535667238870" expanded="true" signature="189:1432" ph="{...}" />
-                <marker date="1535667238870" expanded="true" signature="790:1210" ph="{...}" />
-                <marker date="1535667238870" expanded="true" signature="1250:1426" ph="{...}" />
-                <marker date="1535667238870" expanded="true" signature="1473:2128" ph="{...}" />
-                <marker date="1535667238870" expanded="true" signature="2165:3963" ph="{...}" />
-                <marker date="1535667238870" expanded="true" signature="4014:5222" ph="{...}" />
-                <marker date="1535667238870" expanded="true" signature="5269:6285" ph="{...}" />
-                <marker date="1535667238870" expanded="true" signature="6370:6919" ph="{...}" />
-                <marker date="1535667238870" expanded="true" signature="6550:6913" ph="{...}" />
-                <marker date="1535667238870" expanded="true" signature="6963:7036" ph="{...}" />
-                <marker date="1535667238870" expanded="true" signature="7126:14494" ph="{...}" />
-                <marker date="1535667238870" expanded="true" signature="7743:14240" ph="{...}" />
-                <marker date="1535667238870" expanded="true" signature="7796:7873" ph="{...}" />
-                <marker date="1535667238870" expanded="true" signature="7951:10894" ph="{...}" />
-                <marker date="1535667238870" expanded="true" signature="10942:11023" ph="{...}" />
-                <marker date="1535667238870" expanded="true" signature="11109:14230" ph="{...}" />
-                <marker date="1535667238870" expanded="true" signature="14288:14488" ph="{...}" />
-                <marker date="1535667238870" expanded="true" signature="14577:14733" ph="{...}" />
-                <marker date="1535667238870" expanded="true" signature="14827:14898" ph="{...}" />
-                <marker date="1535667238870" expanded="true" signature="14990:15356" ph="{...}" />
-                <marker date="1535667238870" expanded="true" signature="15218:15350" ph="{...}" />
-                <marker date="1535667238870" expanded="true" signature="15244:15340" ph="{...}" />
-                <marker date="1535667238870" expanded="true" signature="15581:15772" ph="{...}" />
+                <marker date="1561821607131" expanded="false" signature="6:79" ph="..." />
+                <marker date="1561821607131" expanded="true" signature="114:15773" ph="{...}" />
+                <marker date="1561821607131" expanded="true" signature="187:1430" ph="{...}" />
+                <marker date="1561821607131" expanded="true" signature="788:1208" ph="{...}" />
+                <marker date="1561821607131" expanded="true" signature="1248:1424" ph="{...}" />
+                <marker date="1561821607131" expanded="true" signature="1471:2126" ph="{...}" />
+                <marker date="1561821607131" expanded="true" signature="2163:3961" ph="{...}" />
+                <marker date="1561821607131" expanded="true" signature="4012:5220" ph="{...}" />
+                <marker date="1561821607131" expanded="true" signature="5267:6283" ph="{...}" />
+                <marker date="1561821607131" expanded="true" signature="6368:6917" ph="{...}" />
+                <marker date="1561821607131" expanded="true" signature="6548:6911" ph="{...}" />
+                <marker date="1561821607131" expanded="true" signature="6961:7034" ph="{...}" />
+                <marker date="1561821607131" expanded="true" signature="7124:14492" ph="{...}" />
+                <marker date="1561821607131" expanded="true" signature="7741:14238" ph="{...}" />
+                <marker date="1561821607131" expanded="true" signature="7794:7871" ph="{...}" />
+                <marker date="1561821607131" expanded="true" signature="7949:10892" ph="{...}" />
+                <marker date="1561821607131" expanded="true" signature="10940:11021" ph="{...}" />
+                <marker date="1561821607131" expanded="true" signature="11107:14228" ph="{...}" />
+                <marker date="1561821607131" expanded="true" signature="14286:14486" ph="{...}" />
+                <marker date="1561821607131" expanded="true" signature="14575:14731" ph="{...}" />
+                <marker date="1561821607131" expanded="true" signature="14825:14896" ph="{...}" />
+                <marker date="1561821607131" expanded="true" signature="14988:15354" ph="{...}" />
+                <marker date="1561821607131" expanded="true" signature="15216:15348" ph="{...}" />
+                <marker date="1561821607131" expanded="true" signature="15242:15338" ph="{...}" />
+                <marker date="1561821607131" expanded="true" signature="15579:15770" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -240,34 +141,150 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Hook/PrintWatcher.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1904">
-              <caret line="144" selection-start-line="144" selection-end-line="144" />
+            <state relative-caret-position="128">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
               <folding>
-                <marker date="1561727206444" expanded="true" signature="6:205" ph="..." />
-                <marker date="1561727206444" expanded="true" signature="226:4785" ph="{...}" />
-                <marker date="1561727206444" expanded="true" signature="233:334" ph="/// A object holding key information on a particular print event ... " />
-                <marker date="1561727206444" expanded="true" signature="366:813" ph="{...}" />
-                <marker date="1561727206444" expanded="true" signature="819:900" ph="/// An argument passed along user call backs ... " />
-                <marker date="1561727206444" expanded="true" signature="944:1043" ph="{...}" />
-                <marker date="1561727206444" expanded="true" signature="1049:1134" ph="/// A class that wraps around printServer object ... " />
-                <marker date="1561727206444" expanded="true" signature="1164:4783" ph="{...}" />
-                <marker date="1561727206444" expanded="true" signature="1480:1556" ph="/// Start watching print events ... " />
-                <marker date="1561727206444" expanded="true" signature="1609:2201" ph="{...}" />
-                <marker date="1561727206444" expanded="true" signature="2211:2286" ph="/// Stop watching print events ... " />
-                <marker date="1561727206444" expanded="true" signature="2320:3295" ph="{...}" />
-                <marker date="1561727206444" expanded="true" signature="2357:3285" ph="{...}" />
-                <marker date="1561727206444" expanded="true" signature="2465:3177" ph="{...}" />
-                <marker date="1561727206444" expanded="true" signature="2552:3113" ph="{...}" />
-                <marker date="1561727206444" expanded="true" signature="2687:2791" ph="{...}" />
-                <marker date="1561727206444" expanded="true" signature="2854:3087" ph="{...}" />
-                <marker date="1561727206444" expanded="true" signature="2888:3057" ph="/* ignored intentionally ... */" />
-                <marker date="1561727206444" expanded="true" signature="3305:3490" ph="/// Invoke user callback as soon as a relevent event is fired ... " />
-                <marker date="1561727206444" expanded="true" signature="3582:4668" ph="{...}" />
-                <marker date="1561727206444" expanded="true" signature="3593:3723" ph="/* if ((e.JobStatus &amp; JOBSTATUS.JOB_STATUS_PAUSED) == JOBSTATUS.JOB_STATUS_PAUSED &amp;&amp; e.JobInfo != null) ... */" />
-                <marker date="1561727206444" expanded="true" signature="4032:4049" ph="/* try ... */" />
-                <marker date="1561727206444" expanded="true" signature="4094:4444" ph="{...}" />
-                <marker date="1561727206444" expanded="true" signature="4446:4504" ph="/* } ... */" />
-                <marker date="1561727206444" expanded="true" signature="4609:4658" ph="/* } ... */" />
+                <marker date="1561822587663" expanded="true" signature="6:205" ph="..." />
+                <marker date="1561822587663" expanded="true" signature="226:4785" ph="{...}" />
+                <marker date="1561822587663" expanded="true" signature="233:334" ph="/// A object holding key information on a particular print event ... " />
+                <marker date="1561822587663" expanded="true" signature="366:813" ph="{...}" />
+                <marker date="1561822587663" expanded="true" signature="819:900" ph="/// An argument passed along user call backs ... " />
+                <marker date="1561822587663" expanded="true" signature="944:1043" ph="{...}" />
+                <marker date="1561822587663" expanded="true" signature="1049:1134" ph="/// A class that wraps around printServer object ... " />
+                <marker date="1561822587663" expanded="true" signature="1164:4783" ph="{...}" />
+                <marker date="1561822587663" expanded="true" signature="1480:1556" ph="/// Start watching print events ... " />
+                <marker date="1561822587663" expanded="true" signature="1609:2201" ph="{...}" />
+                <marker date="1561822587663" expanded="true" signature="2211:2286" ph="/// Stop watching print events ... " />
+                <marker date="1561822587663" expanded="true" signature="2320:3295" ph="{...}" />
+                <marker date="1561822587663" expanded="true" signature="2357:3285" ph="{...}" />
+                <marker date="1561822587663" expanded="true" signature="2465:3177" ph="{...}" />
+                <marker date="1561822587663" expanded="true" signature="2552:3113" ph="{...}" />
+                <marker date="1561822587663" expanded="true" signature="2687:2791" ph="{...}" />
+                <marker date="1561822587663" expanded="true" signature="2854:3087" ph="{...}" />
+                <marker date="1561822587663" expanded="true" signature="2888:3057" ph="/* ignored intentionally ... */" />
+                <marker date="1561822587663" expanded="true" signature="3305:3490" ph="/// Invoke user callback as soon as a relevent event is fired ... " />
+                <marker date="1561822587663" expanded="true" signature="3582:4668" ph="{...}" />
+                <marker date="1561822587663" expanded="true" signature="3593:3723" ph="/* if ((e.JobStatus &amp; JOBSTATUS.JOB_STATUS_PAUSED) == JOBSTATUS.JOB_STATUS_PAUSED &amp;&amp; e.JobInfo != null) ... */" />
+                <marker date="1561822587663" expanded="true" signature="4032:4049" ph="/* try ... */" />
+                <marker date="1561822587663" expanded="true" signature="4094:4444" ph="{...}" />
+                <marker date="1561822587663" expanded="true" signature="4446:4504" ph="/* } ... */" />
+                <marker date="1561822587663" expanded="true" signature="4609:4658" ph="/* } ... */" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Hook/Hooks/PrintQueueHook.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4144">
+              <caret line="344" column="8" selection-start-line="344" selection-start-column="8" selection-end-line="344" selection-end-column="8" />
+              <folding>
+                <marker date="1564164925074" expanded="false" signature="6:217" ph="..." />
+                <marker date="1564164925074" expanded="true" signature="244:13785" ph="{...}" />
+                <marker date="1564164925074" expanded="false" signature="332:1175" ph="{...}" />
+                <marker date="1564164925074" expanded="true" signature="1266:1908" ph="{...}" />
+                <marker date="1564164925074" expanded="true" signature="1934:2040" ph="{...}" />
+                <marker date="1564164925074" expanded="true" signature="2047:2168" ph="///  //http://www.codeproject.com/Articles/51085/Monitor-jobs-in-a-printer-queue-NET ... " />
+                <marker date="1564164925074" expanded="true" signature="2223:3305" ph="{...}" />
+                <marker date="1564164925074" expanded="true" signature="2371:2559" ph="{...}" />
+                <marker date="1564164925074" expanded="true" signature="2587:2642" ph="{...}" />
+                <marker date="1564164925074" expanded="true" signature="2675:2732" ph="{...}" />
+                <marker date="1564164925074" expanded="true" signature="2770:2829" ph="{...}" />
+                <marker date="1564164925074" expanded="true" signature="2874:2931" ph="{...}" />
+                <marker date="1564164925074" expanded="true" signature="3007:3063" ph="{...}" />
+                <marker date="1564164925074" expanded="true" signature="3073:3299" ph="private variables" />
+                <marker date="1564164925074" expanded="true" signature="3433:13783" ph="{...}" />
+                <marker date="1564164925074" expanded="false" signature="3448:3548" ph="Constants" />
+                <marker date="1564164925074" expanded="false" signature="3558:3778" ph="constructor" />
+                <marker date="1564164925074" expanded="true" signature="3631:3758" ph="{...}" />
+                <marker date="1564164925074" expanded="true" signature="3788:3887" ph="Events" />
+                <marker date="1564164925074" expanded="true" signature="3897:4002" ph="destructor" />
+                <marker date="1564164925074" expanded="true" signature="3942:3982" ph="{...}" />
+                <marker date="1564164925074" expanded="true" signature="4012:5153" ph="StartMonitoring" />
+                <marker date="1564164925074" expanded="true" signature="4066:5133" ph="{...}" />
+                <marker date="1564164925074" expanded="true" signature="4184:4894" ph="{...}" />
+                <marker date="1564164925074" expanded="true" signature="5036:5123" ph="{...}" />
+                <marker date="1564164925074" expanded="false" signature="5163:5507" ph="StopMonitoring" />
+                <marker date="1564164925074" expanded="true" signature="5215:5493" ph="{...}" />
+                <marker date="1564164925074" expanded="true" signature="5241:5461" ph="{...}" />
+                <marker date="1564164925074" expanded="true" signature="5306:5447" ph="{...}" />
+                <marker date="1564164925074" expanded="true" signature="5554:6660" ph="{...}" />
+                <marker date="1564164925074" expanded="true" signature="5717:5912" ph="{...}" />
+                <marker date="1564164925074" expanded="true" signature="5920:6598" ph="{...}" />
+                <marker date="1564164925074" expanded="true" signature="6324:6377" ph="{...}" />
+                <marker date="1564164925074" expanded="true" signature="6379:6593" ph="/* Console.ForegroundColor = ConsoleColor.Yellow; ... */" />
+                <marker date="1564164925074" expanded="true" signature="6663:11178" ph="Callback Function" />
+                <marker date="1564164925074" expanded="true" signature="6692:6893" ph="/// Отлавливается нужное задание и вызывается событие, на которое подписались в вызывающем коде ... " />
+                <marker date="1564164925074" expanded="true" signature="6964:11162" ph="{...}" />
+                <marker date="1564164925074" expanded="true" signature="7043:8357" ph="read notification details" />
+                <marker date="1564164925074" expanded="true" signature="8371:9096" ph="populate Notification Information" />
+                <marker date="1564164925074" expanded="true" signature="8820:9072" ph="{...}" />
+                <marker date="1564164925074" expanded="true" signature="9110:10909" ph="iterate through all elements in the data array" />
+                <marker date="1564164925074" expanded="true" signature="9216:10885" ph="{...}" />
+                <marker date="1564164925074" expanded="true" signature="9494:10871" ph="{...}" />
+                <marker date="1564164925074" expanded="true" signature="9788:10145" ph="{...}" />
+                <marker date="1564164925074" expanded="true" signature="10185:10415" ph="{...}" />
+                <marker date="1564164925074" expanded="true" signature="10467:10853" ph="{...}" />
+                <marker date="1564164925074" expanded="false" signature="10923:11152" ph="reset the Event and wait for the next event" />
+                <marker date="1564164925074" expanded="true" signature="11185:13233" ph="DLL Import Functions" />
+                <marker date="1564164925074" expanded="true" signature="11217:11399" ph="[...]" />
+                <marker date="1564164925074" expanded="true" signature="11540:11722" ph="[...]" />
+                <marker date="1564164925074" expanded="true" signature="11809:12049" ph="[...]" />
+                <marker date="1564164925074" expanded="true" signature="12340:12568" ph="[...]" />
+                <marker date="1564164925074" expanded="true" signature="12894:13038" ph="[...]" />
+                <marker date="1564164925074" expanded="false" signature="13237:13777" ph="private variables" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Hook/ApplicationWatcher.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="512">
+              <caret line="47" column="17" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
+              <folding>
+                <marker date="1535667238872" expanded="false" signature="6:164" ph="..." />
+                <marker date="1535667238872" expanded="true" signature="186:8031" ph="{...}" />
+                <marker date="1535667238872" expanded="true" signature="193:275" ph="/// An enum for the type of application event ... " />
+                <marker date="1535667238872" expanded="true" signature="309:373" ph="{...}" />
+                <marker date="1535667238872" expanded="true" signature="379:473" ph="/// An object that holds information on application event ... " />
+                <marker date="1535667238872" expanded="true" signature="501:705" ph="{...}" />
+                <marker date="1535667238872" expanded="true" signature="711:789" ph="/// An event argument object send to user ... " />
+                <marker date="1535667238872" expanded="true" signature="839:960" ph="{...}" />
+                <marker date="1535667238872" expanded="true" signature="966:1210" ph="/// A wrapper around shell hook to hook application window change events ... " />
+                <marker date="1535667238872" expanded="true" signature="1246:8029" ph="{...}" />
+                <marker date="1535667238872" expanded="true" signature="1640:1703" ph="/// Start to watch ... " />
+                <marker date="1535667238872" expanded="true" signature="1738:2874" ph="{...}" />
+                <marker date="1535667238872" expanded="true" signature="1776:2863" ph="{...}" />
+                <marker date="1535667238872" expanded="true" signature="2037:2158" ph="/* This needs to run on UI thread context ... */" />
+                <marker date="1535667238872" expanded="true" signature="2250:2585" ph="{...}" />
+                <marker date="1535667238872" expanded="true" signature="2884:2946" ph="/// Quit watching ... " />
+                <marker date="1535667238872" expanded="true" signature="2980:3506" ph="{...}" />
+                <marker date="1535667238872" expanded="true" signature="3017:3495" ph="{...}" />
+                <marker date="1535667238872" expanded="true" signature="3516:3684" ph="/// A windows was created on desktop ... " />
+                <marker date="1535667238872" expanded="true" signature="3762:3857" ph="{...}" />
+                <marker date="1535667238872" expanded="true" signature="3867:4043" ph="/// An existing desktop window was destroyed ... " />
+                <marker date="1535667238872" expanded="true" signature="4123:4218" ph="{...}" />
+                <marker date="1535667238872" expanded="true" signature="4228:4399" ph="/// A windows was brought to foreground ... " />
+                <marker date="1535667238872" expanded="true" signature="4479:4574" ph="{...}" />
+                <marker date="1535667238872" expanded="true" signature="4584:4850" ph="/// This is used to avoid blocking low level hooks ... " />
+                <marker date="1535667238872" expanded="true" signature="4898:5572" ph="{...}" />
+                <marker date="1535667238872" expanded="true" signature="4938:5562" ph="{...}" />
+                <marker date="1535667238872" expanded="true" signature="5198:5547" ph="{...}" />
+                <marker date="1535667238872" expanded="true" signature="5582:5677" ph="/// A handle to keep track of last window launched ... " />
+                <marker date="1535667238872" expanded="true" signature="5735:5843" ph="/// A window got created ... " />
+                <marker date="1535667238872" expanded="true" signature="5901:6106" ph="{...}" />
+                <marker date="1535667238872" expanded="true" signature="6116:6269" ph="/// invoke user call back ... " />
+                <marker date="1535667238872" expanded="true" signature="6359:6905" ph="{...}" />
+                <marker date="1535667238872" expanded="true" signature="6915:7046" ph="/// Remove handle from active window collection ... " />
+                <marker date="1535667238872" expanded="true" signature="7106:7430" ph="{...}" />
+                <marker date="1535667238872" expanded="true" signature="7176:7377" ph="{...}" />
+                <marker date="1535667238872" expanded="true" signature="7440:7535" ph="/// Add window handle to active windows collection ... " />
+                <marker date="1535667238872" expanded="true" signature="7645:8022" ph="{...}" />
+                <marker date="1535667238872" expanded="true" signature="7715:7970" ph="{...}" />
+                <marker date="1535667238872" expanded="true" signature="7806:7956" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -276,14 +293,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Project53/Program.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+            <state relative-caret-position="112">
+              <caret line="12" column="50" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
               <folding>
-                <marker date="1561734153428" expanded="true" signature="6:28" ph="..." />
-                <marker date="1561734153428" expanded="true" signature="49:711" ph="{...}" />
-                <marker date="1561734153428" expanded="true" signature="78:709" ph="{...}" />
-                <marker date="1561734153428" expanded="true" signature="131:703" ph="{...}" />
-                <marker date="1561734153428" expanded="true" signature="368:422" ph="/* RunSpoolerService ... */" />
+                <marker date="1561820482484" expanded="true" signature="6:104" ph="..." />
+                <marker date="1561820482484" expanded="true" signature="125:893" ph="{...}" />
+                <marker date="1561820482484" expanded="true" signature="154:891" ph="{...}" />
+                <marker date="1561820482484" expanded="true" signature="280:885" ph="{...}" />
+                <marker date="1561820482484" expanded="true" signature="550:604" ph="/* RunSpoolerService ... */" />
               </folding>
             </state>
           </provider>
@@ -297,6 +314,8 @@
       <find>Printer Name=</find>
       <find>задание от</find>
       <find>delet</find>
+      <find>devmode</find>
+      <find>задание п</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -305,12 +324,17 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Project53/TicketRegistry.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/00A78D6D-663C-4F46-9D5F-BC222D4BFE01/c5/3f65ad75/Delegate.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5A268815-2CE6-43AD-A3DC-4E91EFA0F623/d8/b4002e15/PrintDialog.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Project53/Models/FileInfoEventArgs.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Hook/Hooks/Library/Procs.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/00A78D6D-663C-4F46-9D5F-BC222D4BFE01/7b/c913ae30/Variant.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Project53/FilesWaitsPrinting.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Hook/Hooks/Library/PrintSpoolAPI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Project53/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Hook/Hooks/Library/Msgs.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Hook/Helpers/WindowHelper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Hook/Helpers/SharedMessagePump.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/21879DDF-90C2-48A9-83F6-29F18DE58511/79/8dbb0941/ApplicationEvents4_SinkHelper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Hook/ApplicationWatcher.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Hook/Hooks/PrintQueueHook.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Hook/PrintWatcher.cs" root0="FORCE_HIGHLIGHTING" />
@@ -322,6 +346,7 @@
     <setting file="file://$PROJECT_DIR$/Project53/SpoolerService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Project53/JobController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Hook/MouseWatcher.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/851F7F57-9033-407F-ACDB-54D96398BA10/fb/d3630957/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Project53/Printers.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Project53/packages.config" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Project53/LogMessages.cs" root0="FORCE_HIGHLIGHTING" />
@@ -338,14 +363,18 @@
         <option value="$PROJECT_DIR$/Project53/SpoolerService.cs" />
         <option value="$PROJECT_DIR$/Project53/WindowsServiceManaging.cs" />
         <option value="$PROJECT_DIR$/Project53/TicketsOfPrintersQueue.cs" />
-        <option value="$PROJECT_DIR$/Hook/Hooks/PrintQueueHook.cs" />
-        <option value="$PROJECT_DIR$/Hook/PrintWatcher.cs" />
         <option value="$PROJECT_DIR$/Project53/LogMessages.cs" />
-        <option value="$PROJECT_DIR$/Project53/JobController.cs" />
         <option value="$PROJECT_DIR$/Project53/Models/FileInfoEventArgs.cs" />
-        <option value="$PROJECT_DIR$/Project53/Program.cs" />
-        <option value="$PROJECT_DIR$/Project53/MsWordHandle.cs" />
         <option value="$PROJECT_DIR$/Project53/TicketRegistry.cs" />
+        <option value="$PROJECT_DIR$/Project53/Program.cs" />
+        <option value="$PROJECT_DIR$/Hook/Hooks/Library/PrintSpoolAPI.cs" />
+        <option value="$PROJECT_DIR$/Hook/PrintWatcher.cs" />
+        <option value="$PROJECT_DIR$/Project53/FilesWaitingPrinting.cs" />
+        <option value="$PROJECT_DIR$/Project53/JobController.cs" />
+        <option value="$PROJECT_DIR$/Project53/FilesWaitsPrinting.cs" />
+        <option value="$APPLICATION_CONFIG_DIR$/rider64.exe.vmoptions" />
+        <option value="$PROJECT_DIR$/Hook/Hooks/PrintQueueHook.cs" />
+        <option value="$PROJECT_DIR$/Project53/MsWordHandle.cs" />
       </list>
     </option>
   </component>
@@ -357,10 +386,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-50" />
-    <option name="y" value="381" />
-    <option name="width" value="1560" />
-    <option name="height" value="975" />
+    <option name="x" value="350" />
+    <option name="y" value="255" />
+    <option name="width" value="1440" />
+    <option name="height" value="805" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -368,6 +397,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="FileSystemExplorer" />
+      <pane id="AssemblyExplorer" />
       <pane id="SolutionExplorer">
         <subPane>
           <expand>
@@ -375,13 +406,16 @@
               <item name="" type="784c90a0:SolutionExplorerRootNode" />
               <item name="PrintersManaging" type="24d0babc:SolutionExplorerModelNode" />
             </path>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="PrintersManaging" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Project53" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
           </expand>
           <select />
         </subPane>
         <option name="show-all-files" value="false" />
       </pane>
-      <pane id="AssemblyExplorer" />
-      <pane id="FileSystemExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -391,7 +425,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Hook/Hook.csproj" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -438,12 +472,22 @@
       <workItem from="1561617178696" duration="5169000" />
       <workItem from="1561643422699" duration="31536000" />
       <workItem from="1561743270590" duration="3523000" />
-      <workItem from="1561748366172" duration="330000" />
+      <workItem from="1561748366172" duration="7074000" />
+      <workItem from="1561803475265" duration="15501000" />
+      <workItem from="1562436297749" duration="909000" />
+      <workItem from="1562795520438" duration="667000" />
+      <workItem from="1563326827116" duration="265000" />
+      <workItem from="1563327247864" duration="3721000" />
+      <workItem from="1564164537572" duration="2219000" />
+      <workItem from="1564216292531" duration="192000" />
+      <workItem from="1564766904088" duration="871000" />
+      <workItem from="1564901188899" duration="660000" />
+      <workItem from="1565375382061" duration="726000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47204000" />
+    <option name="totallyTimeSpent" value="79679000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -456,26 +500,25 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1609658" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20187794" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32894737" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49966466" weight="0.5736842" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4453387" weight="0.4289985" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49966466" weight="0.5150376" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4453387" weight="0.42028984" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="NuGet" order="7" weight="0.32894737" />
+      <window_info anchor="bottom" id="NuGet" order="7" weight="0.69473684" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
       <window_info anchor="bottom" id="Unit Tests" order="11" />
       <window_info anchor="bottom" id="Terminal" order="12" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="13" sideWeight="0.50033534" side_tool="true" visible="true" weight="0.44868422" />
-      <window_info anchor="bottom" id="Build" order="14" sideWeight="0.49966466" weight="0.33026317" />
+      <window_info anchor="bottom" id="Event Log" order="13" sideWeight="0.50033534" side_tool="true" weight="0.44868422" />
+      <window_info anchor="bottom" id="Build" order="14" sideWeight="0.49966466" weight="0.83458644" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -496,84 +539,6 @@
           <option name="timeStamp" value="1" />
         </breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Hook/Hooks/PrintQueueHook.cs</url>
-          <line>206</line>
-          <properties documentPath="$PROJECT_DIR$/Hook/Hooks/PrintQueueHook.cs" initialLine="155">
-            <startOffsets>
-              <option value="5787" />
-            </startOffsets>
-            <endOffsets>
-              <option value="5788" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Project53/JobController.cs</url>
-          <line>61</line>
-          <properties documentPath="$PROJECT_DIR$/Project53/JobController.cs" initialLine="61">
-            <startOffsets>
-              <option value="2234" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2279" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Project53/JobController.cs</url>
-          <line>58</line>
-          <properties documentPath="$PROJECT_DIR$/Project53/JobController.cs" initialLine="59">
-            <startOffsets>
-              <option value="2106" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2138" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Project53/MsWordHandle.cs</url>
-          <line>60</line>
-          <properties documentPath="$PROJECT_DIR$/Project53/MsWordHandle.cs" initialLine="59">
-            <startOffsets>
-              <option value="1706" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1798" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Project53/MsWordHandle.cs</url>
-          <line>48</line>
-          <properties documentPath="$PROJECT_DIR$/Project53/MsWordHandle.cs" initialLine="47">
-            <startOffsets>
-              <option value="1290" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1396" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Project53/MsWordHandle.cs</url>
-          <line>39</line>
-          <properties documentPath="$PROJECT_DIR$/Project53/MsWordHandle.cs" initialLine="38">
-            <startOffsets>
-              <option value="1040" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1120" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Project53/MsWordHandle.cs</url>
           <line>63</line>
           <properties documentPath="$PROJECT_DIR$/Project53/MsWordHandle.cs" initialLine="62">
@@ -581,7 +546,7 @@
               <option value="1905" />
             </startOffsets>
             <endOffsets>
-              <option value="2015" />
+              <option value="2010" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="20" />
@@ -601,29 +566,133 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Project53/MsWordHandle.cs</url>
-          <line>107</line>
-          <properties documentPath="$PROJECT_DIR$/Project53/MsWordHandle.cs" initialLine="106">
+          <line>95</line>
+          <properties documentPath="$PROJECT_DIR$/Project53/MsWordHandle.cs" initialLine="96">
             <startOffsets>
-              <option value="3206" />
+              <option value="2864" />
             </startOffsets>
             <endOffsets>
-              <option value="3272" />
+              <option value="2900" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="22" />
+          <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Project53/TicketRegistry.cs</url>
-          <line>22</line>
-          <properties documentPath="$PROJECT_DIR$/Project53/TicketRegistry.cs" initialLine="22">
+          <url>file://$PROJECT_DIR$/Hook/Hooks/PrintQueueHook.cs</url>
+          <line>326</line>
+          <properties documentPath="$PROJECT_DIR$/Hook/Hooks/PrintQueueHook.cs" initialLine="324">
             <startOffsets>
-              <option value="563" />
+              <option value="10592" />
             </startOffsets>
             <endOffsets>
-              <option value="607" />
+              <option value="10663" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="23" />
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Project53/JobController.cs</url>
+          <line>79</line>
+          <properties documentPath="$PROJECT_DIR$/Project53/JobController.cs" initialLine="79">
+            <startOffsets>
+              <option value="3069" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3116" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Project53/MsWordHandle.cs</url>
+          <line>46</line>
+          <properties documentPath="$PROJECT_DIR$/Project53/MsWordHandle.cs" initialLine="46">
+            <startOffsets>
+              <option value="1284" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1285" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Project53/JobController.cs</url>
+          <line>116</line>
+          <properties documentPath="$PROJECT_DIR$/Project53/JobController.cs" initialLine="116">
+            <startOffsets>
+              <option value="4412" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4480" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Project53/MsWordHandle.cs</url>
+          <line>118</line>
+          <properties documentPath="$PROJECT_DIR$/Project53/MsWordHandle.cs" initialLine="118">
+            <startOffsets>
+              <option value="3710" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3800" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Project53/JobController.cs</url>
+          <line>58</line>
+          <properties documentPath="$PROJECT_DIR$/Project53/JobController.cs" initialLine="58">
+            <startOffsets>
+              <option value="2080" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2112" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Project53/JobController.cs</url>
+          <line>50</line>
+          <properties documentPath="$PROJECT_DIR$/Project53/JobController.cs" initialLine="50">
+            <startOffsets>
+              <option value="1621" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1668" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Project53/MsWordHandle.cs</url>
+          <line>147</line>
+          <properties documentPath="$PROJECT_DIR$/Project53/MsWordHandle.cs" initialLine="147">
+            <startOffsets>
+              <option value="4603" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4849" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Project53/MsWordHandle.cs</url>
+          <line>159</line>
+          <properties documentPath="$PROJECT_DIR$/Project53/MsWordHandle.cs" initialLine="159">
+            <startOffsets>
+              <option value="5074" />
+            </startOffsets>
+            <endOffsets>
+              <option value="5075" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="45" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -631,55 +700,56 @@
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
       <expression>
-        <expression-string>Marshal.PtrToStringAnsi(jobInfo.pMachineName)</expression-string>
+        <expression-string>System.Runtime.InteropServices.Marshal.BindToMoniker(fullFileName)</expression-string>
         <language-id>C#</language-id>
         <custom-info>RiderImportsList:</custom-info>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>Marshal.PtrToStringAnsi(jobInfo.pPrintProcessor)</expression-string>
+        <expression-string>System.Runtime.InteropServices.Marshal
+        					.BindToMoniker(fullFileName)</expression-string>
         <language-id>C#</language-id>
         <custom-info>RiderImportsList:</custom-info>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>Marshal.PtrToStringAnsi(jobInfo.pNotifyName)</expression-string>
+        <expression-string>e.EventData.JobDetail.DevMode.</expression-string>
         <language-id>C#</language-id>
         <custom-info>RiderImportsList:</custom-info>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>Marshal.PtrToStringAnsi(jobInfo.pDevMode)</expression-string>
+        <expression-string>e.EventData.Pages</expression-string>
         <language-id>C#</language-id>
         <custom-info>RiderImportsList:</custom-info>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>Marshal.PtrToStringAnsi(jobInfo.pDatatype)</expression-string>
-        <language-id>C#</language-id>
-        <custom-info>RiderImportsList:</custom-info>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>Marshal.PtrToStringAnsi(jobInfo.pDocument)</expression-string>
-        <language-id>C#</language-id>
-        <custom-info>RiderImportsList:</custom-info>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>Marshal.PtrToStringAnsi(jobInfo.pDriverName)</expression-string>
-        <language-id>C#</language-id>
-        <custom-info>RiderImportsList:</custom-info>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>jobInfo</expression-string>
+        <expression-string>e.EventData.Ji.NumberOfPages</expression-string>
         <language-id>C#</language-id>
         <custom-info>RiderImportsList:</custom-info>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
         <expression-string>e</expression-string>
+        <language-id>C#</language-id>
+        <custom-info>RiderImportsList:</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>doc.PrintFormsData</expression-string>
+        <language-id>C#</language-id>
+        <custom-info>RiderImportsList:</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>doc.PrintPreview()</expression-string>
+        <language-id>C#</language-id>
+        <custom-info>RiderImportsList:</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>doc</expression-string>
         <language-id>C#</language-id>
         <custom-info>RiderImportsList:</custom-info>
         <evaluation-mode>EXPRESSION</evaluation-mode>
@@ -802,55 +872,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Hook/ApplicationWatcher.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="47" column="17" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
-          <folding>
-            <marker date="1535667238872" expanded="false" signature="6:164" ph="..." />
-            <marker date="1535667238872" expanded="true" signature="186:8031" ph="{...}" />
-            <marker date="1535667238872" expanded="true" signature="193:275" ph="/// An enum for the type of application event ... " />
-            <marker date="1535667238872" expanded="true" signature="309:373" ph="{...}" />
-            <marker date="1535667238872" expanded="true" signature="379:473" ph="/// An object that holds information on application event ... " />
-            <marker date="1535667238872" expanded="true" signature="501:705" ph="{...}" />
-            <marker date="1535667238872" expanded="true" signature="711:789" ph="/// An event argument object send to user ... " />
-            <marker date="1535667238872" expanded="true" signature="839:960" ph="{...}" />
-            <marker date="1535667238872" expanded="true" signature="966:1210" ph="/// A wrapper around shell hook to hook application window change events ... " />
-            <marker date="1535667238872" expanded="true" signature="1246:8029" ph="{...}" />
-            <marker date="1535667238872" expanded="true" signature="1640:1703" ph="/// Start to watch ... " />
-            <marker date="1535667238872" expanded="true" signature="1738:2874" ph="{...}" />
-            <marker date="1535667238872" expanded="true" signature="1776:2863" ph="{...}" />
-            <marker date="1535667238872" expanded="true" signature="2037:2158" ph="/* This needs to run on UI thread context ... */" />
-            <marker date="1535667238872" expanded="true" signature="2250:2585" ph="{...}" />
-            <marker date="1535667238872" expanded="true" signature="2884:2946" ph="/// Quit watching ... " />
-            <marker date="1535667238872" expanded="true" signature="2980:3506" ph="{...}" />
-            <marker date="1535667238872" expanded="true" signature="3017:3495" ph="{...}" />
-            <marker date="1535667238872" expanded="true" signature="3516:3684" ph="/// A windows was created on desktop ... " />
-            <marker date="1535667238872" expanded="true" signature="3762:3857" ph="{...}" />
-            <marker date="1535667238872" expanded="true" signature="3867:4043" ph="/// An existing desktop window was destroyed ... " />
-            <marker date="1535667238872" expanded="true" signature="4123:4218" ph="{...}" />
-            <marker date="1535667238872" expanded="true" signature="4228:4399" ph="/// A windows was brought to foreground ... " />
-            <marker date="1535667238872" expanded="true" signature="4479:4574" ph="{...}" />
-            <marker date="1535667238872" expanded="true" signature="4584:4850" ph="/// This is used to avoid blocking low level hooks ... " />
-            <marker date="1535667238872" expanded="true" signature="4898:5572" ph="{...}" />
-            <marker date="1535667238872" expanded="true" signature="4938:5562" ph="{...}" />
-            <marker date="1535667238872" expanded="true" signature="5198:5547" ph="{...}" />
-            <marker date="1535667238872" expanded="true" signature="5582:5677" ph="/// A handle to keep track of last window launched ... " />
-            <marker date="1535667238872" expanded="true" signature="5735:5843" ph="/// A window got created ... " />
-            <marker date="1535667238872" expanded="true" signature="5901:6106" ph="{...}" />
-            <marker date="1535667238872" expanded="true" signature="6116:6269" ph="/// invoke user call back ... " />
-            <marker date="1535667238872" expanded="true" signature="6359:6905" ph="{...}" />
-            <marker date="1535667238872" expanded="true" signature="6915:7046" ph="/// Remove handle from active window collection ... " />
-            <marker date="1535667238872" expanded="true" signature="7106:7430" ph="{...}" />
-            <marker date="1535667238872" expanded="true" signature="7176:7377" ph="{...}" />
-            <marker date="1535667238872" expanded="true" signature="7440:7535" ph="/// Add window handle to active windows collection ... " />
-            <marker date="1535667238872" expanded="true" signature="7645:8022" ph="{...}" />
-            <marker date="1535667238872" expanded="true" signature="7715:7970" ph="{...}" />
-            <marker date="1535667238872" expanded="true" signature="7806:7956" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Project53/SpoolerService.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
@@ -901,16 +922,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project53/packages.config">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project53/Project53.csproj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="10" column="46" lean-forward="true" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3B759EFC-2BC8-4183-BA37-347F42C023AF/99/16735f74/PrintSystemJobInfo.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -918,100 +929,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project53/LogMessages.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
-          <folding>
-            <marker date="1561727771014" expanded="true" signature="19:711" ph="{...}" />
-            <marker date="1561727771014" expanded="true" signature="57:709" ph="{...}" />
-            <marker date="1561727771014" expanded="true" signature="121:239" ph="{...}" />
-            <marker date="1561727771014" expanded="true" signature="291:383" ph="{...}" />
-            <marker date="1561727771014" expanded="true" signature="438:547" ph="{...}" />
-            <marker date="1561727771014" expanded="true" signature="605:703" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PrintersManaging.sln">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/00A78D6D-663C-4F46-9D5F-BC222D4BFE01/cf/f0784235/Path.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6048">
           <caret line="383" column="8" selection-start-line="383" selection-start-column="8" selection-end-line="383" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project53/JobController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="70" column="64" lean-forward="true" selection-start-line="70" selection-start-column="64" selection-end-line="70" selection-end-column="64" />
-          <folding>
-            <marker date="1561747960944" expanded="false" signature="6:150" ph="..." />
-            <marker date="1561747960944" expanded="true" signature="171:4586" ph="{...}" />
-            <marker date="1561747960944" expanded="true" signature="204:4584" ph="{...}" />
-            <marker date="1561747960944" expanded="true" signature="408:492" ph="{...}" />
-            <marker date="1561747960944" expanded="true" signature="537:1338" ph="{...}" />
-            <marker date="1561747960944" expanded="true" signature="563:1171" ph="{...}" />
-            <marker date="1561747960944" expanded="true" signature="762:1157" ph="{...}" />
-            <marker date="1561747960944" expanded="true" signature="1204:1328" ph="{...}" />
-            <marker date="1561747960944" expanded="true" signature="1348:1517" ph="/// It's main handler of printers queue hooks ... " />
-            <marker date="1561747960944" expanded="true" signature="1598:2927" ph="{...}" />
-            <marker date="1561747960944" expanded="true" signature="2004:2213" ph="/* if (!isManagedDoc)//Unmanaged doc - MsOffice without ticket ... */" />
-            <marker date="1561747960944" expanded="true" signature="2996:3252" ph="{...}" />
-            <marker date="1561747960944" expanded="true" signature="3398:3502" ph="{...}" />
-            <marker date="1561747960944" expanded="true" signature="3565:4076" ph="{...}" />
-            <marker date="1561747960944" expanded="true" signature="3896:4039" ph="{...}" />
-            <marker date="1561747960944" expanded="true" signature="4077:4181" ph="/* private PrintEventArgs UpdateJobPropertyAboutValid() ... */" />
-            <marker date="1561747960944" expanded="true" signature="4240:4551" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project53/MsWordHandle.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="32" column="62" selection-start-line="32" selection-start-column="62" selection-end-line="32" selection-end-column="62" />
-          <folding>
-            <marker date="1561740396552" expanded="true" signature="6:292" ph="..." />
-            <marker date="1561740396552" expanded="true" signature="313:6129" ph="{...}" />
-            <marker date="1561740396552" expanded="true" signature="342:6127" ph="{...}" />
-            <marker date="1561740396552" expanded="true" signature="518:587" ph="{...}" />
-            <marker date="1561740396552" expanded="true" signature="664:1206" ph="{...}" />
-            <marker date="1561740396552" expanded="true" signature="1281:2288" ph="{...}" />
-            <marker date="1561740396552" expanded="true" signature="1607:1701" ph="/* reloadedDoc.Close(false, null, null); ... */" />
-            <marker date="1561740396552" expanded="true" signature="2098:2283" ph="/* msWordDoc.Close(0, null, null); ... */" />
-            <marker date="1561740396552" expanded="true" signature="2367:2763" ph="{...}" />
-            <marker date="1561740396552" expanded="true" signature="2813:4127" ph="{...}" />
-            <marker date="1561740396552" expanded="true" signature="3196:4123" ph="{...}" />
-            <marker date="1561740396552" expanded="true" signature="4186:5676" ph="{...}" />
-            <marker date="1561740396552" expanded="true" signature="4210:4338" ph="/* string docName = Path.GetFileName(fileInfo.FullFileName); ... */" />
-            <marker date="1561740396552" expanded="true" signature="4882:4937" ph="/* d.Application.Quit(0, null, null); ... */" />
-            <marker date="1561740396552" expanded="true" signature="4988:5150" ph="/* var application = new Application(); ... */" />
-            <marker date="1561740396552" expanded="true" signature="5180:5664" ph="/* var pathCurrDoc = Path.Combine(Environment.CurrentDirectory, tempFileName); ... */" />
-            <marker date="1561740396552" expanded="true" signature="5774:6124" ph="{...}" />
-            <marker date="1561740396552" expanded="true" signature="5882:5958" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project53/TicketRegistry.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="22" column="59" selection-start-line="22" selection-start-column="59" selection-end-line="22" selection-end-column="59" />
-          <folding>
-            <marker date="1561747679551" expanded="true" signature="6:66" ph="..." />
-            <marker date="1561747679551" expanded="true" signature="87:1379" ph="{...}" />
-            <marker date="1561747679551" expanded="true" signature="128:1377" ph="{...}" />
-            <marker date="1561747679551" expanded="true" signature="267:439" ph="{...}" />
-            <marker date="1561747679551" expanded="true" signature="496:617" ph="{...}" />
-            <marker date="1561747679551" expanded="true" signature="653:996" ph="{...}" />
-            <marker date="1561747679551" expanded="true" signature="738:859" ph="{...}" />
-            <marker date="1561747679551" expanded="true" signature="876:949" ph="{...}" />
-            <marker date="1561747679551" expanded="true" signature="1048:1118" ph="{...}" />
-            <marker date="1561747679551" expanded="true" signature="1187:1371" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1057,147 +978,372 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Hook/Hooks/PrintQueueHook.cs">
+    <entry file="file://$PROJECT_DIR$/PrintersManaging.sln">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5A268815-2CE6-43AD-A3DC-4E91EFA0F623/d8/b4002e15/PrintDialog.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3440">
-          <caret line="270" column="21" selection-start-line="270" selection-start-column="21" selection-end-line="270" selection-end-column="21" />
+        <state relative-caret-position="141">
+          <caret line="117" column="8" selection-start-line="117" selection-start-column="8" selection-end-line="117" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/00A78D6D-663C-4F46-9D5F-BC222D4BFE01/7b/c913ae30/Variant.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="420" column="12" selection-start-line="420" selection-start-column="12" selection-end-line="420" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/tools/MSBuild/15.0/Bin/Microsoft.Common.CurrentVersion.targets">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="4364" column="4" selection-start-line="4364" selection-start-column="4" selection-end-line="4364" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/rider64.exe.vmoptions">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="13" column="41" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project53/LogMessages.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
           <folding>
-            <marker date="1561727143756" expanded="false" signature="6:217" ph="..." />
-            <marker date="1561727143756" expanded="true" signature="244:13736" ph="{...}" />
-            <marker date="1561727143756" expanded="true" signature="332:1175" ph="{...}" />
-            <marker date="1561727143756" expanded="true" signature="1201:1255" ph="{...}" />
-            <marker date="1561727143756" expanded="true" signature="1262:1383" ph="///  //http://www.codeproject.com/Articles/51085/Monitor-jobs-in-a-printer-queue-NET ... " />
-            <marker date="1561727143756" expanded="true" signature="1438:2520" ph="{...}" />
-            <marker date="1561727143756" expanded="true" signature="1586:1774" ph="{...}" />
-            <marker date="1561727143756" expanded="true" signature="1802:1857" ph="{...}" />
-            <marker date="1561727143756" expanded="true" signature="1890:1947" ph="{...}" />
-            <marker date="1561727143756" expanded="true" signature="1985:2044" ph="{...}" />
-            <marker date="1561727143756" expanded="true" signature="2089:2146" ph="{...}" />
-            <marker date="1561727143756" expanded="true" signature="2222:2278" ph="{...}" />
-            <marker date="1561727143756" expanded="false" signature="2288:2514" ph="private variables" />
-            <marker date="1561727143756" expanded="true" signature="2648:13734" ph="{...}" />
-            <marker date="1561727143756" expanded="false" signature="2663:2763" ph="Constants" />
-            <marker date="1561727143756" expanded="false" signature="2773:2993" ph="constructor" />
-            <marker date="1561727143756" expanded="true" signature="2846:2973" ph="{...}" />
-            <marker date="1561727143756" expanded="true" signature="3003:3102" ph="Events" />
-            <marker date="1561727143756" expanded="true" signature="3112:3217" ph="destructor" />
-            <marker date="1561727143756" expanded="true" signature="3157:3197" ph="{...}" />
-            <marker date="1561727143756" expanded="true" signature="3227:4368" ph="StartMonitoring" />
-            <marker date="1561727143756" expanded="true" signature="3281:4348" ph="{...}" />
-            <marker date="1561727143756" expanded="true" signature="3399:4109" ph="{...}" />
-            <marker date="1561727143756" expanded="true" signature="4251:4338" ph="{...}" />
-            <marker date="1561727143756" expanded="false" signature="4378:4722" ph="StopMonitoring" />
-            <marker date="1561727143756" expanded="true" signature="4430:4708" ph="{...}" />
-            <marker date="1561727143756" expanded="true" signature="4456:4676" ph="{...}" />
-            <marker date="1561727143756" expanded="true" signature="4521:4662" ph="{...}" />
-            <marker date="1561727143756" expanded="true" signature="4769:5850" ph="{...}" />
-            <marker date="1561727143756" expanded="true" signature="4932:5127" ph="{...}" />
-            <marker date="1561727143756" expanded="true" signature="5135:5788" ph="{...}" />
-            <marker date="1561727143756" expanded="true" signature="5539:5567" ph="{...}" />
-            <marker date="1561727143756" expanded="true" signature="5569:5783" ph="/* Console.ForegroundColor = ConsoleColor.Yellow; ... */" />
-            <marker date="1561727143756" expanded="true" signature="5853:10368" ph="Callback Function" />
-            <marker date="1561727143756" expanded="true" signature="5882:6083" ph="/// Отлавливается нужное задание и вызывается событие, на которое подписались в вызывающем коде ... " />
-            <marker date="1561727143756" expanded="true" signature="6154:10352" ph="{...}" />
-            <marker date="1561727143756" expanded="true" signature="6233:7547" ph="read notification details" />
-            <marker date="1561727143756" expanded="true" signature="7561:8286" ph="populate Notification Information" />
-            <marker date="1561727143756" expanded="true" signature="8010:8262" ph="{...}" />
-            <marker date="1561727143756" expanded="true" signature="8300:10099" ph="iterate through all elements in the data array" />
-            <marker date="1561727143756" expanded="true" signature="8406:10075" ph="{...}" />
-            <marker date="1561727143756" expanded="true" signature="8684:10061" ph="{...}" />
-            <marker date="1561727143756" expanded="true" signature="8978:9335" ph="{...}" />
-            <marker date="1561727143756" expanded="true" signature="9375:9605" ph="{...}" />
-            <marker date="1561727143756" expanded="true" signature="9657:10043" ph="{...}" />
-            <marker date="1561727143756" expanded="false" signature="10113:10342" ph="reset the Event and wait for the next event" />
-            <marker date="1561727143756" expanded="true" signature="10465:11132" ph="{...}" />
-            <marker date="1561727143756" expanded="true" signature="11136:13184" ph="DLL Import Functions" />
-            <marker date="1561727143756" expanded="true" signature="11168:11350" ph="[...]" />
-            <marker date="1561727143756" expanded="true" signature="11491:11673" ph="[...]" />
-            <marker date="1561727143756" expanded="true" signature="11760:12000" ph="[...]" />
-            <marker date="1561727143756" expanded="true" signature="12291:12519" ph="[...]" />
-            <marker date="1561727143756" expanded="true" signature="12845:12989" ph="[...]" />
-            <marker date="1561727143756" expanded="false" signature="13188:13728" ph="private variables" />
+            <marker date="1561727771014" expanded="true" signature="19:711" ph="{...}" />
+            <marker date="1561727771014" expanded="true" signature="57:709" ph="{...}" />
+            <marker date="1561727771014" expanded="true" signature="121:239" ph="{...}" />
+            <marker date="1561727771014" expanded="true" signature="291:383" ph="{...}" />
+            <marker date="1561727771014" expanded="true" signature="438:547" ph="{...}" />
+            <marker date="1561727771014" expanded="true" signature="605:703" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project53/packages.config">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project53/MsWordHandle.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="82">
+          <caret line="160" column="24" lean-forward="true" selection-start-line="160" selection-start-column="24" selection-end-line="160" selection-end-column="24" />
+          <folding>
+            <marker date="1564166383352" expanded="true" signature="6:292" ph="..." />
+            <marker date="1564166383352" expanded="true" signature="342:6613" ph="{...}" />
+            <marker date="1564166383352" expanded="true" signature="518:587" ph="{...}" />
+            <marker date="1564166383352" expanded="true" signature="664:1206" ph="{...}" />
+            <marker date="1564166383352" expanded="true" signature="1281:2287" ph="{...}" />
+            <marker date="1564166383352" expanded="true" signature="1607:1701" ph="/* reloadedDoc.Close(false, null, null); ... */" />
+            <marker date="1564166383352" expanded="true" signature="2097:2282" ph="/* msWordDoc.Close(0, null, null); ... */" />
+            <marker date="1564166383352" expanded="true" signature="2366:2762" ph="{...}" />
+            <marker date="1564166383352" expanded="true" signature="2812:4266" ph="{...}" />
+            <marker date="1564166383352" expanded="true" signature="3267:4262" ph="{...}" />
+            <marker date="1564166383352" expanded="true" signature="4134:4208" ph="/* pDialog.Document.Print(); ... */" />
+            <marker date="1564166383352" expanded="true" signature="4325:6052" ph="{...}" />
+            <marker date="1564166383352" expanded="true" signature="4349:4477" ph="/* string docName = Path.GetFileName(fileInfo.FullFileName); ... */" />
+            <marker date="1564166383352" expanded="true" signature="4646:5012" ph="{...}" />
+            <marker date="1564166383352" expanded="true" signature="5053:5119" ph="{...}" />
+            <marker date="1564166383352" expanded="true" signature="5258:5313" ph="/* d.Application.Quit(0, null, null); ... */" />
+            <marker date="1564166383352" expanded="true" signature="5364:5526" ph="/* var application = new Application(); ... */" />
+            <marker date="1564166383352" expanded="true" signature="5556:6040" ph="/* var pathCurrDoc = Path.Combine(Environment.CurrentDirectory, tempFileName); ... */" />
+            <marker date="1564166383352" expanded="true" signature="6150:6610" ph="{...}" />
+            <marker date="1564166383352" expanded="true" signature="6258:6334" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project53/FilesWaitsPrinting.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="976">
+          <caret line="71" column="22" selection-start-line="71" selection-start-column="22" selection-end-line="71" selection-end-column="22" />
+          <folding>
+            <marker date="1562796179130" expanded="false" signature="6:69" ph="..." />
+            <marker date="1562796179130" expanded="true" signature="90:2731" ph="{...}" />
+            <marker date="1562796179130" expanded="true" signature="94:146" ph="/// it's just wrapper ... " />
+            <marker date="1562796179130" expanded="true" signature="181:515" ph="{...}" />
+            <marker date="1562796179130" expanded="true" signature="297:363" ph="{...}" />
+            <marker date="1562796179130" expanded="true" signature="519:597" ph="/// Container for files that want to be printed ... " />
+            <marker date="1562796179130" expanded="true" signature="637:2729" ph="{...}" />
+            <marker date="1562796179130" expanded="true" signature="697:873" ph="/// Добавляет файл, который можно напечатать. ... " />
+            <marker date="1562796179130" expanded="true" signature="943:1156" ph="{...}" />
+            <marker date="1562796179130" expanded="true" signature="1160:1346" ph="/// Истина, если содержится описание указанного файла. ... " />
+            <marker date="1562796179130" expanded="true" signature="1421:1655" ph="{...}" />
+            <marker date="1562796179130" expanded="true" signature="1703:1822" ph="{...}" />
+            <marker date="1562796179130" expanded="true" signature="1826:2180" ph="/// Удаляет информацию о файле, который нужно напечатать. После удаления запись безвозратно удаляется и возвращае ... " />
+            <marker date="1562796179130" expanded="true" signature="2253:2458" ph="{...}" />
+            <marker date="1562796179130" expanded="true" signature="2348:2418" ph="{...}" />
+            <marker date="1562796179130" expanded="true" signature="2426:2454" ph="{...}" />
+            <marker date="1562796179130" expanded="true" signature="2499:2541" ph="{...}" />
+            <marker date="1562796179130" expanded="true" signature="2587:2726" ph="{...}" />
+            <marker date="1562796179130" expanded="true" signature="2616:2686" ph="{...}" />
+            <marker date="1562796179130" expanded="true" signature="2694:2722" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project53/Project53.csproj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" column="58" selection-start-line="2" selection-start-column="58" selection-end-line="2" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project53/TicketRegistry.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="26" column="9" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+          <folding>
+            <marker date="1561804056233" expanded="true" signature="6:66" ph="..." />
+            <marker date="1561804056233" expanded="true" signature="87:1378" ph="{...}" />
+            <marker date="1561804056233" expanded="true" signature="128:1376" ph="{...}" />
+            <marker date="1561804056233" expanded="true" signature="267:439" ph="{...}" />
+            <marker date="1561804056233" expanded="true" signature="496:617" ph="{...}" />
+            <marker date="1561804056233" expanded="true" signature="653:995" ph="{...}" />
+            <marker date="1561804056233" expanded="true" signature="737:858" ph="{...}" />
+            <marker date="1561804056233" expanded="true" signature="875:948" ph="{...}" />
+            <marker date="1561804056233" expanded="true" signature="1047:1117" ph="{...}" />
+            <marker date="1561804056233" expanded="true" signature="1186:1370" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/851F7F57-9033-407F-ACDB-54D96398BA10/fb/d3630957/Enumerable.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="2155" column="28" selection-start-line="2155" selection-start-column="28" selection-end-line="2155" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/21879DDF-90C2-48A9-83F6-29F18DE58511/79/8dbb0941/ApplicationEvents4_SinkHelper.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="91" column="6" selection-start-line="91" selection-start-column="6" selection-end-line="91" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Hook/Hooks/Library/PrintSpoolAPI.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2608">
-          <caret line="175" column="8" selection-start-line="175" selection-start-column="8" selection-end-line="175" selection-end-column="8" />
+        <state relative-caret-position="64">
+          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
           <folding>
-            <marker date="1535667238870" expanded="false" signature="6:79" ph="..." />
-            <marker date="1535667238870" expanded="true" signature="114:15775" ph="{...}" />
-            <marker date="1535667238870" expanded="true" signature="189:1432" ph="{...}" />
-            <marker date="1535667238870" expanded="true" signature="790:1210" ph="{...}" />
-            <marker date="1535667238870" expanded="true" signature="1250:1426" ph="{...}" />
-            <marker date="1535667238870" expanded="true" signature="1473:2128" ph="{...}" />
-            <marker date="1535667238870" expanded="true" signature="2165:3963" ph="{...}" />
-            <marker date="1535667238870" expanded="true" signature="4014:5222" ph="{...}" />
-            <marker date="1535667238870" expanded="true" signature="5269:6285" ph="{...}" />
-            <marker date="1535667238870" expanded="true" signature="6370:6919" ph="{...}" />
-            <marker date="1535667238870" expanded="true" signature="6550:6913" ph="{...}" />
-            <marker date="1535667238870" expanded="true" signature="6963:7036" ph="{...}" />
-            <marker date="1535667238870" expanded="true" signature="7126:14494" ph="{...}" />
-            <marker date="1535667238870" expanded="true" signature="7743:14240" ph="{...}" />
-            <marker date="1535667238870" expanded="true" signature="7796:7873" ph="{...}" />
-            <marker date="1535667238870" expanded="true" signature="7951:10894" ph="{...}" />
-            <marker date="1535667238870" expanded="true" signature="10942:11023" ph="{...}" />
-            <marker date="1535667238870" expanded="true" signature="11109:14230" ph="{...}" />
-            <marker date="1535667238870" expanded="true" signature="14288:14488" ph="{...}" />
-            <marker date="1535667238870" expanded="true" signature="14577:14733" ph="{...}" />
-            <marker date="1535667238870" expanded="true" signature="14827:14898" ph="{...}" />
-            <marker date="1535667238870" expanded="true" signature="14990:15356" ph="{...}" />
-            <marker date="1535667238870" expanded="true" signature="15218:15350" ph="{...}" />
-            <marker date="1535667238870" expanded="true" signature="15244:15340" ph="{...}" />
-            <marker date="1535667238870" expanded="true" signature="15581:15772" ph="{...}" />
+            <marker date="1561821607131" expanded="false" signature="6:79" ph="..." />
+            <marker date="1561821607131" expanded="true" signature="114:15773" ph="{...}" />
+            <marker date="1561821607131" expanded="true" signature="187:1430" ph="{...}" />
+            <marker date="1561821607131" expanded="true" signature="788:1208" ph="{...}" />
+            <marker date="1561821607131" expanded="true" signature="1248:1424" ph="{...}" />
+            <marker date="1561821607131" expanded="true" signature="1471:2126" ph="{...}" />
+            <marker date="1561821607131" expanded="true" signature="2163:3961" ph="{...}" />
+            <marker date="1561821607131" expanded="true" signature="4012:5220" ph="{...}" />
+            <marker date="1561821607131" expanded="true" signature="5267:6283" ph="{...}" />
+            <marker date="1561821607131" expanded="true" signature="6368:6917" ph="{...}" />
+            <marker date="1561821607131" expanded="true" signature="6548:6911" ph="{...}" />
+            <marker date="1561821607131" expanded="true" signature="6961:7034" ph="{...}" />
+            <marker date="1561821607131" expanded="true" signature="7124:14492" ph="{...}" />
+            <marker date="1561821607131" expanded="true" signature="7741:14238" ph="{...}" />
+            <marker date="1561821607131" expanded="true" signature="7794:7871" ph="{...}" />
+            <marker date="1561821607131" expanded="true" signature="7949:10892" ph="{...}" />
+            <marker date="1561821607131" expanded="true" signature="10940:11021" ph="{...}" />
+            <marker date="1561821607131" expanded="true" signature="11107:14228" ph="{...}" />
+            <marker date="1561821607131" expanded="true" signature="14286:14486" ph="{...}" />
+            <marker date="1561821607131" expanded="true" signature="14575:14731" ph="{...}" />
+            <marker date="1561821607131" expanded="true" signature="14825:14896" ph="{...}" />
+            <marker date="1561821607131" expanded="true" signature="14988:15354" ph="{...}" />
+            <marker date="1561821607131" expanded="true" signature="15216:15348" ph="{...}" />
+            <marker date="1561821607131" expanded="true" signature="15242:15338" ph="{...}" />
+            <marker date="1561821607131" expanded="true" signature="15579:15770" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Hook/PrintWatcher.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1904">
-          <caret line="144" selection-start-line="144" selection-end-line="144" />
+        <state relative-caret-position="128">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
           <folding>
-            <marker date="1561727206444" expanded="true" signature="6:205" ph="..." />
-            <marker date="1561727206444" expanded="true" signature="226:4785" ph="{...}" />
-            <marker date="1561727206444" expanded="true" signature="233:334" ph="/// A object holding key information on a particular print event ... " />
-            <marker date="1561727206444" expanded="true" signature="366:813" ph="{...}" />
-            <marker date="1561727206444" expanded="true" signature="819:900" ph="/// An argument passed along user call backs ... " />
-            <marker date="1561727206444" expanded="true" signature="944:1043" ph="{...}" />
-            <marker date="1561727206444" expanded="true" signature="1049:1134" ph="/// A class that wraps around printServer object ... " />
-            <marker date="1561727206444" expanded="true" signature="1164:4783" ph="{...}" />
-            <marker date="1561727206444" expanded="true" signature="1480:1556" ph="/// Start watching print events ... " />
-            <marker date="1561727206444" expanded="true" signature="1609:2201" ph="{...}" />
-            <marker date="1561727206444" expanded="true" signature="2211:2286" ph="/// Stop watching print events ... " />
-            <marker date="1561727206444" expanded="true" signature="2320:3295" ph="{...}" />
-            <marker date="1561727206444" expanded="true" signature="2357:3285" ph="{...}" />
-            <marker date="1561727206444" expanded="true" signature="2465:3177" ph="{...}" />
-            <marker date="1561727206444" expanded="true" signature="2552:3113" ph="{...}" />
-            <marker date="1561727206444" expanded="true" signature="2687:2791" ph="{...}" />
-            <marker date="1561727206444" expanded="true" signature="2854:3087" ph="{...}" />
-            <marker date="1561727206444" expanded="true" signature="2888:3057" ph="/* ignored intentionally ... */" />
-            <marker date="1561727206444" expanded="true" signature="3305:3490" ph="/// Invoke user callback as soon as a relevent event is fired ... " />
-            <marker date="1561727206444" expanded="true" signature="3582:4668" ph="{...}" />
-            <marker date="1561727206444" expanded="true" signature="3593:3723" ph="/* if ((e.JobStatus &amp; JOBSTATUS.JOB_STATUS_PAUSED) == JOBSTATUS.JOB_STATUS_PAUSED &amp;&amp; e.JobInfo != null) ... */" />
-            <marker date="1561727206444" expanded="true" signature="4032:4049" ph="/* try ... */" />
-            <marker date="1561727206444" expanded="true" signature="4094:4444" ph="{...}" />
-            <marker date="1561727206444" expanded="true" signature="4446:4504" ph="/* } ... */" />
-            <marker date="1561727206444" expanded="true" signature="4609:4658" ph="/* } ... */" />
+            <marker date="1561822587663" expanded="true" signature="6:205" ph="..." />
+            <marker date="1561822587663" expanded="true" signature="226:4785" ph="{...}" />
+            <marker date="1561822587663" expanded="true" signature="233:334" ph="/// A object holding key information on a particular print event ... " />
+            <marker date="1561822587663" expanded="true" signature="366:813" ph="{...}" />
+            <marker date="1561822587663" expanded="true" signature="819:900" ph="/// An argument passed along user call backs ... " />
+            <marker date="1561822587663" expanded="true" signature="944:1043" ph="{...}" />
+            <marker date="1561822587663" expanded="true" signature="1049:1134" ph="/// A class that wraps around printServer object ... " />
+            <marker date="1561822587663" expanded="true" signature="1164:4783" ph="{...}" />
+            <marker date="1561822587663" expanded="true" signature="1480:1556" ph="/// Start watching print events ... " />
+            <marker date="1561822587663" expanded="true" signature="1609:2201" ph="{...}" />
+            <marker date="1561822587663" expanded="true" signature="2211:2286" ph="/// Stop watching print events ... " />
+            <marker date="1561822587663" expanded="true" signature="2320:3295" ph="{...}" />
+            <marker date="1561822587663" expanded="true" signature="2357:3285" ph="{...}" />
+            <marker date="1561822587663" expanded="true" signature="2465:3177" ph="{...}" />
+            <marker date="1561822587663" expanded="true" signature="2552:3113" ph="{...}" />
+            <marker date="1561822587663" expanded="true" signature="2687:2791" ph="{...}" />
+            <marker date="1561822587663" expanded="true" signature="2854:3087" ph="{...}" />
+            <marker date="1561822587663" expanded="true" signature="2888:3057" ph="/* ignored intentionally ... */" />
+            <marker date="1561822587663" expanded="true" signature="3305:3490" ph="/// Invoke user callback as soon as a relevent event is fired ... " />
+            <marker date="1561822587663" expanded="true" signature="3582:4668" ph="{...}" />
+            <marker date="1561822587663" expanded="true" signature="3593:3723" ph="/* if ((e.JobStatus &amp; JOBSTATUS.JOB_STATUS_PAUSED) == JOBSTATUS.JOB_STATUS_PAUSED &amp;&amp; e.JobInfo != null) ... */" />
+            <marker date="1561822587663" expanded="true" signature="4032:4049" ph="/* try ... */" />
+            <marker date="1561822587663" expanded="true" signature="4094:4444" ph="{...}" />
+            <marker date="1561822587663" expanded="true" signature="4446:4504" ph="/* } ... */" />
+            <marker date="1561822587663" expanded="true" signature="4609:4658" ph="/* } ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Hook/Hooks/PrintQueueHook.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4144">
+          <caret line="344" column="8" selection-start-line="344" selection-start-column="8" selection-end-line="344" selection-end-column="8" />
+          <folding>
+            <marker date="1564164925074" expanded="false" signature="6:217" ph="..." />
+            <marker date="1564164925074" expanded="true" signature="244:13785" ph="{...}" />
+            <marker date="1564164925074" expanded="false" signature="332:1175" ph="{...}" />
+            <marker date="1564164925074" expanded="true" signature="1266:1908" ph="{...}" />
+            <marker date="1564164925074" expanded="true" signature="1934:2040" ph="{...}" />
+            <marker date="1564164925074" expanded="true" signature="2047:2168" ph="///  //http://www.codeproject.com/Articles/51085/Monitor-jobs-in-a-printer-queue-NET ... " />
+            <marker date="1564164925074" expanded="true" signature="2223:3305" ph="{...}" />
+            <marker date="1564164925074" expanded="true" signature="2371:2559" ph="{...}" />
+            <marker date="1564164925074" expanded="true" signature="2587:2642" ph="{...}" />
+            <marker date="1564164925074" expanded="true" signature="2675:2732" ph="{...}" />
+            <marker date="1564164925074" expanded="true" signature="2770:2829" ph="{...}" />
+            <marker date="1564164925074" expanded="true" signature="2874:2931" ph="{...}" />
+            <marker date="1564164925074" expanded="true" signature="3007:3063" ph="{...}" />
+            <marker date="1564164925074" expanded="true" signature="3073:3299" ph="private variables" />
+            <marker date="1564164925074" expanded="true" signature="3433:13783" ph="{...}" />
+            <marker date="1564164925074" expanded="false" signature="3448:3548" ph="Constants" />
+            <marker date="1564164925074" expanded="false" signature="3558:3778" ph="constructor" />
+            <marker date="1564164925074" expanded="true" signature="3631:3758" ph="{...}" />
+            <marker date="1564164925074" expanded="true" signature="3788:3887" ph="Events" />
+            <marker date="1564164925074" expanded="true" signature="3897:4002" ph="destructor" />
+            <marker date="1564164925074" expanded="true" signature="3942:3982" ph="{...}" />
+            <marker date="1564164925074" expanded="true" signature="4012:5153" ph="StartMonitoring" />
+            <marker date="1564164925074" expanded="true" signature="4066:5133" ph="{...}" />
+            <marker date="1564164925074" expanded="true" signature="4184:4894" ph="{...}" />
+            <marker date="1564164925074" expanded="true" signature="5036:5123" ph="{...}" />
+            <marker date="1564164925074" expanded="false" signature="5163:5507" ph="StopMonitoring" />
+            <marker date="1564164925074" expanded="true" signature="5215:5493" ph="{...}" />
+            <marker date="1564164925074" expanded="true" signature="5241:5461" ph="{...}" />
+            <marker date="1564164925074" expanded="true" signature="5306:5447" ph="{...}" />
+            <marker date="1564164925074" expanded="true" signature="5554:6660" ph="{...}" />
+            <marker date="1564164925074" expanded="true" signature="5717:5912" ph="{...}" />
+            <marker date="1564164925074" expanded="true" signature="5920:6598" ph="{...}" />
+            <marker date="1564164925074" expanded="true" signature="6324:6377" ph="{...}" />
+            <marker date="1564164925074" expanded="true" signature="6379:6593" ph="/* Console.ForegroundColor = ConsoleColor.Yellow; ... */" />
+            <marker date="1564164925074" expanded="true" signature="6663:11178" ph="Callback Function" />
+            <marker date="1564164925074" expanded="true" signature="6692:6893" ph="/// Отлавливается нужное задание и вызывается событие, на которое подписались в вызывающем коде ... " />
+            <marker date="1564164925074" expanded="true" signature="6964:11162" ph="{...}" />
+            <marker date="1564164925074" expanded="true" signature="7043:8357" ph="read notification details" />
+            <marker date="1564164925074" expanded="true" signature="8371:9096" ph="populate Notification Information" />
+            <marker date="1564164925074" expanded="true" signature="8820:9072" ph="{...}" />
+            <marker date="1564164925074" expanded="true" signature="9110:10909" ph="iterate through all elements in the data array" />
+            <marker date="1564164925074" expanded="true" signature="9216:10885" ph="{...}" />
+            <marker date="1564164925074" expanded="true" signature="9494:10871" ph="{...}" />
+            <marker date="1564164925074" expanded="true" signature="9788:10145" ph="{...}" />
+            <marker date="1564164925074" expanded="true" signature="10185:10415" ph="{...}" />
+            <marker date="1564164925074" expanded="true" signature="10467:10853" ph="{...}" />
+            <marker date="1564164925074" expanded="false" signature="10923:11152" ph="reset the Event and wait for the next event" />
+            <marker date="1564164925074" expanded="true" signature="11185:13233" ph="DLL Import Functions" />
+            <marker date="1564164925074" expanded="true" signature="11217:11399" ph="[...]" />
+            <marker date="1564164925074" expanded="true" signature="11540:11722" ph="[...]" />
+            <marker date="1564164925074" expanded="true" signature="11809:12049" ph="[...]" />
+            <marker date="1564164925074" expanded="true" signature="12340:12568" ph="[...]" />
+            <marker date="1564164925074" expanded="true" signature="12894:13038" ph="[...]" />
+            <marker date="1564164925074" expanded="false" signature="13237:13777" ph="private variables" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Hook/ApplicationWatcher.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="512">
+          <caret line="47" column="17" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
+          <folding>
+            <marker date="1535667238872" expanded="false" signature="6:164" ph="..." />
+            <marker date="1535667238872" expanded="true" signature="186:8031" ph="{...}" />
+            <marker date="1535667238872" expanded="true" signature="193:275" ph="/// An enum for the type of application event ... " />
+            <marker date="1535667238872" expanded="true" signature="309:373" ph="{...}" />
+            <marker date="1535667238872" expanded="true" signature="379:473" ph="/// An object that holds information on application event ... " />
+            <marker date="1535667238872" expanded="true" signature="501:705" ph="{...}" />
+            <marker date="1535667238872" expanded="true" signature="711:789" ph="/// An event argument object send to user ... " />
+            <marker date="1535667238872" expanded="true" signature="839:960" ph="{...}" />
+            <marker date="1535667238872" expanded="true" signature="966:1210" ph="/// A wrapper around shell hook to hook application window change events ... " />
+            <marker date="1535667238872" expanded="true" signature="1246:8029" ph="{...}" />
+            <marker date="1535667238872" expanded="true" signature="1640:1703" ph="/// Start to watch ... " />
+            <marker date="1535667238872" expanded="true" signature="1738:2874" ph="{...}" />
+            <marker date="1535667238872" expanded="true" signature="1776:2863" ph="{...}" />
+            <marker date="1535667238872" expanded="true" signature="2037:2158" ph="/* This needs to run on UI thread context ... */" />
+            <marker date="1535667238872" expanded="true" signature="2250:2585" ph="{...}" />
+            <marker date="1535667238872" expanded="true" signature="2884:2946" ph="/// Quit watching ... " />
+            <marker date="1535667238872" expanded="true" signature="2980:3506" ph="{...}" />
+            <marker date="1535667238872" expanded="true" signature="3017:3495" ph="{...}" />
+            <marker date="1535667238872" expanded="true" signature="3516:3684" ph="/// A windows was created on desktop ... " />
+            <marker date="1535667238872" expanded="true" signature="3762:3857" ph="{...}" />
+            <marker date="1535667238872" expanded="true" signature="3867:4043" ph="/// An existing desktop window was destroyed ... " />
+            <marker date="1535667238872" expanded="true" signature="4123:4218" ph="{...}" />
+            <marker date="1535667238872" expanded="true" signature="4228:4399" ph="/// A windows was brought to foreground ... " />
+            <marker date="1535667238872" expanded="true" signature="4479:4574" ph="{...}" />
+            <marker date="1535667238872" expanded="true" signature="4584:4850" ph="/// This is used to avoid blocking low level hooks ... " />
+            <marker date="1535667238872" expanded="true" signature="4898:5572" ph="{...}" />
+            <marker date="1535667238872" expanded="true" signature="4938:5562" ph="{...}" />
+            <marker date="1535667238872" expanded="true" signature="5198:5547" ph="{...}" />
+            <marker date="1535667238872" expanded="true" signature="5582:5677" ph="/// A handle to keep track of last window launched ... " />
+            <marker date="1535667238872" expanded="true" signature="5735:5843" ph="/// A window got created ... " />
+            <marker date="1535667238872" expanded="true" signature="5901:6106" ph="{...}" />
+            <marker date="1535667238872" expanded="true" signature="6116:6269" ph="/// invoke user call back ... " />
+            <marker date="1535667238872" expanded="true" signature="6359:6905" ph="{...}" />
+            <marker date="1535667238872" expanded="true" signature="6915:7046" ph="/// Remove handle from active window collection ... " />
+            <marker date="1535667238872" expanded="true" signature="7106:7430" ph="{...}" />
+            <marker date="1535667238872" expanded="true" signature="7176:7377" ph="{...}" />
+            <marker date="1535667238872" expanded="true" signature="7440:7535" ph="/// Add window handle to active windows collection ... " />
+            <marker date="1535667238872" expanded="true" signature="7645:8022" ph="{...}" />
+            <marker date="1535667238872" expanded="true" signature="7715:7970" ph="{...}" />
+            <marker date="1535667238872" expanded="true" signature="7806:7956" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Project53/Program.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+        <state relative-caret-position="112">
+          <caret line="12" column="50" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
           <folding>
-            <marker date="1561734153428" expanded="true" signature="6:28" ph="..." />
-            <marker date="1561734153428" expanded="true" signature="49:711" ph="{...}" />
-            <marker date="1561734153428" expanded="true" signature="78:709" ph="{...}" />
-            <marker date="1561734153428" expanded="true" signature="131:703" ph="{...}" />
-            <marker date="1561734153428" expanded="true" signature="368:422" ph="/* RunSpoolerService ... */" />
+            <marker date="1561820482484" expanded="true" signature="6:104" ph="..." />
+            <marker date="1561820482484" expanded="true" signature="125:893" ph="{...}" />
+            <marker date="1561820482484" expanded="true" signature="154:891" ph="{...}" />
+            <marker date="1561820482484" expanded="true" signature="280:885" ph="{...}" />
+            <marker date="1561820482484" expanded="true" signature="550:604" ph="/* RunSpoolerService ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project53/JobController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="53" column="28" selection-start-line="53" selection-start-column="28" selection-end-line="53" selection-end-column="28" />
+          <folding>
+            <marker date="1562795695969" expanded="false" signature="6:150" ph="..." />
+            <marker date="1562795695969" expanded="true" signature="171:5194" ph="{...}" />
+            <marker date="1562795695969" expanded="true" signature="204:5192" ph="{...}" />
+            <marker date="1562795695969" expanded="true" signature="408:492" ph="{...}" />
+            <marker date="1562795695969" expanded="true" signature="537:1338" ph="{...}" />
+            <marker date="1562795695969" expanded="true" signature="563:1171" ph="{...}" />
+            <marker date="1562795695969" expanded="true" signature="762:1157" ph="{...}" />
+            <marker date="1562795695969" expanded="true" signature="1204:1328" ph="{...}" />
+            <marker date="1562795695969" expanded="true" signature="1348:1517" ph="/// It's main handler of printers queue hooks ... " />
+            <marker date="1562795695969" expanded="true" signature="1598:2977" ph="{...}" />
+            <marker date="1562795695969" expanded="true" signature="2049:2126" ph="{...}" />
+            <marker date="1562795695969" expanded="true" signature="2190:2967" ph="{...}" />
+            <marker date="1562795695969" expanded="true" signature="3046:3302" ph="{...}" />
+            <marker date="1562795695969" expanded="true" signature="3441:3537" ph="{...}" />
+            <marker date="1562795695969" expanded="true" signature="3600:4111" ph="{...}" />
+            <marker date="1562795695969" expanded="true" signature="3931:4074" ph="{...}" />
+            <marker date="1562795695969" expanded="true" signature="4184:4684" ph="{...}" />
+            <marker date="1562795695969" expanded="true" signature="4527:4648" ph="{...}" />
+            <marker date="1562795695969" expanded="true" signature="4685:4789" ph="/* private PrintEventArgs UpdateJobPropertyAboutValid() ... */" />
+            <marker date="1562795695969" expanded="true" signature="4848:5159" ph="{...}" />
           </folding>
         </state>
       </provider>

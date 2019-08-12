@@ -51,20 +51,23 @@ namespace Project53
             _logger.Information(LogMessages.JobWasCatched);
 
             bool isManagedDoc = true; //If the document is fully managed, for example, it is txt or image
-            if (IsThisMsOfficeDoc(e.EventData))//Unmanaged doc, for example msoffice
-                isManagedDoc = ValidateMsOfficeTicket(e);//If msoffice doc have ticket it's means that the document is management
+            if (IsThisMsOfficeDoc(e.EventData.FileName))//Unmanaged doc, for example msoffice
+                isManagedDoc = CheckFileForPrintWaiting(e);//If msoffice doc wait for printing
             
-//            if (!isManagedDoc)//Unmanaged doc - MsOffice without ticket
-//            {
-//                //CancelDocumentFromPrintQueue(e);
-//            }else if (isManagedDoc && e.EventData.Ji.IsSpooling)
+            if (!isManagedDoc)//Unmanaged doc - MsOffice without ticket
+            {
+                CancelDocumentFromPrintQueue(e);
+            }
+            else if (isManagedDoc && e.EventData.Ji.IsSpooling)
             {
                 _logger.Information("Управляемый документ.");
-                _logger.Debug($"Страниц {e.JobId}; копий {e.EventData.JobDetail.DevMode.dmCopies}");
-                
-                _logger.Information("Запрос аккаунта."); 
+                _logger.Debug(
+                    $"Страниц {e.EventData.JobDetail.JobInfo2.TotalPages}; копий {e.EventData.JobDetail.DevMode.dmCopies}");
+
+                _logger.Information("Запрос аккаунта.");
                 _logger.Information("Проверка баланса.");
-                _logger.Information($"Требуется {e.EventData.Ji.NumberOfPages * e.EventData.JobDetail.DevMode.dmCopies * 2} у.е..");
+                _logger.Information(
+                    $"Требуется {e.EventData.JobDetail.JobInfo2.TotalPages * e.EventData.JobDetail.DevMode.dmCopies * 2} у.е..");
                 _logger.Information("Печать разрешена.");
                 _logger.Information("Запуск печати.");
                 _logger.Information("Отправка данных на сервер.");
@@ -82,9 +85,9 @@ namespace Project53
         }
 
         private string[] _msOfficeExtensions = new string[2]{".doc", ".docx"};
-        private bool IsThisMsOfficeDoc(PrintEventData eEventData)
+        private bool IsThisMsOfficeDoc(string docFileName)
         {
-            return _msOfficeExtensions.Any(el => eEventData.FileName.Contains(el));
+            return _msOfficeExtensions.Any(el => docFileName.Contains(el));
         }
 
         private bool ValidateMsOfficeTicket(PrintEventArgs p)
@@ -103,6 +106,23 @@ namespace Project53
             }
 
             return false;
+        }
+        
+        private bool CheckFileForPrintWaiting(PrintEventArgs p)
+        {
+            var fileName = p.EventData.FileName;
+            var fileId = AboutPagesOfDocument.ToString(p.EventData.JobDetail.JobInfo2.TotalPages,
+                p.EventData.JobDetail.DevMode.dmCopies);
+
+            var isExistsFileWaitingForPrint = FilesWaitsPrinting.Remove(fileId);
+
+            if (!isExistsFileWaitingForPrint)
+            {
+                _logger.Debug("Такой файл не ожидает печати");
+                return false;
+            }
+
+            return true;
         }
 //
 //        private PrintEventArgs UpdateJobPropertyAboutValid()

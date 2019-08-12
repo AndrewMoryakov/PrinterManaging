@@ -26,7 +26,7 @@ namespace Project53
         public static string Get()
         {
             var firstFreeTicket = "";
-            if (!_freeTickets.Any())
+            if (_freeTickets.Any())
             {
                 firstFreeTicket = _freeTickets[0];
                 _freeTickets.RemoveAt(0);

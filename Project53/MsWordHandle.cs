@@ -63,8 +63,8 @@ namespace Project53
 
 			reloadedDoc.Content.Application.DocumentBeforePrint += delegate(Document doc, ref bool cancel)
 			{
-				
 			};
+			
 			SetDocumentInfo(reloadedDoc, fInfo);
 
 			OpenWordPrintDialog(reloadedDoc);
@@ -93,16 +93,16 @@ namespace Project53
 		private void OpenWordPrintDialog(Document d)
 		{
 			PrintDialog pDialog = new PrintDialog();
-			//pDialog.Document.PrinterSettings.PrinterName = printer;
 			pDialog.PrinterSettings.Copies = 10;
+			pDialog.PrinterSettings.FromPage = 1;
+			pDialog.PrinterSettings.ToPage = 1;
 			pDialog.Document = new PrintDocument();
+//			pDialog.Document.DocumentName = TicketRegistry.Get();
 			
-			pDialog.PrinterSettings.PrintRange = PrintRange.SomePages;
+			pDialog.PrinterSettings.PrintRange = PrintRange.AllPages;
 			pDialog.AllowSomePages = true;
 			pDialog.AllowSelection = true;
 			
-			
-
 			if (pDialog.ShowDialog() == DialogResult.OK)
 			{
 				d.Application.ActivePrinter = pDialog.PrinterSettings.PrinterName;
@@ -113,19 +113,23 @@ namespace Project53
 				object copies = pDialog.PrinterSettings.Copies.ToString();
 				object from = pDialog.PrinterSettings.FromPage.ToString();
 				object to = pDialog.PrinterSettings.ToPage.ToString();
+				object pages = "";
 				
-				_logger.Debug("Диалог печати - ОК. Количество копий {copies}, листы от {from}, до {to}");
+				FilesWaitsPrinting.Add(d.FullName, new AboutPagesOfDocument("2", copies));
+				_logger.Debug($"Диалог печати - ОК. Количество копий {copies}, листы от {from}, до {to}");
 				
 				d.Application.ActiveDocument.PrintOut(
 					Background: ref back,
-					Range: Microsoft.Office.Interop.Word.WdPrintOutRange.wdPrintFromTo
-					,Item: Microsoft.Office.Interop.Word.WdPrintOutItem.wdPrintDocumentContent
-					,PageType:Microsoft.Office.Interop.Word.WdPrintOutPages.wdPrintAllPages
+					Pages: ref pages,
+					Range: WdPrintOutRange.wdPrintFromTo
+					,Item: WdPrintOutItem.wdPrintDocumentContent
+					,PageType:WdPrintOutPages.wdPrintAllPages
 					,Append: ref append,
 					Copies: ref copies
 					,From: ref from 
 					,To: ref to);
 				
+//				pDialog.Document.Print();
 				//this will also work: doc.PrintOut();
 				d.Close(SaveChanges: false);
 				//d = null;
@@ -139,16 +143,24 @@ namespace Project53
         			//start 2
         			if (fullFileName.Contains(Environment.CurrentDirectory))
         				throw new Exception();
-        
-        
-        			var d = System.Runtime.InteropServices.Marshal
-        					.BindToMoniker(fullFileName) as
-        				Microsoft.Office.Interop.Word.Document;
-        
-        			d.Application.StatusBar = $"Reloaded {fullFileName}";
-        			d.Application.Documents.Open(fullFileName);
-        
-        			//var numberOfPages = d.ComputeStatistics(WdStatistic.wdStatisticPages, false);
+
+
+                    Document d = null;
+
+                    try
+                    {
+	                    d = System.Runtime.InteropServices.Marshal
+			                    .BindToMoniker(fullFileName) as
+		                    Microsoft.Office.Interop.Word.Document;
+
+	                    d.Application.StatusBar = $"Reloaded {fullFileName}";
+	                    d.Application.Documents.Open(fullFileName);
+                    }
+                    catch (Exception ex)
+                    {
+	                    
+                    }
+                    //var numberOfPages = d.ComputeStatistics(WdStatistic.wdStatisticPages, false);
         
         
         
@@ -183,7 +195,8 @@ namespace Project53
 				commandLine = targetInstance.Properties["CommandLine"].Value;
 			}
 
-			string path = Regex.Match((string)commandLine, ".\\/n \"(?<path>.+\") \\/o \"").Groups["path"].Value;
+			string path = Regex.Match((string)commandLine, "^.+(?<div>[\\/,n]) \"(?<path>.+)").Groups["path"].Value;
+//			string path = Regex.Match((string)commandLine, ".\\/n \"(?<path>.+\") \\/o \"").Groups["path"].Value;
 			path = path.Remove(path.Length - 1);
 			return path;
 		}

@@ -42,6 +42,7 @@
       <e p="PrintersManaging.sln" t="IncludeFlat" />
       <e p="Project53" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
+        <e p="FilesWaitsPrinting.cs" t="Include" />
         <e p="JobController.cs" t="Include" />
         <e p="LogMessages.cs" t="Include" />
         <e p="Models" t="Include">

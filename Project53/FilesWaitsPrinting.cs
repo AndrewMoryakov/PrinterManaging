@@ -9,31 +9,24 @@ namespace Project53
 	/// </summary>
 	public class AboutPagesOfDocument
 	{
-		private string _pages;
-		private string _selectPages;
-		private string _from;
-		private string _to;
+		private string _count;
 		private string _copies;
 		
-		public AboutPagesOfDocument(string pages, string selectPages, string from, string to, string copies)
+		public AboutPagesOfDocument(object count, object copies)
 		{
-			_pages = pages;
-			_selectPages = selectPages;
-			_from = from;
-			_to = to;
-			_copies = copies;
+			_count = (string) count;
+			_copies = (string) copies;
 		}
 
-		public override string ToString()
-		{
-			return $"{_pages} {_selectPages} {_from} {_to} {_copies}";
-		}
+		public override string ToString() => $"{_count} {_copies}";
+
+		public static string ToString(object count, object copies) => $"{count} {copies}";
 	}
 	
 	/// <summary>
 	/// Container for files that want to be printed
 	/// </summary>
-	public static class FilesWaitingPrinting
+	public static class FilesWaitsPrinting
 	{
 		private static List<string> _filesThatWaitPrinting;
 		/// <summary>
@@ -65,6 +58,14 @@ namespace Project53
 
 			return _filesThatWaitPrinting.Contains(fileId);
 		}
+		
+		public static bool Contains(string fileId)
+		{
+			if (!_filesThatWaitPrinting.Any())
+				return false;
+			
+			return _filesThatWaitPrinting.Contains(fileId);
+		}
 
 		/// <summary>
 		/// Удаляет информацию о файле, который нужно напечатать. После удаления запись безвозратно удаляется и возвращается истина.
@@ -77,6 +78,24 @@ namespace Project53
 			string fileId = $"{fileName} {pages.ToString()}";
 			
 			if (Contains(fileName, pages))
+			{
+				_filesThatWaitPrinting.Remove(fileId);
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+		
+		public static List<string> GetIds()
+		{
+			return _filesThatWaitPrinting;
+		}
+		
+		public static bool Remove(string fileId)
+		{
+			if (Contains(fileId))
 			{
 				_filesThatWaitPrinting.Remove(fileId);
 				return true;

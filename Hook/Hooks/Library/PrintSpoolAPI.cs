@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 namespace EventHook.Hooks.Library
 {
     [StructLayout(LayoutKind.Sequential)]
-    internal struct SYSTEMTIME
+    public struct SYSTEMTIME
     {
         [MarshalAs(UnmanagedType.U2)]
         internal short Year;
