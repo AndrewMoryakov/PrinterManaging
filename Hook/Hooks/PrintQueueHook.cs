@@ -313,6 +313,7 @@ namespace EventHook.Hooks
                         if (!_objJobDict.ContainsKey(intJobId))
                             _objJobDict[intJobId] = pji.Name;
                         strJobName = pji.Name;
+                        pji.Refresh();
                     }
                     catch(Exception ex)
                     {

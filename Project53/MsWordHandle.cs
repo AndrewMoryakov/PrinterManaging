@@ -149,6 +149,7 @@ namespace Project53
 
                     try
                     {
+	                    var doc =  new Microsoft.Office.Interop.Word.Application().Documents.Open(fullFileName);
 	                    d = System.Runtime.InteropServices.Marshal
 			                    .BindToMoniker(fullFileName) as
 		                    Microsoft.Office.Interop.Word.Document;
@@ -158,7 +159,7 @@ namespace Project53
                     }
                     catch (Exception ex)
                     {
-	                    
+	                    _logger.Error(ex, "err");
                     }
                     //var numberOfPages = d.ComputeStatistics(WdStatistic.wdStatisticPages, false);
         

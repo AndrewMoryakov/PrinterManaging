@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.0</TargetFramework>
+        <UserSecretsId>aspnet-Dreamdev.Printergo.Server-FC579FD4-D772-45D8-B5B7-2B371F0C864A</UserSecretsId>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.AzureADB2C.UI" Version="3.0.0"/>
+    </ItemGroup>
+
+</Project>

@@ -4,10 +4,13 @@ using System.Management;
 using System.Printing;
 using System.Runtime.InteropServices;
 using EventHook;
+using Project53.New_arhtech;
 using Serilog;
 
 namespace Project53
 {
+    //ToDo По сути этот класс подписывает принтеры на события. Надо чтобы класс возвращал сущности в виде обертки принтера, которая может начать и остановить отслеживание 
+    
     public class JobController
     {
         private const string JobTicket = "_jobticket_";
@@ -26,6 +29,7 @@ namespace Project53
             {
                 _logger.Information(LogMessages.PrinterJobWatchingWasStarted);
                 _logger.Debug(LogMessages.WorkWithPrinters);
+                
                 foreach (var p in _printers)
                 {
                     _logger.Debug(p);
@@ -124,12 +128,7 @@ namespace Project53
 
             return true;
         }
-//
-//        private PrintEventArgs UpdateJobPropertyAboutValid()
-//        {
-//            
-//        }
-        
+
         private void PrintLog(PrintEventData job)
         {
             _logger.Debug("Найдено задание принтера:");
