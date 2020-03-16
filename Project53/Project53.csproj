@@ -66,6 +66,10 @@
     <Compile Include="LogMessages.cs" />
     <Compile Include="Models\FileInfoEventArgs.cs" />
     <Compile Include="MsWordHandle.cs" />
+    <Compile Include="New arhtech\Auth.cs" />
+    <Compile Include="New arhtech\BaseValidationOfDoc.cs" />
+    <Compile Include="New arhtech\Client.cs" />
+    <Compile Include="New arhtech\ClientValidator.cs" />
     <Compile Include="New arhtech\JobMeta.cs" />
     <Compile Include="New arhtech\PrinterWrapper.cs" />
     <Compile Include="Printers.cs" />
