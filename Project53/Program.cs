@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Management;
+using Newtonsoft.Json;
 using Project53.New_arhtech;
 using Serilog;
 using Serilog.Core;
@@ -30,6 +32,12 @@ namespace Project53
         {
             Configure();
             ProcessWithPrinters();
+            
+            #if DEBUG
+                _logger.Information("DEBUG");
+            #else
+                _logger.Information("RELEASE");
+            #endif
             Console.ReadKey();
         }
 
@@ -39,9 +47,10 @@ namespace Project53
             {
                 var list = Printers.Get().ToList();
                 _logger.Information("Printers");
-                list.ForEach(el => _logger.Verbose(el));
+                list.ForEach(el => _logger.Information(el));
                 return list;
             }
+            
             void SubscribePrinters(List<string> supprtedPrinters1)
             {
                 foreach (var printerName in supprtedPrinters1)
@@ -67,9 +76,21 @@ namespace Project53
             // jobController.StartWatching();
         }
 
+        private static HashSet<string> _jobs = new HashSet<string>();
         private static void Subscriber(JobMeta job)
         {
-            job.ToPause();
+            if (_jobs.Contains(job.DocumentName) == false)
+                _jobs.Add(job.DocumentName);
+            else
+                return;
+                
+            //ToDo он тут много раз вызывается. надо сделать механизм контроля от повторных вызовов одного джоба
+           _logger.Information($"File to print: {job.DocumentName}"); 
+           _logger.Information($"Job state: {job._job.JobStatus.ToString()}"); 
+           _logger.Information($"Amount of pages: {job.CountOfPages}"); 
+           _logger.Information($"Amount of copies: {job._job.HostingPrintQueue.CurrentJobSettings.CurrentPrintTicket.CopyCount}");
+           // var json = JsonConvert.SerializeObject(job._job); 
+            // job.ToPause();
             var jobIsValid = _validator.CheckJob(job);
 
             if (jobIsValid == false)
@@ -77,10 +98,10 @@ namespace Project53
 
             Client client = Auth.GetClient();
 
-            var canToPrint = ClientValidator.CanContinuePrinting(client, job);
+            var canBePrinted = ClientValidator.CanContinuePrinting(client, job);
 
-            if (canToPrint == true)
-                job.Resume();
+            // if (canToPrint == true)
+                // PausePrintJob(job.) //job.Resume();
         }
     }
 }

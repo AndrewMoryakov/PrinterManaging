@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Diagnostics;
+using System.Management;
 using System.Printing;
 using EventHook.Hooks;
 using EventHook.Helpers;
@@ -113,8 +114,8 @@ namespace EventHook
         /// <param name="e"></param>
         private static void pqm_OnJobStatusChange(object sender, PrintJobChangeEventArgs e)
         {
-//            if ((e.JobStatus & JOBSTATUS.JOB_STATUS_PAUSED) == JOBSTATUS.JOB_STATUS_PAUSED && e.JobInfo != null)
-//            {
+            // if ((e.JobStatus & JOBSTATUS.JOB_STATUS_PAUSED) == JOBSTATUS.JOB_STATUS_PAUSED && e.JobInfo != null)
+            {
                 var hWnd = WindowHelper.GetActiveWindowHandle();
                 var appTitle = WindowHelper.GetWindowText(hWnd);
                 var appName = WindowHelper.GetAppDescription(WindowHelper.GetAppPath(hWnd));
@@ -127,12 +128,12 @@ namespace EventHook
 					printEvent = new PrintEventData()
 					{
 						AppTitle = appTitle,
-						JobName = e.JobInfo.JobName,
-						JobSize = e.JobInfo.JobSize,
+						JobName = e.JobInfo?.JobName,
+						JobSize = e.JobInfo?.JobSize,
 						EventDateTime = DateTime.Now,
-						Pages = e.JobInfo.NumberOfPages,
+						Pages = e.JobInfo?.NumberOfPages,
 						PrinterName = ((PrintQueueHook) sender).SpoolerName,
-						FileName = e.JobInfo.Name,
+						FileName = e.JobInfo?.Name,
 						Ji = e.JobInfo,
 						ProcessId = procId,
 						JobDetail = e.JobDetail
@@ -142,10 +143,41 @@ namespace EventHook
 //				{
 //					
 //				}
-
+	            var d = PausePrintJob(((PrintQueueHook) sender).SpoolerName, e.JobId);
 				OnPrintEvent?.Invoke(null, new PrintEventArgs() { EventData = printEvent }); //Поставлено на паузу
-//            }
-//            e.JobInfo?.Pause();
+            }
+            
+            	
+            // e.JobInfo?.Pause();
+        }
+        
+        public static bool PausePrintJob(string printerName, int printJobID)
+        {
+	        bool isActionPerformed = false;
+	        string searchQuery = "SELECT * FROM Win32_PrintJob";
+	        ManagementObjectSearcher searchPrintJobs = 
+		        new ManagementObjectSearcher(searchQuery);
+	        ManagementObjectCollection prntJobCollection = searchPrintJobs.Get();
+	        foreach(ManagementObject prntJob in prntJobCollection)
+	        {
+		        string jobName = prntJob.Properties["Name"].Value.ToString();
+		        //Job name would be of the format [Printer name], [Job ID]
+		        char[] splitArr = new char[1];
+		        splitArr[0] = Convert.ToChar(",");
+		        string prnterName = jobName.Split(splitArr)[0];
+		        int prntJobID = Convert.ToInt32(jobName.Split(splitArr)[1]);
+		        string documentName = prntJob.Properties["Document"].Value.ToString();
+		        if(String.Compare(prnterName, printerName, true) == 0)
+		        {
+			        if(prntJobID == printJobID)
+			        {
+				        prntJob.InvokeMethod("Pause", null);
+				        isActionPerformed = true; 
+				        break;
+			        }
+		        }
+	        }
+	        return isActionPerformed;
         }
 
 		[DllImport("user32.dll")]

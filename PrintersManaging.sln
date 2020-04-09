@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnitTestProject1", "NUnitT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dreamdev.Printergo.Server", "Dreamdev.Printergo.Server\Dreamdev.Printergo.Server.csproj", "{9EC34CDD-7742-4FB0-8AFD-03137C8153FA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project53Core", "Project53Core\Project53Core.csproj", "{09620811-8E74-4915-8358-31793731EDF8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{9EC34CDD-7742-4FB0-8AFD-03137C8153FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9EC34CDD-7742-4FB0-8AFD-03137C8153FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9EC34CDD-7742-4FB0-8AFD-03137C8153FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09620811-8E74-4915-8358-31793731EDF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09620811-8E74-4915-8358-31793731EDF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09620811-8E74-4915-8358-31793731EDF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09620811-8E74-4915-8358-31793731EDF8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -34,7 +34,8 @@ namespace Project53.New_arhtech
 
         private void PrintWatcherOnPrintEvent(object sender, PrintEventArgs e)
         {
-            if(e.EventData.JobDetail.JobInfo2.TotalPages != 0)
+            e.EventData.Ji.Refresh();
+            if(e.EventData.JobDetail !=null && e.EventData.JobDetail.JobInfo2.TotalPages != 0)
             _action(new JobMeta(
                 e.EventData.FileName,
                 (int)e.EventData.JobDetail.JobInfo2.TotalPages,
