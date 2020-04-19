@@ -5,7 +5,7 @@ namespace Project53.New_arhtech
 		public static Client GetClient()
 		{
 			decimal mockBalance = 10.0m;
-			return new Client(mockBalance);
+			return new Client(mockBalance, "test@test.com");
 		}
 	}
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Management;
+using System.Printing;
 using Newtonsoft.Json;
 using Project53.New_arhtech;
 using Serilog;
@@ -75,33 +76,65 @@ namespace Project53
             // JobController jobController = new JobController(supprtedPrinters, logger);
             // jobController.StartWatching();
         }
-
+        
         private static HashSet<string> _jobs = new HashSet<string>();
         private static void Subscriber(JobMeta job)
         {
-            if (_jobs.Contains(job.DocumentName) == false)
-                _jobs.Add(job.DocumentName);
+            var isPaused = job._job.IsSpooling == false && job._job.IsPaused == true;
+            if (_jobs.Contains(job.Guid) == false && isPaused)
+                _jobs.Add(job.Guid); //ToDo одно задание сюда попадает множество раз. Для предотвращения кроме имени документа нужно генерировать уникальный хэш
             else
                 return;
-                
-            //ToDo он тут много раз вызывается. надо сделать механизм контроля от повторных вызовов одного джоба
-           _logger.Information($"File to print: {job.DocumentName}"); 
-           _logger.Information($"Job state: {job._job.JobStatus.ToString()}"); 
-           _logger.Information($"Amount of pages: {job.CountOfPages}"); 
-           _logger.Information($"Amount of copies: {job._job.HostingPrintQueue.CurrentJobSettings.CurrentPrintTicket.CopyCount}");
-           // var json = JsonConvert.SerializeObject(job._job); 
-            // job.ToPause();
-            var jobIsValid = _validator.CheckJob(job);
+            
+            LogIt(job);
+           
+            var jobIsValid = _validator.ApplyChecks(job);
 
             if (jobIsValid == false)
                 job.CancelJob();
 
-            Client client = Auth.GetClient();
+            var client = Auth.GetClient();
+            _logger.Information($"Client: {client.Email}, balance: {client.Balance}");
+            _logger.Information($"Job guid: {job.Guid}");
 
             var canBePrinted = ClientValidator.CanContinuePrinting(client, job);
 
-            // if (canToPrint == true)
-                // PausePrintJob(job.) //job.Resume();
+            if (canBePrinted)
+                RunPrintJob(job._job);
+            else
+                job._job.Cancel();
+
+            _logger.Information($"Balance required: {(job.Copies * job.CountOfPages) * 2m}");
+            _logger.Information($"Has ability to be printed: {canBePrinted}");
+
+            
+            if (isPaused)
+            {
+                _jobs.Remove(job.Guid);
+
+                try
+                {
+                    job._job.Cancel();
+                }
+                catch (Exception ex)
+                {
+                    _logger.Error(ex, "Не удалось удалить задание печати");
+                }
+            }
+        }
+//Todo если этот сервис отключается, то удаляем все задания печати.
+        private static void RunPrintJob(PrintSystemJobInfo jobJob)
+        {
+            _logger.Information("Start print");
+        }
+
+        private static void LogIt(JobMeta job)
+        {
+            _logger.Information($"File to print: {job.DocumentName}");
+            _logger.Information($"Job state: {job._job.JobStatus.ToString()}");
+            _logger.Information($"Amount of pages: {job.CountOfPages}");
+            _logger.Information(
+                $"Amount of copies: {job._job.HostingPrintQueue.CurrentJobSettings.CurrentPrintTicket.CopyCount}");
         }
     }
 }
