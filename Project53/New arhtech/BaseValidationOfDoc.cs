@@ -13,7 +13,7 @@ namespace Project53
 			_extensionsForBlock = new[] {".doc", ".excel"};
 		}
 		
-		public bool CheckJob(JobMeta job)
+		public bool ApplyChecks(JobMeta job)
 		{
 			bool isValidExtension = CheckExtensions(job.DocumentName);
 

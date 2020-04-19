@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="080fcdab-3c0d-4d34-878a-437d269d6fed" name="Default Changelist" comment="">
+    <list default="true" id="080fcdab-3c0d-4d34-878a-437d269d6fed" name="Default Changelist" comment="Обновляю job перед его передачей, job предварительно ставлю на паузу.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PrintersManaging/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PrintersManaging/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PrintersManaging/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PrintersManaging/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dreamdev.Printergo.Server/Dreamdev.Printergo.Server.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Dreamdev.Printergo.Server/Dreamdev.Printergo.Server.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hook/Hooks/PrintQueueHook.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hook/Hooks/PrintQueueHook.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Hook/PrintWatcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hook/PrintWatcher.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PrintersManaging.sln" beforeDir="false" afterPath="$PROJECT_DIR$/PrintersManaging.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project53/New arhtech/Auth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Project53/New arhtech/Auth.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project53/New arhtech/BaseValidationOfDoc.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Project53/New arhtech/BaseValidationOfDoc.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project53/New arhtech/Client.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Project53/New arhtech/Client.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project53/New arhtech/JobMeta.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Project53/New arhtech/JobMeta.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project53/New arhtech/PrinterWrapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Project53/New arhtech/PrinterWrapper.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project53/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Project53/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project53/Project53.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Project53/Project53.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project53/packages.config" beforeDir="false" afterPath="$PROJECT_DIR$/Project53/packages.config" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,38 +26,37 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Project53/WindowsServiceManaging.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Dreamdev.Printergo.Server/Controllers/WeatherForecastController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Hook/ApplicationWatcher.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Hook/packages.config" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/86E1336D-64F6-4F13-B89A-2B130CF273EC/46/4256c14b/Environment.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Hook/packages.config" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Hook/ClipboardWatcher.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Project53/MsWordHandle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Hook/PrintWatcher.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Hook/MouseWatcher.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Hook/KeyboardWatcher.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Hook/Hooks/PrintQueueHook.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Project53/New arhtech/JobMeta.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Project53/JobController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/NUnitTestProject1/UnitTest1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Project53/New arhtech/Auth.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Project53/Models/FileInfoEventArgs.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Project53/New arhtech/BaseValidationOfDoc.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Project53/Models/FileInfoEventArgs.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Project53/New arhtech/ClientValidator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Project53/New arhtech/Client.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B588F0EF-C374-4824-ACBE-02918C0EDDC1/3a/d4908438/PrintServer.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DesctopGui/MainWindow.xaml.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/86E1336D-64F6-4F13-B89A-2B130CF273EC/38/c1a7f28d/Exception.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DesctopGui/AssemblyInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DesctopGui/MainWindow.xaml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Hook/Hooks/KeyboardHook.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Hook/Hooks/WindowHook.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6A1DAB71-C7AA-4F6D-9C4F-8F3531B3A6CE/6a/96587766/PrintSystemJobInfo.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/86E1336D-64F6-4F13-B89A-2B130CF273EC/71/c6931496/COMException.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Hook/Hooks/Library/Msgs.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/86E1336D-64F6-4F13-B89A-2B130CF273EC/71/c6931496/COMException.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Project53/SpoolerService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Project53/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Hook/Hooks/Library/PrintSpoolAPI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Project53/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Hook/Hooks/Library/Procs.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Project53/LogMessages.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Hook/Helpers/SharedMessagePump.cs" root0="FORCE_HIGHLIGHTING" />
@@ -61,22 +65,19 @@
     <setting file="file://$PROJECT_DIR$/Project53/Printers.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/86E1336D-64F6-4F13-B89A-2B130CF273EC/9f/19760f78/SystemException.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/86E1336D-64F6-4F13-B89A-2B130CF273EC/cb/3a2726c8/StubHelpers.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D82962CD-623D-4D1F-A179-3EAD3990E367/38/c480a7a4/Marshal.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6A1DAB71-C7AA-4F6D-9C4F-8F3531B3A6CE/25/e1be985f/PrintInt32Property.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/86E1336D-64F6-4F13-B89A-2B130CF273EC/7a/af1c8348/ExternalException.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Project53/New arhtech/PrinterWrapper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Dreamdev.Printergo.Server/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Project53/packages.config" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Project53/TicketRegistry.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7F49EB8A-FD40-4AA9-AE50-624130FD75FA/27/b4e3842a/PrintQueue.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/nunit/nunit/c933a883ea25263ec575a654dae69fa38000edd9/src/NUnitFramework/framework/Internal/Execution/SimpleWorkItemDispatcher.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Dreamdev.Printergo.Server/Startup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Dreamdev.Printergo.Server/WeatherForecast.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/86E1336D-64F6-4F13-B89A-2B130CF273EC/78/7d6c2b25/Marshal.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Project53Core/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/86E1336D-64F6-4F13-B89A-2B130CF273EC/78/7d6c2b25/Marshal.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -86,7 +87,6 @@
         <option value="$PROJECT_DIR$/Project53/SpoolerService.cs" />
         <option value="$PROJECT_DIR$/Project53/WindowsServiceManaging.cs" />
         <option value="$PROJECT_DIR$/Project53/TicketsOfPrintersQueue.cs" />
-        <option value="$PROJECT_DIR$/Project53/LogMessages.cs" />
         <option value="$PROJECT_DIR$/Project53/Models/FileInfoEventArgs.cs" />
         <option value="$PROJECT_DIR$/Project53/TicketRegistry.cs" />
         <option value="$PROJECT_DIR$/Hook/Hooks/Library/PrintSpoolAPI.cs" />
@@ -97,16 +97,19 @@
         <option value="$PROJECT_DIR$/NUnitTestProject1/UnitTest1.cs" />
         <option value="$PROJECT_DIR$/Project53/JobController.cs" />
         <option value="$PROJECT_DIR$/Project53/BaseValidationOfDoc.cs" />
-        <option value="$PROJECT_DIR$/Project53/New arhtech/Client.cs" />
-        <option value="$PROJECT_DIR$/Project53/New arhtech/Auth.cs" />
         <option value="$PROJECT_DIR$/Project53/New arhtech/ClientValidator.cs" />
         <option value="$PROJECT_DIR$/Project53/New arhtech/BaseValidationOfDoc.cs" />
-        <option value="$PROJECT_DIR$/Project53/New arhtech/JobMeta.cs" />
         <option value="$PROJECT_DIR$/Project53Core/Program.cs" />
         <option value="$PROJECT_DIR$/Hook/Helpers/WindowHelper.cs" />
-        <option value="$PROJECT_DIR$/Hook/PrintWatcher.cs" />
-        <option value="$PROJECT_DIR$/Hook/Hooks/PrintQueueHook.cs" />
+        <option value="$PROJECT_DIR$/DesctopGui/MainWindow.xaml" />
+        <option value="$PROJECT_DIR$/DesctopGui/MainWindow.xaml.cs" />
+        <option value="$PROJECT_DIR$/Project53/New arhtech/Client.cs" />
+        <option value="$PROJECT_DIR$/Project53/New arhtech/Auth.cs" />
+        <option value="$PROJECT_DIR$/Project53/New arhtech/JobMeta.cs" />
         <option value="$PROJECT_DIR$/Project53/New arhtech/PrinterWrapper.cs" />
+        <option value="$PROJECT_DIR$/Hook/Hooks/PrintQueueHook.cs" />
+        <option value="$PROJECT_DIR$/Project53/LogMessages.cs" />
+        <option value="$PROJECT_DIR$/Hook/PrintWatcher.cs" />
         <option value="$PROJECT_DIR$/Project53/Program.cs" />
       </list>
     </option>
@@ -126,10 +129,11 @@
     <option name="autoscrollFromSource" value="true" />
     <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.3502052" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.3002736" />
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
     <property name="Rider.SolutionExplorerActivator" value="true" />
@@ -139,9 +143,9 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Hook/Hook.csproj" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected=".NET Project.Default">
     <configuration name="Default" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/Project53/bin/Debug/Project53.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -160,18 +164,29 @@
         <option name="Build" enabled="true" />
       </method>
     </configuration>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
+    <configuration name="DesctopGui" type="DotNetProject" factoryName=".NET Project" temporary="true">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/DesctopGui/bin/Debug/netcoreapp3.1/DesctopGui.dll" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DesctopGui/bin/Debug/netcoreapp3.1" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/DesctopGui/DesctopGui.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value=".NETCoreApp,Version=v3.1" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
       <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
+        <item itemvalue=".NET Project.DesctopGui" />
       </list>
-    </option>
+    </recent_temporary>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -215,7 +230,13 @@
       <workItem from="1584784742573" duration="2687000" />
       <workItem from="1586085921501" duration="4519000" />
       <workItem from="1586094512193" duration="4687000" />
-      <workItem from="1586403108901" duration="7316000" />
+      <workItem from="1586403108901" duration="28464000" />
+      <workItem from="1586718675838" duration="6725000" />
+      <workItem from="1586835257159" duration="15464000" />
+      <workItem from="1587213318886" duration="4823000" />
+      <workItem from="1587280768056" duration="312000" />
+      <workItem from="1587281858930" duration="5200000" />
+      <workItem from="1587313883734" duration="1994000" />
     </task>
     <task id="LOCAL-00001" summary="Добавлен класс, возвращающий информацию о клиенте.">
       <created>1584376353314</created>
@@ -266,7 +287,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584376736194</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Обновляю job перед его передачей, job предварительно ставлю на паузу.">
+      <created>1586413209300</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1586413209300</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -288,131 +316,137 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Добавлен класс, возвращающий информацию о клиенте." />
     <MESSAGE value="Валидатор задания на печать. Проверяет на присуствие недопустимых расширений" />
     <MESSAGE value="Модель описывающая клиента." />
     <MESSAGE value="Модуль проверяющий допустимость печати документа, на основе баланса пользователя" />
     <MESSAGE value="В модель задания печати добавлен объект описывающий задание и методы для управления состоянием задания" />
     <MESSAGE value="Сформулирована структура выполнения бизнес логики." />
-    <option name="LAST_COMMIT_MESSAGE" value="Сформулирована структура выполнения бизнес логики." />
+    <MESSAGE value="Обновляю job перед его передачей, job предварительно ставлю на паузу." />
+    <option name="LAST_COMMIT_MESSAGE" value="Обновляю job перед его передачей, job предварительно ставлю на паузу." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="755" y="0" width="781" height="864" key="#xdebugger.evaluate" timestamp="1586412513132">
+    <state x="345" y="77" key="#Inspection_severity" timestamp="1587282674523">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="755" y="0" width="781" height="864" key="#xdebugger.evaluate/0.0.1536.864@0.0.1536.864" timestamp="1586412513132" />
-    <state width="758" height="597" key="DebuggerActiveHint" timestamp="1586410974604">
+    <state x="345" y="77" key="#Inspection_severity/0.0.1536.864@0.0.1536.864" timestamp="1587282674523" />
+    <state x="407" y="0" width="1002" height="864" key="#xdebugger.evaluate" timestamp="1587290003647">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="758" height="597" key="DebuggerActiveHint/0.0.1536.864@0.0.1536.864" timestamp="1586410974604" />
-    <state width="1493" height="421" key="GridCell.Tab.0.bottom" timestamp="1586412792965">
+    <state x="407" y="0" width="1002" height="864" key="#xdebugger.evaluate/0.0.1536.864@0.0.1536.864" timestamp="1587290003647" />
+    <state width="758" height="597" key="DebuggerActiveHint" timestamp="1587289619397">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="421" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1586412792965" />
-    <state width="1493" height="421" key="GridCell.Tab.0.center" timestamp="1586412792965">
+    <state width="758" height="597" key="DebuggerActiveHint/0.0.1536.864@0.0.1536.864" timestamp="1587289619397" />
+    <state width="1493" height="313" key="GridCell.Tab.0.bottom" timestamp="1587315598123">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="421" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1586412792965" />
-    <state width="1493" height="421" key="GridCell.Tab.0.left" timestamp="1586412792964">
+    <state width="1493" height="313" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1587315598123" />
+    <state width="1493" height="313" key="GridCell.Tab.0.center" timestamp="1587315598122">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="421" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1586412792964" />
-    <state width="1493" height="421" key="GridCell.Tab.0.right" timestamp="1586412792965">
+    <state width="1493" height="313" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1587315598122" />
+    <state width="1493" height="313" key="GridCell.Tab.0.left" timestamp="1587315598122">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="421" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1586412792965" />
-    <state width="1493" height="191" key="GridCell.Tab.1.bottom" timestamp="1586412696247">
+    <state width="1493" height="313" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1587315598122" />
+    <state width="1493" height="313" key="GridCell.Tab.0.right" timestamp="1587315598123">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="191" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1586412696247" />
-    <state width="1493" height="191" key="GridCell.Tab.1.center" timestamp="1586412696246">
+    <state width="1493" height="313" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1587315598123" />
+    <state width="1493" height="517" key="GridCell.Tab.1.bottom" timestamp="1587314252418">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="191" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1586412696246" />
-    <state width="1493" height="191" key="GridCell.Tab.1.left" timestamp="1586412696246">
+    <state width="1493" height="517" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1587314252418" />
+    <state width="1493" height="517" key="GridCell.Tab.1.center" timestamp="1587314252417">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="191" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1586412696246" />
-    <state width="1493" height="191" key="GridCell.Tab.1.right" timestamp="1586412696246">
+    <state width="1493" height="517" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1587314252417" />
+    <state width="1493" height="517" key="GridCell.Tab.1.left" timestamp="1587314252417">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="191" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1586412696246" />
-    <state width="1493" height="191" key="GridCell.Tab.2.bottom" timestamp="1586412696249">
+    <state width="1493" height="517" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1587314252417" />
+    <state width="1493" height="517" key="GridCell.Tab.1.right" timestamp="1587314252418">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="191" key="GridCell.Tab.2.bottom/0.0.1536.864@0.0.1536.864" timestamp="1586412696249" />
-    <state width="1493" height="191" key="GridCell.Tab.2.center" timestamp="1586412696248">
+    <state width="1493" height="517" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1587314252418" />
+    <state width="1493" height="517" key="GridCell.Tab.2.bottom" timestamp="1587314252418">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="191" key="GridCell.Tab.2.center/0.0.1536.864@0.0.1536.864" timestamp="1586412696248" />
-    <state width="1493" height="191" key="GridCell.Tab.2.left" timestamp="1586412696247">
+    <state width="1493" height="517" key="GridCell.Tab.2.bottom/0.0.1536.864@0.0.1536.864" timestamp="1587314252418" />
+    <state width="1493" height="517" key="GridCell.Tab.2.center" timestamp="1587314252418">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="191" key="GridCell.Tab.2.left/0.0.1536.864@0.0.1536.864" timestamp="1586412696247" />
-    <state width="1493" height="191" key="GridCell.Tab.2.right" timestamp="1586412696248">
+    <state width="1493" height="517" key="GridCell.Tab.2.center/0.0.1536.864@0.0.1536.864" timestamp="1587314252418" />
+    <state width="1493" height="517" key="GridCell.Tab.2.left" timestamp="1587314252418">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="191" key="GridCell.Tab.2.right/0.0.1536.864@0.0.1536.864" timestamp="1586412696248" />
-    <state width="1493" height="191" key="GridCell.Tab.3.bottom" timestamp="1586412696251">
+    <state width="1493" height="517" key="GridCell.Tab.2.left/0.0.1536.864@0.0.1536.864" timestamp="1587314252418" />
+    <state width="1493" height="517" key="GridCell.Tab.2.right" timestamp="1587314252418">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="191" key="GridCell.Tab.3.bottom/0.0.1536.864@0.0.1536.864" timestamp="1586412696251" />
-    <state width="1493" height="191" key="GridCell.Tab.3.center" timestamp="1586412696250">
+    <state width="1493" height="517" key="GridCell.Tab.2.right/0.0.1536.864@0.0.1536.864" timestamp="1587314252418" />
+    <state width="1493" height="517" key="GridCell.Tab.3.bottom" timestamp="1587314252419">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="191" key="GridCell.Tab.3.center/0.0.1536.864@0.0.1536.864" timestamp="1586412696250" />
-    <state width="1493" height="191" key="GridCell.Tab.3.left" timestamp="1586412696249">
+    <state width="1493" height="517" key="GridCell.Tab.3.bottom/0.0.1536.864@0.0.1536.864" timestamp="1587314252419" />
+    <state width="1493" height="517" key="GridCell.Tab.3.center" timestamp="1587314252419">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="191" key="GridCell.Tab.3.left/0.0.1536.864@0.0.1536.864" timestamp="1586412696249" />
-    <state width="1493" height="191" key="GridCell.Tab.3.right" timestamp="1586412696250">
+    <state width="1493" height="517" key="GridCell.Tab.3.center/0.0.1536.864@0.0.1536.864" timestamp="1587314252419" />
+    <state width="1493" height="517" key="GridCell.Tab.3.left" timestamp="1587314252419">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="191" key="GridCell.Tab.3.right/0.0.1536.864@0.0.1536.864" timestamp="1586412696250" />
-    <state width="1493" height="191" key="GridCell.Tab.4.bottom" timestamp="1586412696252">
+    <state width="1493" height="517" key="GridCell.Tab.3.left/0.0.1536.864@0.0.1536.864" timestamp="1587314252419" />
+    <state width="1493" height="517" key="GridCell.Tab.3.right" timestamp="1587314252419">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="191" key="GridCell.Tab.4.bottom/0.0.1536.864@0.0.1536.864" timestamp="1586412696252" />
-    <state width="1493" height="191" key="GridCell.Tab.4.center" timestamp="1586412696251">
+    <state width="1493" height="517" key="GridCell.Tab.3.right/0.0.1536.864@0.0.1536.864" timestamp="1587314252419" />
+    <state width="1493" height="517" key="GridCell.Tab.4.bottom" timestamp="1587314252420">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="191" key="GridCell.Tab.4.center/0.0.1536.864@0.0.1536.864" timestamp="1586412696251" />
-    <state width="1493" height="191" key="GridCell.Tab.4.left" timestamp="1586412696251">
+    <state width="1493" height="517" key="GridCell.Tab.4.bottom/0.0.1536.864@0.0.1536.864" timestamp="1587314252420" />
+    <state width="1493" height="517" key="GridCell.Tab.4.center" timestamp="1587314252419">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="191" key="GridCell.Tab.4.left/0.0.1536.864@0.0.1536.864" timestamp="1586412696251" />
-    <state width="1493" height="191" key="GridCell.Tab.4.right" timestamp="1586412696252">
+    <state width="1493" height="517" key="GridCell.Tab.4.center/0.0.1536.864@0.0.1536.864" timestamp="1587314252419" />
+    <state width="1493" height="517" key="GridCell.Tab.4.left" timestamp="1587314252419">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="191" key="GridCell.Tab.4.right/0.0.1536.864@0.0.1536.864" timestamp="1586412696252" />
-    <state x="361" y="165" key="Rider.ProjectTemplateDialog.Size" timestamp="1584821212862">
+    <state width="1493" height="517" key="GridCell.Tab.4.left/0.0.1536.864@0.0.1536.864" timestamp="1587314252419" />
+    <state width="1493" height="517" key="GridCell.Tab.4.right" timestamp="1587314252419">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="361" y="165" key="Rider.ProjectTemplateDialog.Size/0.0.1536.864@0.0.1536.864" timestamp="1584821212862" />
-    <state x="277" y="74" key="SettingsEditor" timestamp="1584206921544">
+    <state width="1493" height="517" key="GridCell.Tab.4.right/0.0.1536.864@0.0.1536.864" timestamp="1587314252419" />
+    <state x="361" y="165" key="Rider.ProjectTemplateDialog.Size" timestamp="1586590766009">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="277" y="74" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1584206921544" />
-    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1584376747541">
+    <state x="361" y="165" key="Rider.ProjectTemplateDialog.Size/0.0.1536.864@0.0.1536.864" timestamp="1586590766009" />
+    <state x="622" y="114" width="914" height="707" key="SettingsEditor" timestamp="1587282296326">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1584376747541" />
-    <state width="776" height="440" key="XDebugger.FullValuePopup" timestamp="1586412410706">
+    <state x="622" y="114" width="914" height="707" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1587282296326" />
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1586413236482">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="776" height="440" key="XDebugger.FullValuePopup/0.0.1536.864@0.0.1536.864" timestamp="1586412410706" />
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1586413236482" />
+    <state width="776" height="440" key="XDebugger.FullValuePopup" timestamp="1587289893094">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="776" height="440" key="XDebugger.FullValuePopup/0.0.1536.864@0.0.1536.864" timestamp="1587289893094" />
     <state x="567" y="111" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1584206617560">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="567" y="111" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.864@0.0.1536.864" timestamp="1584206617560" />
-    <state x="433" y="164" width="669" height="536" key="find.popup" timestamp="1586086879100">
+    <state x="433" y="164" width="669" height="536" key="find.popup" timestamp="1587283161498">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="433" y="164" width="669" height="536" key="find.popup/0.0.1536.864@0.0.1536.864" timestamp="1586086879100" />
-    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1586406465125">
+    <state x="433" y="164" width="669" height="536" key="find.popup/0.0.1536.864@0.0.1536.864" timestamp="1587283161498" />
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1586758914185">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1586406465125" />
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1586758914185" />
     <state x="491" y="345" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1580680408964">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -620,45 +654,6 @@
           </properties>
           <option name="timeStamp" value="72" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Project53/Program.cs</url>
-          <line>80</line>
-          <properties documentPath="$PROJECT_DIR$/Project53/Program.cs" initialLine="70">
-            <startOffsets>
-              <option value="2582" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2583" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="78" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Hook/PrintWatcher.cs</url>
-          <line>151</line>
-          <properties documentPath="$PROJECT_DIR$/Hook/PrintWatcher.cs" initialLine="149">
-            <startOffsets>
-              <option value="4804" />
-            </startOffsets>
-            <endOffsets>
-              <option value="4805" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="85" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Hook/Hooks/PrintQueueHook.cs</url>
-          <line>210</line>
-          <properties documentPath="$PROJECT_DIR$/Hook/Hooks/PrintQueueHook.cs" initialLine="210">
-            <startOffsets>
-              <option value="5562" />
-            </startOffsets>
-            <endOffsets>
-              <option value="5580" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="87" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>
@@ -668,7 +663,9 @@
         <PinnedItemInfo typeName="System.Printing.IndexedProperties.PrintInt32Property" fieldName="Value" />
         <PinnedItemInfo typeName="System.Printing.IndexedProperties.PrintJobStatusProperty" fieldName="Value" />
         <PinnedItemInfo typeName="System.Collections.DictionaryEntry" fieldName="Value" />
+        <PinnedItemInfo typeName="System.Management.ManagementObject" fieldName="Path" />
         <PinnedItemInfo typeName="System.Management.PropertyData" fieldName="Value" />
+        <PinnedItemInfo typeName="System.Printing.PrintServer" fieldName="PropertiesCollection" />
         <PinnedItemInfo typeName="System.Management.PropertyData" fieldName="Name" />
       </pinned-members>
     </pin-to-top-manager>
