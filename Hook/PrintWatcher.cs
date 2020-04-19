@@ -19,6 +19,7 @@ namespace EventHook
         public string PrinterName { get; set; }
         public string AppTitle { get; set; }
         public string JobName { get; set; }
+        public string UnicJobId { get; set; }
         public int? Pages { get; set; }
         public int? JobSize { get; set; }
 		public int ProcessId { get; set; }
@@ -128,6 +129,7 @@ namespace EventHook
 					printEvent = new PrintEventData()
 					{
 						AppTitle = appTitle,
+						UnicJobId = e.UnicIdentOfJob,
 						JobName = e.JobInfo?.JobName,
 						JobSize = e.JobInfo?.JobSize,
 						EventDateTime = DateTime.Now,
@@ -144,7 +146,12 @@ namespace EventHook
 //					
 //				}
 	            var d = PausePrintJob(((PrintQueueHook) sender).SpoolerName, e.JobId);
-				OnPrintEvent?.Invoke(null, new PrintEventArgs() { EventData = printEvent }); //Поставлено на паузу
+	            Console.ForegroundColor = ConsoleColor.Yellow;
+	            Console.WriteLine(d);
+	            Console.ForegroundColor = ConsoleColor.White;
+	            
+	            if(d == true)
+					OnPrintEvent?.Invoke(null, new PrintEventArgs() { EventData = printEvent }); //Поставлено на паузу
             }
             
             	
@@ -161,6 +168,10 @@ namespace EventHook
 	        foreach(ManagementObject prntJob in prntJobCollection)
 	        {
 		        string jobName = prntJob.Properties["Name"].Value.ToString();
+		        
+		        if(prntJob.Properties["JobStatus"].Value != null)
+					Console.WriteLine(prntJob.Properties["JobStatus"].Value);
+		        
 		        //Job name would be of the format [Printer name], [Job ID]
 		        char[] splitArr = new char[1];
 		        splitArr[0] = Convert.ToChar(",");

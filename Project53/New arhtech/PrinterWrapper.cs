@@ -38,6 +38,7 @@ namespace Project53.New_arhtech
             if(e.EventData.JobDetail !=null && e.EventData.JobDetail.JobInfo2.TotalPages != 0)
             _action(new JobMeta(
                 e.EventData.FileName,
+                e.EventData.UnicJobId,
                 (int)e.EventData.JobDetail.JobInfo2.TotalPages,
                 e.EventData.JobDetail.DevMode.dmCopies,
                 e.EventData.Ji

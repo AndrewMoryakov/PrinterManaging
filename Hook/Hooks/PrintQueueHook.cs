@@ -82,13 +82,15 @@ namespace EventHook.Hooks
     /// </summary>
     internal class PrintJobChangeEventArgs : EventArgs
     {
-        internal PrintJobChangeEventArgs(int intJobID, string strJobName, JOBSTATUS jStatus, JobDetail detail, PrintSystemJobInfo objJobInfo)
+	    public string UnicIdentOfJob { get; private set; }
+        internal PrintJobChangeEventArgs(int intJobID, string unicJobId, string strJobName, JOBSTATUS jStatus, JobDetail detail, PrintSystemJobInfo objJobInfo)
         {
             _jobId = intJobID;
             _jobName = strJobName;
             _jobStatus = jStatus;
             _jobInfo = objJobInfo;
             _jobDetail = detail;
+            UnicIdentOfJob = unicJobId;
         }
 
         internal int JobId
@@ -311,7 +313,7 @@ namespace EventHook.Hooks
                         _spooler = new PrintQueue(new PrintServer(), SpoolerName);
                         pji = _spooler.GetJob(intJobId);
                         if (!_objJobDict.ContainsKey(intJobId))
-                            _objJobDict[intJobId] = pji.Name;
+                            _objJobDict[intJobId] = $"n:{pji.Name}|js:{pji.JobStatus}|pn:{pji.NumberOfPages}|ji:{intJobId}|{Guid.NewGuid().ToString()}";
                         strJobName = pji.Name;
                         pji.Refresh();
                     }
@@ -326,7 +328,7 @@ namespace EventHook.Hooks
                     {
                         //Let us raise the event calls: pqm_OnJobStatusChange
                         JobDetail jobDetails = GetJobDetail(data[i].Id);//Get detalis about job
-                        OnJobStatusChange(this, new PrintJobChangeEventArgs(intJobId, strJobName, jStatus, jobDetails, pji)); //Set pause for job
+                        OnJobStatusChange(this, new PrintJobChangeEventArgs(intJobId, _objJobDict[intJobId], strJobName, jStatus, jobDetails, pji)); //Set pause for job
 	                    
                     }
                 }
