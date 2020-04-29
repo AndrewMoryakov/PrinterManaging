@@ -313,7 +313,7 @@ namespace EventHook.Hooks
                         _spooler = new PrintQueue(new PrintServer(), SpoolerName);
                         pji = _spooler.GetJob(intJobId);
                         if (!_objJobDict.ContainsKey(intJobId))
-                            _objJobDict[intJobId] = $"n:{pji.Name}|js:{pji.JobStatus}|pn:{pji.NumberOfPages}|ji:{intJobId}|{Guid.NewGuid().ToString()}";
+                            _objJobDict[intJobId] = $"'n:{pji.Name}|js:{pji.JobStatus}|pn:{pji.NumberOfPages}|ji:{intJobId}|{Guid.NewGuid().ToString()}'";
                         strJobName = pji.Name;
                         pji.Refresh();
                     }

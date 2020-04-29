@@ -81,33 +81,47 @@ namespace Project53
         private static void Subscriber(JobMeta job)
         {
             var isPaused = job._job.IsSpooling == false && job._job.IsPaused == true;
-            if (_jobs.Contains(job.Guid) == false && isPaused)
+            var alreadyProcessedJob = _jobs.Contains(job.Guid) == true;
+            if (isPaused && !alreadyProcessedJob)
+            {
                 _jobs.Add(job.Guid); //ToDo одно задание сюда попадает множество раз. Для предотвращения кроме имени документа нужно генерировать уникальный хэш
+            }
             else
+            {
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.WriteLine($"Process aborted: {job._job.JobStatus}");
+                Console.ForegroundColor = ConsoleColor.White;
                 return;
+            }
             
-            LogIt(job);
+            WriteLogs(job);
            
             var jobIsValid = _validator.ApplyChecks(job);
-
             if (jobIsValid == false)
                 job.CancelJob();
 
             var client = Auth.GetClient();
-            _logger.Information($"Client: {client.Email}, balance: {client.Balance}");
-            _logger.Information($"Job guid: {job.Guid}");
-
             var canBePrinted = ClientValidator.CanContinuePrinting(client, job);
-
             if (canBePrinted)
                 RunPrintJob(job._job);
             else
                 job._job.Cancel();
+            
+            WriteLogsAboutJobAndClient(job, client, canBePrinted);
 
+            // RemoveJobIfPaused(job, isPaused);
+        }
+
+        private static void WriteLogsAboutJobAndClient(JobMeta job, Client client, bool canBePrinted)
+        {
+            _logger.Information($"Client: {client.Email}, balance: {client.Balance}");
+            _logger.Information($"Job guid: {job.Guid}");
             _logger.Information($"Balance required: {(job.Copies * job.CountOfPages) * 2m}");
             _logger.Information($"Has ability to be printed: {canBePrinted}");
+        }
 
-            
+        private static void RemoveJobIfPaused(JobMeta job, bool isPaused)
+        {
             if (isPaused)
             {
                 _jobs.Remove(job.Guid);
@@ -122,14 +136,18 @@ namespace Project53
                 }
             }
         }
-//Todo если этот сервис отключается, то удаляем все задания печати.
+
+        //Todo если этот сервис отключается, то удаляем все задания печати.
         private static void RunPrintJob(PrintSystemJobInfo jobJob)
         {
-            _logger.Information("Start print");
+            jobJob.Resume();
+            _logger.Information("Start printing");
+            _logger.Information("___");
         }
 
-        private static void LogIt(JobMeta job)
+        private static void WriteLogs(JobMeta job)
         {
+            _logger.Information($"***********************************************");
             _logger.Information($"File to print: {job.DocumentName}");
             _logger.Information($"Job state: {job._job.JobStatus.ToString()}");
             _logger.Information($"Amount of pages: {job.CountOfPages}");
