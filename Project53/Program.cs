@@ -5,6 +5,7 @@ using System.Management;
 using System.Printing;
 using Newtonsoft.Json;
 using Project53.New_arhtech;
+using Project53.New_arhtech.Http.Server;
 using Serilog;
 using Serilog.Core;
 using Serilog.Sinks.SystemConsole.Themes;
@@ -16,7 +17,8 @@ namespace Project53
     {
         private static Logger _logger;
         public static List<string> PrintingMsDocs;
-        private static BaseValidationOfDoc _validator;  
+        private static BaseValidationOfDoc _validator;
+        private static IDisposable _disposableserver;
 
         private static void Configure()
         {
@@ -27,6 +29,8 @@ namespace Project53
                 .WriteTo.File("logs.log")
                 .MinimumLevel.Verbose()
                 .CreateLogger();
+            
+            _disposableserver = RestFullServer.StartServer();
         }
 
         public static void Main(string[] args)
