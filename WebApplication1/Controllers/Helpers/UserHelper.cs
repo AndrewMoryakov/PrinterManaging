@@ -1,339 +1,241 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Claims;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
+using WebApplication1.DataModel;
+
 namespace WebApplication1.Controllers.Helpers
 {
 	public class UserHelper
 	{
-		// public static (IdentityResult Result, ApplicationUser User) CreateUser(RegisterBindingModel model, AppRole role, bool isVk = false)
-		// {
-		// 	try
-		// 	{
-		// 		using (var db = new ApplicationDbContext())
-		// 		{
-		// 			var userManager = new ApplicationUserManager(new UserStore<ApplicationUser>(db));
-		// 			var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(db));
-		// 			var role1 = new IdentityRole
-		// 			{
-		// 				Name = role.ToString()
-		// 			};
-		// 			//создаем роль
-		// 			roleManager.Create(role1);
-		// 			//Создаем пользователя
-		// 			var user = new ApplicationUser
-		// 			{
-		// 				UserName = model.Email,
-		// 				Email = model.Email,
-		// 				FirstName = model.FirstName,
-		// 				LastName =  model.LastName,
-		// 				EmailConfirmed = isVk,
-		// 				ImageUrl = model.ImageUrl,
-		// 				SocialId = model.SocialId,
-		// 				SocialEmail = model.SocialEmail
-		// 			};
-		//
-		// 			IdentityResult result = null;
-		// 			if (model.Password==null)
-		// 			 result = userManager.Create(user);
-		// 			else
-		// 				result = userManager.Create(user, model.Password);
-		//
-		// 			if (result.Succeeded)
-		// 			{
-		// 				userManager.AddToRole(user.Id, role1.Name);
-		// 			}
-		// 			return (result, user);
-		// 		}
-		// 	}
-		// 	catch (Exception ex)
-		// 	{
-		// 		throw new Exception("Не удалось создать пользователя", ex);
-		// 	}
-		// }
-		//
-		// /// <summary>
-		// ///     Создает нового пользователя
-		// /// </summary>
-		// /// <param name="model">Объект с информацией о пользователе</param>
-		// /// <returns>Результат операции</returns>
-		// public static IdentityResult GetRoleOfUser(RegisterBindingModel model, AppRole role)
-		// {
-		// 	try
-		// 	{
-		// 		using (var db = new ApplicationDbContext())
-		// 		{
-		// 			var userManager = new ApplicationUserManager(new UserStore<ApplicationUser>(db));
-		// 			var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(db));
-		// 			var role1 = new IdentityRole
-		// 			{
-		// 				Name = role.ToString()
-		// 			};
-		// 			//создаем роль
-		// 			roleManager.Create(role1);
-		// 			//Создаем пользователя
-		// 			var admin = new ApplicationUser
-		// 			{
-		// 				UserName = model.Email,
-		// 				Email = model.Email,
-		// 				FirstName = model.FirstName,
-		// 				LastName = model.LastName
-		// 			};
-		//
-		// 			var result = userManager.Create(admin, model.Password);
-		// 			if (result.Succeeded)
-		// 			{
-		// 				userManager.AddToRole(admin.Id, role1.Name);
-		// 			}
-		// 			return result;
-		// 		}
-		// 	}
-		// 	catch (Exception ex)
-		// 	{
-		// 		throw new Exception("Не удалось создать пользователя", ex);
-		// 	}
-		// }
-		//
-		// /// <summary>
-		// ///     Изменяет пользователя
-		// /// </summary>
-		// /// <param name="model">
-		// ///     Пользователь с одним или несколькими новыми свойствами, свойство Id должно быть таким же как и у
-		// ///     изменяемой сущности
-		// /// </param>
-		// public static (IdentityResult Result, ApplicationUser User) EditUser(ApplicationUser model)
-		// {
-		// 	using (var db = new ApplicationDbContext())
-		// 	{
-		// 		var user = db.Users.FirstOrDefault(el => el.Id == model.Id);
-		//
-		// 		user.FirstName = model.FirstName;
-		// 		user.LastName = model.LastName;
-		// 		user.CurrentBalance = model.CurrentBalance;
-		// 		user.Email = model.Email;
-		// 		user.UserName = model.Email;
-		// 		user.EmailConfirmed = model.EmailConfirmed;
-		//
-		// 		db.Entry(user).State = EntityState.Modified;
-		// 		db.SaveChanges();
-		//
-		// 		return (new IdentityResult(), user);
-		// 	}
-		// }
-		//
-		// /// <summary>
-		// ///     Изменяет пользователя
-		// /// </summary>
-		// /// <param name="model">
-		// ///     Пользователь с одним или несколькими новыми свойствами, свойство Id должно быть таким же как и у
-		// ///     изменяемой сущности
-		// /// </param>
-		// public static (IdentityResult Result, ApplicationUser User) EditUser(ChangeBindingModel model)
-		// {
-		// 	using (var db = new ApplicationDbContext())
-		// 	{
-		// 		var user = db.Users.FirstOrDefault(el => el.Id == model.Id);
-		//
-		// 		user.FirstName = model.FirstName;
-		// 		user.LastName = model.LastName;
-		// 		user.CurrentBalance = model.FoundAccount.Amount.GetInvariantDecimal(decimal.Parse(model.FoundAccount.Amount,
-		// 			NumberStyles.AllowDecimalPoint | NumberStyles.AllowThousands, CultureInfo.InvariantCulture));//decimal.Parse(model.FoundAccount.Amount, NumberStyles.AllowDecimalPoint | NumberStyles.AllowThousands, CultureInfo.InvariantCulture);
-		// 		user.Email = model.Email;
-		// 		user.UserName = model.Email;
-		// 		user.EmailConfirmed = model.PasswordConfirmed;
-		//
-		// 		db.Entry(user).State = EntityState.Modified;
-		// 		db.SaveChanges();
-		//
-		// 		return (new IdentityResult(), user);
-		// 	}
-		// }
-		//
-		// /// <summary>
-		// ///     ПОдтверждает пароль
-		// /// </summary>
-		// /// <param name="model">
-		// ///     Пользователь с одним или несколькими новыми свойствами, свойство Id должно быть таким же как и у
-		// ///     изменяемой сущности
-		// /// </param>
-		// public static ApplicationUser ConfirmEmail(bool confirm, string id)
-		// {
-		// 	using (var db = new ApplicationDbContext())
-		// 	{
-		// 		var user = db.Users.FirstOrDefault(el => el.Id == id);
-		// 		user.EmailConfirmed = confirm;
-		//
-		// 		db.Entry(user).State = EntityState.Modified;
-		// 		db.SaveChanges();
-		//
-		// 		return user;
-		// 	}
-		// }
-		//
-		// public static (IdentityResult Result, ApplicationUser User) GetUserById(string id)
-		// {
-		// 	using (var db = new ApplicationDbContext())
-		// 	{
-		// 		var user = db.Users.FirstOrDefault(el => el.Id == id);
-		// 		return (new IdentityResult(), user);
-		// 	}
-		// }
-		//
-		// public static (IdentityResult Result, ApplicationUser User) GetUserBySocialId(string socialId)
-		// {
-		// 	using (var db = new ApplicationDbContext())
-		// 	{
-		// 		var user = db.Users.FirstOrDefault(el => el.SocialId == socialId);
-		// 		return (new IdentityResult(), user);
-		// 	}
-		// }
-		//
-		// public static (IdentityResult Result, ApplicationUser User) GetUserBySocialEmail(string socialEmail)
-		// {
-		// 	using (var db = new ApplicationDbContext())
-		// 	{
-		// 		var user = db.Users.FirstOrDefault(el => el.SocialEmail == socialEmail);
-		// 		return (new IdentityResult(), user);
-		// 	}
-		// }
-		//
-		//
-		// public static (IdentityResult Result, ApplicationUser User) GetUserByEmail(string email)
-		// {
-		// 	using (var db = new ApplicationDbContext())
-		// 	{
-		// 		var user = db.Users.FirstOrDefault(el => el.Email == email);
-		// 		return (new IdentityResult(), user);
-		// 	}
-		// }
-		//
-		// /// <summary>
-		// ///     Изменяет счет
-		// /// </summary>
-		// /// <param name="model">
-		// ///     Пользователь с одним или несколькими новыми свойствами, свойство Id должно быть таким же как и у
-		// ///     изменяемой сущности
-		// /// </param>
-		// public static IdentityResult EditFundAccountUser(FundAccountBindingModel model)
-		// {
-		// 	using (var db = new ApplicationDbContext())
-		// 	{
-		// 		var userManager = new ApplicationUserManager(new UserStore<ApplicationUser>(db));
-		// 		bool isNotAdmin = userManager.GetRoles(model?.IdOfCurrentUser).FirstOrDefault() != AppRole.Administrator.ToString();
-		// 		bool isNotYourSelf = (userManager.GetEmail(model?.IdOfCurrentUser) != model.Email);
-		// 		if (model.Amount[0] == '-')
-		// 		{
-		// 			if (isNotAdmin && isNotYourSelf)
-		// 				return new IdentityResult("Вы не можете изменить баланс пользователя.");
-		//
-		// 			model.Amount = $"({model.Amount.Remove(0, 1)})";
-		// 		}
-		// 		else
-		// 		{
-		// 			if (isNotAdmin)
-		// 				return new IdentityResult("Вы не можете изменить баланс пользователя.");
-		//
-		// 		}
-		//
-		// 		return ChangeInvoice(model, db);
-		// 	}
-		// }
-		//
-		// internal static IdentityResult ChangeInvoice(FundAccountBindingModel model, ApplicationDbContext db)
-		// {
-		// 	var userManager = new ApplicationUserManager(new UserStore<ApplicationUser>(db));
-		// 	var user = db.Users.FirstOrDefault(el => el.Email == model.Email);
-		//
-		// 	decimal amountForSum = model.Amount.GetInvariantDecimal(0);//decimal.Parse(model.Amount, NumberStyles.AllowDecimalPoint | NumberStyles.AllowParentheses | NumberStyles.AllowThousands, CultureInfo.CurrentCulture));
-		// 	decimal resultAmount = user.CurrentBalance += amountForSum;
-		//
-		// 	if (resultAmount < 0)
-		// 	{
-		// 		return new IdentityResult("Баланс не может быть отрицательным");
-		// 	}
-		//
-		// 	db.InvoiceMovements.Add(new InvoiceMovement(amountForSum, DateTime.Now, model.IdOfCurrentUser,
-		// 		user?.Id));
-		// 	db.SaveChanges();
-		// 	user.CurrentBalance = resultAmount;
-		//
-		// 	return userManager.Update(user);
-		// }
-		//
-		// /// <summary>
-		// /// Удаляет пользователя
-		// /// </summary>
-		// /// <param name="id">Идетфикатор пользователя</param>
-		// /// <returns>Возвращает удаленного пользователя</returns>
-		// public static ApplicationUser DeleteUser(string id)
-		// {
-		// 	using (ApplicationDbContext db = new ApplicationDbContext())
-		// 	{
-		// 		ApplicationUser user = db.Users.Include(el => el.InvoiceMovements).Include(el=>el.PrintedPages).FirstOrDefault(el => el.Id == id);
-		// 		//var r = user.InvoiceMovements;
-		// 		//foreach (var inv in r)
-		// 		//{
-		// 		//	db.InvoiceMovements.Remove(inv);
-		// 		//}
-		// 		db.SaveChanges();
-		// 		db.Users.Remove(user);
-		// 		db.SaveChanges();
-		//
-		// 		return user;
-		// 	}
-		// }
-		//
-		// #region Async
-		//
-		// /// <summary>
-		// /// Удаляет
-		// /// </summary>
-		// /// <param name="id">Идетфикатор пользователя</param>
-		// /// <returns>Возвращает удаленного пользователя</returns>
-		// public static async Task<ApplicationUser> DeleteUserAsync(string id)
-		// {
-		// 	return await Task.FromResult(DeleteUser(id));
-		// }
-		//
-		// /// <summary>
-		// ///     Создает нового пользователя
-		// /// </summary>
-		// /// <param name="model">Объект с информацией о пользователе</param>
-		// /// <returns>Результат операции</returns>
-		// public static async Task<(IdentityResult Result, ApplicationUser User)> CreateUserAsync(RegisterBindingModel model, AppRole role, bool isVk = false)
-		// {
-		// 	return await Task.FromResult(CreateUser(model, role, isVk));
-		// }
-		//
-		// /// <summary>
-		// ///     Асинхронно зменяет счет
-		// /// </summary>
-		// /// <param name="model">
-		// ///     Пользователь с одним или несколькими новыми свойствами, свойство Id должно быть таким же как и у
-		// ///     изменяемой сущности
-		// /// </param>
-		// public static async Task<IdentityResult> EditFundAccountUserAsync(FundAccountBindingModel model)
-		// {
-		// 	return await Task.FromResult(EditFundAccountUser(model));
-		// }
-		//
-		//
-		// public static async Task<(IdentityResult Result, ApplicationUser User)> EditUserAsync(ApplicationUser email)
-		// {
-		// 	return await Task.FromResult(EditUser(email));
-		// }
-		//
-		// public static async Task<(IdentityResult Result, ApplicationUser User)> EditUserAsync(ChangeBindingModel email)
-		// {
-		// 	return await Task.FromResult(EditUser(email));
-		// }
-		//
-		// public static async Task<(IdentityResult Result, ApplicationUser User)> GetUserBySocialIdAsync(string socialId)
-		// {
-		// 	return await Task.FromResult(GetUserBySocialId(socialId));
-		// }
-		//
-		// public static async Task<(IdentityResult Result, ApplicationUser User)> GetUserBySocialEmailAsync(string socialEmail)
-		// {
-		// 	return await Task.FromResult(GetUserBySocialEmail(socialEmail));
-		// }
-		//
-		// #endregion
+		public class UserService : IUserService, IDisposable
+		{
+			private UserManager<ApplicationUser> _userManager;
+
+			private ApplicationDbContext _context;
+			//private Bot _bot;
+
+			private SignInManager<ApplicationUser> _signInManager2;
+			private IPasswordHasher<ApplicationUser> _passwordHasher;
+			private IHttpContextAccessor _httpContext;
+
+			public UserService(ApplicationDbContext context, UserManager<ApplicationUser> userManager,
+				SignInManager<ApplicationUser> signInManager2, IPasswordHasher<ApplicationUser> hasher,
+				IHttpContextAccessor httpContext
+			) //,Bot bot)
+			{
+				//_bot = bot;
+				_userManager = userManager;
+				_signInManager2 = signInManager2;
+				_passwordHasher = hasher;
+				_httpContext = httpContext;
+				_context = context;
+			}
+
+			public UserManager<ApplicationUser> UserManager
+			{
+				get { return _userManager; }
+				private set { _userManager = value; }
+			}
+
+			public string GetEmailCurrentUser()
+			{
+				return _httpContext.HttpContext.User.Claims
+					.FirstOrDefault(el => el.Type == ClaimTypes.Email)?.Value;
+			}
+
+			public string GetCurrentUserId()
+			{
+				return _httpContext.HttpContext.User.Claims
+					.FirstOrDefault(el => el.Type == ClaimTypes.NameIdentifier)?.Value;
+			}
+
+			public SignInManager<ApplicationUser> InManager2
+			{
+				get { return _signInManager2; }
+				set { _signInManager2 = value; }
+			}
+
+			public async Task<ApplicationUser> GetUserByUsernameOrEmailAsync(string username)
+			{
+				var user = await _userManager.FindByEmailAsync(username)
+				           ?? await _userManager.FindByNameAsync(username);
+
+				return user;
+			}
+
+			//public async Task<ApplicationUser> GetUserByPublicId(string username)
+			//{
+			//	var user = await _context.Users.FirstOrDefaultAsync(el => el.PublicId == username);
+			//	return user;
+			//}
+
+			public async Task<ApplicationUser> GetUserById(string id)
+			{
+				var user = await _userManager.FindByIdAsync(id);
+
+				return user;
+			}
+
+			public async Task<IdentityResult> CreateUser(ApplicationUser user, string password)
+			{
+				return await _userManager.CreateAsync(user, password);
+			}
+
+			public PasswordVerificationResult VerifyHashedPassword(ApplicationUser user, string password)
+			{
+				return _passwordHasher.VerifyHashedPassword(user, user.PasswordHash, password);
+			}
+
+			public ApplicationUser GetUser()
+			{
+				string email = GetEmailCurrentUser();
+				if (email == null)
+					return null;
+
+				var users = _context.Users; //.Include(el => el.Stores).Include(el => el.UsersStore);
+				return users.FirstOrDefault(el => el.Email == email);
+			}
+
+			public ApplicationUser GetUser(string id)
+			{
+				if (id == null)
+					return null;
+
+				var users = _context
+					.Users; ////.Include(el => el.Stores).Include(el => el.UsersStore).Include(el => el.UsersStore);
+				return users.FirstOrDefault(el => el.Id == id);
+			}
+
+			public async Task<IList<string>> GetRolesAsync()
+			{
+				return await _userManager.GetRolesAsync(GetUser());
+			}
+
+			public async Task<IList<string>> GetRolesAsync(string userId)
+			{
+				var user = _context.Users.FirstOrDefault(el => el.Id == userId);
+				return await _userManager.GetRolesAsync(user);
+			}
+
+			//public IList<string> GetRoles(string userId)
+			//{
+			//	if (userId == null)
+			//		throw new ArgumentException("Не указано имя пользователя", nameof(userId));
+
+			//	var users = _context.Users
+			//		.Include(el => el.Roles);
+			//	var user = users.FirstOrDefault(el => el.Id == userId);
+			//		IEnumerable<string> rolesIdForUser = user?.Roles.Select(el => el.RoleId);
+
+			//	var allRoles = _context.Roles;
+
+			//	IList<string> rolesForUser =
+			//		(from roleId in rolesIdForUser
+			//		 from role in allRoles
+			//		 where roleId == role.Id
+			//		 select role.Name).ToList();
+
+			//	return rolesForUser;
+			//}
+
+			//public async Task AddToTelegram(Telegram.Bot.Types.Message message)
+			//{
+
+			//	try
+			//	{
+
+			//		(await _bot.GetClientAsync())
+			//			?.SendTextMessageAsync(message.Chat.Id, "I see you", replyToMessageId: message.MessageId);
+
+			//		if (message.Text == null || message.Text.Length < 10)
+			//		{
+			//			return; //ToDo Тут надо логи писать
+			//		}
+
+			//		var chatId = message.Chat.Id;
+			//		var messageId = message.MessageId;
+
+
+
+
+			//		var commandParameters = message.Text.Split(' ');
+			//		if (commandParameters.Length != 2)
+			//		{
+			//			await(await _bot.GetClientAsync()).SendTextMessageAsync(chatId, "Your command isn't right");
+
+			//			return;
+			//		}
+
+			//		var user = commandParameters[1];
+			//		var currUser = _context.Users.FirstOrDefault(el => el.Email.ToUpper() == user);
+			//		(await _bot.GetClientAsync())
+			//			?.SendTextMessageAsync(message.Chat.Id, $"Your id: {currUser.Id}", replyToMessageId: message.MessageId);
+
+
+
+			//		//var currUser = _context.Users.FirstOrDefault(el => el.Email.ToLower() == user);//it) GetUserByUsernameOrEmailAsync(user));
+			//		if (currUser == null)
+			//			await(await _bot.GetClientAsync()).SendTextMessageAsync(chatId, "I can't find user");
+
+
+			//		currUser.ChatId = chatId.ToString();
+
+			//		if (currUser.ChatId == null && currUser.ChatId == chatId.ToString())
+			//		{
+			//			await(await _bot.GetClientAsync()).SendTextMessageAsync(chatId, "I already know u", replyToMessageId: messageId);
+			//		}
+
+			//		_context.Users.Update(currUser);
+			//		await _context.SaveChangesAsync();
+
+			//		await(await _bot.GetClientAsync()).SendTextMessageAsync(chatId, "Ok, I added u", replyToMessageId: messageId);
+			//	}
+			//	catch (Exception ex)
+			//	{
+			//		await(await _bot.GetClientAsync()).SendTextMessageAsync(message.Chat.Id, ex.Message, replyToMessageId: message.MessageId);
+			//		await(await _bot.GetClientAsync()).SendTextMessageAsync(message.Chat.Id, ex.StackTrace, replyToMessageId: message.MessageId);
+
+			//	}
+			//}
+
+			public async Task<IList<Claim>> GetClaims(ApplicationUser user)
+			{
+				return await _userManager.GetClaimsAsync(user);
+			}
+
+			private bool disposed = false;
+
+			public void Dispose()
+			{
+				Dispose(true);
+				// подавляем финализацию
+				GC.SuppressFinalize(this);
+			}
+
+			protected virtual void Dispose(bool disposing)
+			{
+				if (!disposed)
+				{
+					if (disposing)
+					{
+						// Освобождаем управляемые ресурсы
+					}
+
+					_userManager?.Dispose();
+					_context?.Dispose();
+
+					disposed = true;
+				}
+			}
+
+			~UserService()
+			{
+				Dispose(false);
+			}
+		}
 	}
 }

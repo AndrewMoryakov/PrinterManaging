@@ -27,8 +27,8 @@ namespace WebApplication1.Data
 		{
 			var admin = new ApplicationUser
 			{
-				NormalizedEmail = "admin@admin.com",
-				NormalizedUserName = "admin",
+				NormalizedEmail = "admin@admin.com".ToUpper(),
+				NormalizedUserName = "admin".ToUpper(),
 				Email = "Admin@admin.com",
 				FirstName = "Admin",
 				LastName = "Admin",
@@ -40,8 +40,8 @@ namespace WebApplication1.Data
 			
 			var client = new ApplicationUser
 			{
-				NormalizedEmail = "andrew@gmail.com",
-				NormalizedUserName = "andrew",
+				NormalizedEmail = "andrew@gmail.com".ToUpper(),
+				NormalizedUserName = "ANDREW",
 				Email = "Andrew@gmail.com",
 				FirstName = "Andrew",
 				LastName = "Andrew",
@@ -85,10 +85,10 @@ namespace WebApplication1.Data
 			{
 				var password = new PasswordHasher<ApplicationUser>();
 				var hashed = password.HashPassword(client, "password");
-				admin.PasswordHash = hashed;
+				client.PasswordHash = hashed;
 				var userStore = new UserStore<ApplicationUser>(context);
-				await userStore.CreateAsync(admin);
-				await userStore.AddToRoleAsync(admin, clientRole);
+				await userStore.CreateAsync(client);
+				await userStore.AddToRoleAsync(client, clientRole);
 			}
 			
 			await context.SaveChangesAsync();

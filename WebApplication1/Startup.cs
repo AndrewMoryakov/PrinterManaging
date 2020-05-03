@@ -8,11 +8,15 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.AzureADB2C.UI;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.IdentityModel.Tokens;
+using WebApplication1.Controllers.Helpers;
 using WebApplication1.DataModel;
 
 namespace WebApplication1
@@ -51,8 +55,45 @@ namespace WebApplication1
 					break;
 			}
 			
-			services.AddAuthentication(AzureADB2CDefaults.BearerAuthenticationScheme)
-				.AddAzureADB2CBearer(options => Configuration.Bind("AzureAdB2C", options));
+			
+			services.AddIdentity<ApplicationUser, IdentityRole>()
+				.AddEntityFrameworkStores<ApplicationDbContext>()
+				.AddDefaultTokenProviders();
+
+			services.AddAuthentication(options =>
+				{
+					options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+					options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+				})
+
+				.AddJwtBearer(options =>
+				{
+					options.SaveToken = true;
+					options.RequireHttpsMetadata = false;
+					options.TokenValidationParameters = new TokenValidationParameters
+					{
+						// укзывает, будет ли валидироваться издатель при валидации токена
+						ValidateIssuer = true,
+						// строка, представляющая издателя
+						ValidIssuer = AuthOptions.ISSUER,
+
+						// будет ли валидироваться потребитель токена
+						ValidateAudience = true,
+						// установка потребителя токена
+						ValidAudience = AuthOptions.AUDIENCE,
+						// будет ли валидироваться время существования
+						ValidateLifetime = true,
+
+						// установка ключа безопасности
+						IssuerSigningKey = AuthOptions.GetSymmetricSecurityKey(),
+						// валидация ключа безопасности
+						ValidateIssuerSigningKey = true,
+					};
+				});
+
+			services.AddTransient<IUserService, UserHelper.UserService>();
+			services.AddMemoryCache();
+				services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Latest);
 			services.AddControllers();
 		}
 
@@ -63,6 +104,12 @@ namespace WebApplication1
 			{
 				app.UseDeveloperExceptionPage();
 			}
+			
+			app.UseCors(builder =>
+				builder.AllowAnyOrigin()
+					.AllowAnyHeader()
+					.AllowAnyMethod()
+			);
 
 			app.UseHttpsRedirection();
 
