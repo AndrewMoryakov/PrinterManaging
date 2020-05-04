@@ -2,6 +2,11 @@ namespace WebApplication1.DataModel
 {
 	public class UserInfoVm
 	{
+		public UserInfoVm()
+		{
+			
+		}
+		
 		public UserInfoVm(string email, string firstName, string lastName, decimal balance)
 		{
 			Email = email;
