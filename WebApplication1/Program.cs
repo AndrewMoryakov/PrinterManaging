@@ -45,6 +45,7 @@ namespace WebApplication1
 					_conf = config.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
 						.AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true, reloadOnChange: true);
 				})
+				.UseSockets()
 				.UseStartup<Startup>();
 		
 		private static async Task InitDb(IWebHost host, IConfiguration conf)
