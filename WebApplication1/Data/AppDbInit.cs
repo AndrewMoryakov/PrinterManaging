@@ -46,6 +46,7 @@ namespace WebApplication1.Data
 				FirstName = "Andrew",
 				LastName = "Andrew",
 				UserName = "Andrew",
+				Balance = 10m,
 				EmailConfirmed = true,
 				LockoutEnabled = false,
 				SecurityStamp = Guid.NewGuid().ToString()

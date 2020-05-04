@@ -1,5 +1,4 @@
 #nullable disable
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -21,12 +20,17 @@ namespace WebApplication1.Controllers
 			(_userService) = (userService);
 
 		[HttpGet]
-		public async Task<ActionResult<UserInfoVm>> Get()
+		public ActionResult<UserInfoVm> Get()
 		{
-			return new UserInfoVm("username@gmail.com", "Andrew", "Moryakov", 10m);
-
-			
-			
+			var user = _userService.GetUser();
+			if(user != null)
+				return new UserInfoVm
+				{
+					Balance = user.Balance,
+					Email = user.Email,
+					FirstName = user.FirstName,
+					LastName = user.LastName
+				};
 			
 			return BadRequest();
 		}
