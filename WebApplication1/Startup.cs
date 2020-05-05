@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Authentication.AzureADB2C.UI;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Internal;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -98,8 +99,14 @@ namespace WebApplication1
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-		public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+		public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILogger<Startup> logger)
 		{
+			app.Use(async (context, next) =>
+			{
+				logger.LogInformation($"headers:: \r\n {context.Request.Headers.Select(el=>$"{el.Key}: {el.Value}").Join("\n")}");
+				await next.Invoke();
+			});
+			
 			if (env.IsDevelopment())
 			{
 				app.UseDeveloperExceptionPage();
@@ -111,7 +118,7 @@ namespace WebApplication1
 					.AllowAnyMethod()
 			);
 
-			app.UseHttpsRedirection();
+			// app.UseHttpsRedirection();
 
 			app.UseRouting();
 

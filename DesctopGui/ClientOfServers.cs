@@ -99,10 +99,12 @@ namespace DesctopGui
 			string url = $"{_baseUrl}/api/user";
 			var client =
 				new RestClient(url);
+			
 			var request = new RestRequest(Method.GET);
-			// request.AddHeader("cache-control", "no-cache");
-			request.AddHeader("Authorization", $"Bearer {token}");
-			// request.AddHeader("content-type", "application/json");
+			// request.RequestFormat = RestSharp.DataFormat.Json;
+			// request.AddHeader("Content-Type", "application/json");
+			request.AddParameter("Authorization", $"Bearer {token}", ParameterType.HttpHeader);
+			
 			IRestResponse response = client.Execute(request);
 
 			return JsonConvert.DeserializeObject<UserInfo>(response.Content);
