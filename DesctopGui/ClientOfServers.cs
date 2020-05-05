@@ -1,5 +1,8 @@
 using System;
 using System.Configuration;
+using System.Net;
+using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Security.Cryptography;
 using System.Text;
 using DesctopGui.DateModels;
@@ -88,33 +91,32 @@ namespace DesctopGui
 		{
 			string token = //WindowVkOAuth.Token ??
 			               GetToken(userName, password)?.access_token;
-			string api = "api/Account/UserInfo";
-
 			return GetUserNameInfo(token);
 		}
 
 		public UserInfo GetUserNameInfo(string token)
 		{
+			string url = $"{_baseUrl}/api/user";
 			var client =
-				new RestClient($"{ConfigurationManager.AppSettings.Get("serviceDomain")}/api/Account/ExternalUserInfo");
+				new RestClient(url);
 			var request = new RestRequest(Method.GET);
-			request.AddHeader("cache-control", "no-cache");
-			request.AddHeader("authorization", $"Bearer {token}");
-			request.AddHeader("content-type", "application/x-www-form-urlencoded");
+			// request.AddHeader("cache-control", "no-cache");
+			request.AddHeader("Authorization", $"Bearer {token}");
+			// request.AddHeader("content-type", "application/json");
 			IRestResponse response = client.Execute(request);
 
 			return JsonConvert.DeserializeObject<UserInfo>(response.Content);
 		}
 
 
-		private UserAuthInfo GetToken(string userName, string password)
+		private UserAuthInfo GetToken(string username, string password)
 		{
-			string api = "Token";
-			var client = new RestClient($"{_baseUrl}/{api}");
-			var request = new RestRequest(Method.POST);
+			string api = "auth";
+			var client = new RestClient($"{_baseUrl}/api/{api}");
+			var request = new RestRequest(Method.GET);
 			request.AddHeader("cache-control", "no-cache");
-			request.AddParameter("undefined", $"grant_type=password&username={userName}&password={password}",
-				ParameterType.RequestBody);
+			request.AddHeader("password", password);
+			request.AddHeader("username", username);
 			IRestResponse response = client.Execute(request);
 
 			return JsonConvert.DeserializeObject<UserAuthInfo>(response?.Content);

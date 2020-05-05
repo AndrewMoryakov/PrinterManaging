@@ -43,7 +43,6 @@
 			Text="{Binding UserName, UpdateSourceTrigger=PropertyChanged}"
 			Watermark="Введите почту" />
 		<xctk:WatermarkPasswordBox
-			KeyDown="TextBoxPassword_OnKeyDown"
 			Name="textBoxPassword"
 			Grid.Row="2"
 			Width="238"

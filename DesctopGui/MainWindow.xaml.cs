@@ -32,6 +32,8 @@ namespace DesctopGui
 				configuration.GetSection("appSettings:serviceDomain").Value,
 				configuration.GetSection("appSettings:printControllerHost").Value
 			);
+			
+			Registry.Public<ClientOfServers>(_clientOfServers);
 		}
 
 		private void MainWindow_OnClosing(object sender, CancelEventArgs e)

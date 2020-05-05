@@ -19,13 +19,8 @@ namespace DesctopGui
 		private string password ;
 		private UserAuthInfo _token = null;
 		private bool _isAuth = false;
-		private readonly ClientOfServers _clientOfServers;
+		private ClientOfServers _clientOfServers;
 		public Auth() => InitializeComponent();
-
-		private void TextBoxPassword_OnKeyDown(object sender, KeyEventArgs e)
-		{
-			throw new NotImplementedException();
-		}
 
 		private void ButtonAuth_OnClick(object sender, RoutedEventArgs e)
 		{
@@ -52,7 +47,8 @@ namespace DesctopGui
 				textBlockInfo.Text = "Введите электронную почту и пароль";
 				return;
 			}
-			
+
+			_clientOfServers = Registry.GetValue<ClientOfServers>();
 			UserInfo userInfo = _clientOfServers.GetUserNameInfo(userName, password);
 			if (userInfo == null)
 			{
@@ -61,7 +57,6 @@ namespace DesctopGui
 			}
 			
 			_logger.Information(userInfo.Balance.ToString());
-			
 			
 			Registry<UserInfo, UserInfo>.Public(userInfo);
 			Registry<UserInfo, string>.Public(password, "password");

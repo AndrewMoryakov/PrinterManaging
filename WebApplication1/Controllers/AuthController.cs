@@ -29,7 +29,7 @@ namespace WebApplication1.Controllers
 		}
 		
 		[HttpGet]
-		public async Task<ActionResult<string>> Token()
+		public async Task<ActionResult<object>> Token()
 		{
 			string username;
 			string pswrd;
@@ -66,8 +66,8 @@ namespace WebApplication1.Controllers
 						//await HttpContext.SignInAsync(scheme: JwtBearerDefaults.AuthenticationScheme, principal: new ClaimsPrincipal(claimsIdentity));
 						
 						Response.ContentType = "application/json";
-						return JsonConvert.SerializeObject(response,
-							new JsonSerializerSettings {Formatting = Formatting.None});
+						return response;
+
 					}
 				}
 			}
