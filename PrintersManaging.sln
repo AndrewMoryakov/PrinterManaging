@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedHttpServer", "D:\Documen
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{5AF23BD9-FCF6-491F-BF83-AC97F5A46FDC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp2", "ConsoleApp2\ConsoleApp2.csproj", "{907508A9-49AA-4942-96AB-00820B504A25}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -89,6 +91,14 @@ Global
 		{5AF23BD9-FCF6-491F-BF83-AC97F5A46FDC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5AF23BD9-FCF6-491F-BF83-AC97F5A46FDC}.Release|x64.ActiveCfg = Release|x64
 		{5AF23BD9-FCF6-491F-BF83-AC97F5A46FDC}.Release|x64.Build.0 = Release|x64
+		{907508A9-49AA-4942-96AB-00820B504A25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{907508A9-49AA-4942-96AB-00820B504A25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{907508A9-49AA-4942-96AB-00820B504A25}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{907508A9-49AA-4942-96AB-00820B504A25}.Debug|x64.Build.0 = Debug|Any CPU
+		{907508A9-49AA-4942-96AB-00820B504A25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{907508A9-49AA-4942-96AB-00820B504A25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{907508A9-49AA-4942-96AB-00820B504A25}.Release|x64.ActiveCfg = Release|Any CPU
+		{907508A9-49AA-4942-96AB-00820B504A25}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

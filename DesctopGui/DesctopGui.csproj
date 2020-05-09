@@ -15,7 +15,9 @@
       <PackageReference Include="RestSharp" Version="106.10.1" />
       <PackageReference Include="RxRegistry" Version="1.1.0-a" />
       <PackageReference Include="Serilog" Version="2.9.0" />
-      <PackageReference Include="Serilog.Sinks.RollingFile" Version="3.3.0" />
+      <PackageReference Include="Serilog.Sinks.ColoredConsole" Version="3.0.1" />
+      <PackageReference Include="Serilog.Sinks.Console" Version="4.0.0-dev-00839" />
+      <PackageReference Include="Serilog.Sinks.RollingFile" Version="3.3.1-dev-00771" />
     </ItemGroup>
 
     <ItemGroup>

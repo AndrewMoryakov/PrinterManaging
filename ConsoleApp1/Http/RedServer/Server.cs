@@ -28,7 +28,7 @@ namespace Project53.New_arhtech.Http.RedServer
         
         public void Start()
         {
-            var server = new RedHttpServer(5000);
+            var server = new RedHttpServer(5013);
             server.RespondWithExceptionDetails = true;
             ConfigureActions(server);
             server.OnHandlerException += (e, sender)
