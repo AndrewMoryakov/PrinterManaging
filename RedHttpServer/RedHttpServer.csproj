@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Description>.NET Standard web application framework built on ASP.NET Core w/ Kestrel and inspired by Express.js</Description>
+    <Copyright>Copyright © Rosenbjerg 2020</Copyright>
+    <AssemblyTitle>RedHttpServer</AssemblyTitle>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <AssemblyName>RedHttpServer</AssemblyName>
+    <PackageId>RHttpServer</PackageId>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <RootNamespace>Red</RootNamespace>
+    <ApplicationIcon />
+    <OutputTypeEx>library</OutputTypeEx>
+    <StartupObject />
+    <Version>4.0.0</Version>
+    <PackageTags>red redhttp redhttpserver rhttpserver rhs http server web api expressjs http websocket middleware</PackageTags>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageProjectUrl>https://RedHttp.github.io/Red/</PackageProjectUrl>
+    <PackageLicense>MIT</PackageLicense>
+    <PackageIconUrl>https://redhttp.github.io/Red/assets/red-large.png</PackageIconUrl>
+    <RepositoryUrl>https://github.com/RedHttp/Red</RepositoryUrl>
+    <RepositoryType>GitHub</RepositoryType>
+    <Authors>Malte Rosenbjerg</Authors>
+    <PackageReleaseNotes>Fix contentType optional parameter
+Suppress OperationCanceledException in ws handler </PackageReleaseNotes>
+    <AssemblyVersion>5.0.0.0</AssemblyVersion>
+    <FileVersion>5.0.0.0</FileVersion>
+    <LangVersion>8</LangVersion>
+    <PackageVersion>5.2.1</PackageVersion>
+    <Title>Red</Title>
+    <Nullable>enable</Nullable>
+    <TargetFrameworks>net48;netstandard2.0</TargetFrameworks>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Routing" Version="2.2.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Server.Kestrel" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.WebSockets" Version="2.2.1" />
+    <PackageReference Include="System.Text.Json" Version="4.7.1" />
+  </ItemGroup>
+</Project>
