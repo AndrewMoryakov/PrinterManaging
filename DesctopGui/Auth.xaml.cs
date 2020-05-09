@@ -20,7 +20,11 @@ namespace DesctopGui
 		private UserAuthInfo _token = null;
 		private bool _isAuth = false;
 		private ClientOfServers _clientOfServers;
-		public Auth() => InitializeComponent();
+		public Auth()
+		{
+			InitializeComponent();
+			_logger = Registry.GetValue<Logger>();
+		}
 
 		private void ButtonAuth_OnClick(object sender, RoutedEventArgs e)
 		{
@@ -55,18 +59,15 @@ namespace DesctopGui
 				_logger.Error("Пользователь не получен", new ArgumentException("Не удалось полчить пользователя"));
 				return;
 			}
-			
 			_logger.Information(userInfo.Balance.ToString());
-			
 			Registry<UserInfo, UserInfo>.Public(userInfo);
-			Registry<UserInfo, string>.Public(password, "password");
 			
 			if (userInfo.Email != null)
 			{
 				if (userInfo.Balance > 0)
 				{
 					_logger.Information("Try login in print controller");
-					_clientOfServers.LogIn(userName, password);
+					_clientOfServers.LogIn(userInfo);
 					_logger.Information("Logined in print controller");
 					_isAuth = true;
 					if (Registry<Frame, MainWindow>.Get() != null)

@@ -108,7 +108,7 @@ namespace Project53
             if (jobIsValid == false)
                 job.CancelJob();
 
-            var client = Auth.GetClient();
+            Client client = Auth.GetClient();
             var canBePrinted = ClientValidator.CanContinuePrinting(client, job);
             if (canBePrinted)
                 RunPrintJob(job._job);

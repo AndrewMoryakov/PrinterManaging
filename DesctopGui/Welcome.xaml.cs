@@ -1,5 +1,7 @@
 using System.Windows;
 using System.Windows.Controls;
+using DesctopGui.DateModels;
+using DreamPlace.Lib.Rx;
 
 namespace DesctopGui
 {
@@ -8,6 +10,9 @@ namespace DesctopGui
 		public Welcome()
 		{
 			InitializeComponent();
+
+			var user = Registry<UserInfo, UserInfo>.Get();
+			textBlockBalance.Text = $"{user.Balance.ToString()} ₽";
 		}
 
 		private void ButtonLogOut_OnClick(object sender, RoutedEventArgs e)

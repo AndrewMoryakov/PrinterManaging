@@ -1,13 +1,11 @@
 using System.ComponentModel;
-using System.Configuration;
-using System.IO;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using DreamPlace.Lib.Rx;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Configuration.FileExtensions;
-using Microsoft.Extensions.Configuration.Json;
+using Serilog;
+using Serilog.Sinks.SystemConsole.Themes;
 
 namespace DesctopGui
 {
@@ -23,17 +21,24 @@ namespace DesctopGui
 				.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
 
 			IConfigurationRoot configuration = builder.Build();
-			
-			Registry<WebBrowser, WebBrowser>.Public(new WebBrowser());
-			this.Content = new Auth();
-			Registry<Frame, MainWindow>.Public(this);
-			
+
 			_clientOfServers = new ClientOfServers(
 				configuration.GetSection("appSettings:serviceDomain").Value,
 				configuration.GetSection("appSettings:printControllerHost").Value
 			);
 			
-			Registry.Public<ClientOfServers>(_clientOfServers);
+			var logger = new LoggerConfiguration()
+				.WriteTo.Console(theme: SystemConsoleTheme.Colored)
+				.WriteTo.File("logs.log")
+				.MinimumLevel.Verbose()
+				.CreateLogger();
+			
+			Registry.Public(_clientOfServers);
+			Registry.Public(logger);
+			Registry<WebBrowser, WebBrowser>.Public(new WebBrowser());
+			Registry<Frame, MainWindow>.Public(this);
+			
+			this.Content = new Auth();
 		}
 
 		private void MainWindow_OnClosing(object sender, CancelEventArgs e)

@@ -28,7 +28,7 @@ namespace Project53.New_arhtech.Http.RedServer
         
         public void Start()
         {
-            var server = new RedHttpServer(5013);
+            var server = new RedHttpServer(5012);
             server.RespondWithExceptionDetails = true;
             ConfigureActions(server);
             server.OnHandlerException += (e, sender)
@@ -51,9 +51,19 @@ namespace Project53.New_arhtech.Http.RedServer
 
         private static void ConfigureActions(RedHttpServer server)
         {
+            server.Get("/index", (req, res)
+                => { return  res.SendStatus(HttpStatusCode.OK);});
             server.Post("/logout", async (req, res) =>
             {
                 Registry.OnNext("", RegistryAddresses.Logout);
+                return await res.SendStatus(HttpStatusCode.OK);
+            });
+            
+            server.Post("/login", async (req, res) =>
+            {
+                var email = (await req.GetFormDataAsync())?["Email"];
+                var balance = Convert.ToDecimal((await req.GetFormDataAsync())?["Balance"]);
+                Registry.Public(new Client(balance, email), RegistryAddresses.Login);
                 return await res.SendStatus(HttpStatusCode.OK);
             });
         }

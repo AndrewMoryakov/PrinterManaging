@@ -70,20 +70,18 @@ namespace DesctopGui
 			client.Execute(request);
 		}
 
-		public void LogIn(string userName, string password)
+		public void SendToP(UserInfo user)
 		{
-			string token = // WindowVkOAuth.Token ??
-			               GetToken(userName, password)?.access_token;
-			LogIn(token);
-
+			LogIn(user);
 		}
 
-		public void LogIn(string token)
+		public void LogIn(UserInfo userInfo)
 		{
-			var client = new RestClient($"{_printControllerHost}/api/values/LogIn?token={token}");
+			var client = new RestClient($"{_printControllerHost}/login");
 			var request = new RestRequest(Method.POST);
-			request.AddHeader("cache-control", "no-cache");
 			request.AddHeader("content-type", "application/x-www-form-urlencoded");
+			request.AddParameter("Email", userInfo.Email);
+			request.AddParameter("FirstName", userInfo.FirstName);
 			client.Execute(request);
 		}
 
