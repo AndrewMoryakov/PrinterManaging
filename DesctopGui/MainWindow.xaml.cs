@@ -2,6 +2,7 @@ using System.ComponentModel;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using BackendClient;
 using DreamPlace.Lib.Rx;
 using Microsoft.Extensions.Configuration;
 using Serilog;
@@ -11,7 +12,7 @@ namespace DesctopGui
 {
 	public partial class MainWindow : Window
 	{
-		private ClientOfServers _clientOfServers;
+		private Client _clientOfServers;
 
 		public MainWindow()
 		{
@@ -22,8 +23,12 @@ namespace DesctopGui
 
 			IConfigurationRoot configuration = builder.Build();
 
-			_clientOfServers = new ClientOfServers(
-				configuration.GetSection("appSettings:serviceDomain").Value,
+			_clientOfServers = new Client(
+				configuration.GetSection("appSettings:serviceDomain").Value
+				// configuration.GetSection("appSettings:printControllerHost").Value
+			);
+			
+			var printClient = new PrintGoClient(
 				configuration.GetSection("appSettings:printControllerHost").Value
 			);
 			
@@ -35,6 +40,7 @@ namespace DesctopGui
 			
 			Registry.Public(_clientOfServers);
 			Registry.Public(logger);
+			Registry.Public(printClient);
 			Registry<WebBrowser, WebBrowser>.Public(new WebBrowser());
 			Registry<Frame, MainWindow>.Public(this);
 			

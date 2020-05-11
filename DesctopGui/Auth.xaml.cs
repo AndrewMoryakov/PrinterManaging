@@ -3,9 +3,12 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using BackendClient;
 using DesctopGui.DateModels;
 using DreamPlace.Lib.Rx;
 using Serilog.Core;
+using MapsterMapper;
+using Mapster;
 
 namespace DesctopGui
 {
@@ -19,11 +22,14 @@ namespace DesctopGui
 		private string password ;
 		private UserAuthInfo _token = null;
 		private bool _isAuth = false;
-		private ClientOfServers _clientOfServers;
+		private Client _clientOfServers;
+		private PrintGoClient _clientToPrint;
 		public Auth()
 		{
 			InitializeComponent();
 			_logger = Registry.GetValue<Logger>();
+			_clientOfServers = Registry.GetValue<Client>();
+			_clientToPrint = Registry.GetValue<PrintGoClient>();
 		}
 
 		private void ButtonAuth_OnClick(object sender, RoutedEventArgs e)
@@ -51,9 +57,8 @@ namespace DesctopGui
 				textBlockInfo.Text = "Введите электронную почту и пароль";
 				return;
 			}
-
-			_clientOfServers = Registry.GetValue<ClientOfServers>();
-			UserInfo userInfo = _clientOfServers.GetUserNameInfo(userName, password);
+			
+			UserInfo userInfo = _clientOfServers.GetUserInfo(userName, password).Adapt<UserInfo>();
 			if (userInfo == null)
 			{
 				_logger.Error("Пользователь не получен", new ArgumentException("Не удалось полчить пользователя"));
@@ -67,7 +72,7 @@ namespace DesctopGui
 				if (userInfo.Balance > 0)
 				{
 					_logger.Information("Try login in print controller");
-					_clientOfServers.LogIn(userInfo);
+					_clientToPrint.LogIn(userInfo);
 					_logger.Information("Logined in print controller");
 					_isAuth = true;
 					if (Registry<Frame, MainWindow>.Get() != null)

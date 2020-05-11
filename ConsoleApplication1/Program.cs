@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Printing;
+using ConsoleApp1_2;
 using DreamPlace.Lib.Rx;
 using Project53.New_arhtech;
 using Project53.New_arhtech.Http.RedServer;
@@ -44,6 +45,10 @@ namespace Project53
             ProcessWithPrinters();
             #if DEBUG
                 _logger.Information("DEBUG");
+                Registry.Subscribe<Client>(el =>
+                {
+                    _logger.Information("login");
+                }, RegistryAddresses.Login);
             #else
                 _logger.Information("RELEASE");
             #endif

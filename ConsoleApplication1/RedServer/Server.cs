@@ -52,6 +52,7 @@ namespace Project53.New_arhtech.Http.RedServer
         {
             server.Get("/index", (req, res)
                 => { return  res.SendStatus(HttpStatusCode.OK);});
+            
             server.Post("/logout", async (req, res) =>
             {
                 Registry.OnNext("", RegistryAddresses.Logout);
@@ -62,6 +63,7 @@ namespace Project53.New_arhtech.Http.RedServer
             {
                 var email = (await req.GetFormDataAsync())?["Email"];
                 var balance = Convert.ToDecimal((await req.GetFormDataAsync())?["Balance"]);
+                Registry.OnNext(new Client(balance, email), RegistryAddresses.Login);
                 Registry.Public(new Client(balance, email), RegistryAddresses.Login);
                 return await res.SendStatus(HttpStatusCode.OK);
             });
