@@ -12,7 +12,7 @@ namespace DesctopGui
 {
 	public partial class MainWindow : Window
 	{
-		private Client _clientOfServers;
+		private ClientToBack _clientToBackOfServers;
 
 		public MainWindow()
 		{
@@ -23,7 +23,7 @@ namespace DesctopGui
 
 			IConfigurationRoot configuration = builder.Build();
 
-			_clientOfServers = new Client(
+			_clientToBackOfServers = new ClientToBack(
 				configuration.GetSection("appSettings:serviceDomain").Value
 				// configuration.GetSection("appSettings:printControllerHost").Value
 			);
@@ -38,7 +38,7 @@ namespace DesctopGui
 				.MinimumLevel.Verbose()
 				.CreateLogger();
 			
-			Registry.Public(_clientOfServers);
+			Registry.Public(_clientToBackOfServers);
 			Registry.Public(logger);
 			Registry.Public(printClient);
 			Registry<WebBrowser, WebBrowser>.Public(new WebBrowser());

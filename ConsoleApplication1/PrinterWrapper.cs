@@ -1,6 +1,8 @@
 using System;
 using System.Printing;
+using System.Security.Authentication;
 using EventHook;
+using Serilog.Core;
 
 namespace Project53.New_arhtech
 {
@@ -10,13 +12,15 @@ namespace Project53.New_arhtech
     /// </summary>
     public class PrinterWrapper
     {
+        private Logger _lgr;
         private Action<JobMeta> _action;
         public string TitleOfPrinter { get; private set; }
-        public PrinterWrapper(string titleOfPrinter)
+        public PrinterWrapper(string titleOfPrinter, Logger lgr)
         {
             TitleOfPrinter = titleOfPrinter;
             PrintWatcher.Start(TitleOfPrinter); //Это из либы с GitHub
             PrintWatcher.OnPrintEvent += PrintWatcherOnPrintEvent;
+            _lgr = lgr;
         }
 
         /// <summary>
@@ -34,15 +38,22 @@ namespace Project53.New_arhtech
 
         private void PrintWatcherOnPrintEvent(object sender, PrintEventArgs e)
         {
-            e.EventData.Ji.Refresh();
-            if(e.EventData.JobDetail !=null && e.EventData.JobDetail.JobInfo2.TotalPages != 0)
-            _action(new JobMeta(
-                e.EventData.FileName,
-                e.EventData.UnicJobId,
-                (int)e.EventData.JobDetail.JobInfo2.TotalPages,
-                e.EventData.JobDetail.DevMode.dmCopies,
-                e.EventData.Ji
-            ));
+            try
+            {
+                e.EventData.Ji.Refresh();
+                if (e.EventData.JobDetail != null && e.EventData.JobDetail.JobInfo2.TotalPages != 0)
+                    _action(new JobMeta(
+                        e.EventData.FileName,
+                        e.EventData.UnicJobId,
+                        (int) e.EventData.JobDetail.JobInfo2.TotalPages,
+                        e.EventData.JobDetail.DevMode.dmCopies,
+                        e.EventData.Ji
+                    ));
+            }
+            catch (Exception ex)
+            {
+                _lgr.Error(ex, "При обработке задания произошла ошибка.");
+            }
         }
     }
 }

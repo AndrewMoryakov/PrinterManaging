@@ -53,13 +53,12 @@ namespace DesctopGui
 			client.Execute(request);
 		}
 
-		public void LogIn(UserInfo userInfo)
+		public void LogIn(string token)
 		{
 			var client = new RestClient($"{_printControllerHost}/login");
 			var request = new RestRequest(Method.POST);
 			request.AddHeader("content-type", "application/x-www-form-urlencoded");
-			request.AddParameter("Email", userInfo.Email);
-			request.AddParameter("FirstName", userInfo.FirstName);
+			request.AddParameter("token", token);
 			client.Execute(request);
 		}
 	}

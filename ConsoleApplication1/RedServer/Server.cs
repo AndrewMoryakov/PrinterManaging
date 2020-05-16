@@ -1,6 +1,7 @@
 using Red;
 using System;
 using System.Net;
+using System.Security;
 using ConsoleApp1_2;
 using DreamPlace.Lib.Rx;
 using Serilog.Core;
@@ -61,11 +62,19 @@ namespace Project53.New_arhtech.Http.RedServer
             
             server.Post("/login", async (req, res) =>
             {
-                var email = (await req.GetFormDataAsync())?["Email"];
-                var balance = Convert.ToDecimal((await req.GetFormDataAsync())?["Balance"]);
-                Registry.OnNext(new Client(balance, email), RegistryAddresses.Login);
-                Registry.Public(new Client(balance, email), RegistryAddresses.Login);
-                return await res.SendStatus(HttpStatusCode.OK);
+                try
+                {
+                    var token = (await req.GetFormDataAsync())?["token"].ToString();
+                    // var balance = Convert.ToDecimal((await req.GetFormDataAsync())?["Balance"]);
+                    Registry.OnNext(token, RegistryAddresses.Login);
+                    Registry.Public(token, RegistryAddresses.Login);
+                    return await res.SendStatus(HttpStatusCode.OK);
+                }
+                catch (Exception ex)
+                {
+                    Registry.GetValue<Logger>().Error(ex, "Ошибка при попытке получения токена доступа к серверу");
+                    return await res.SendStatus(HttpStatusCode.InternalServerError);
+                }
             });
         }
     }

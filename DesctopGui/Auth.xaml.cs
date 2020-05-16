@@ -22,13 +22,13 @@ namespace DesctopGui
 		private string password ;
 		private UserAuthInfo _token = null;
 		private bool _isAuth = false;
-		private Client _clientOfServers;
+		private ClientToBack _clientToBackOfServers;
 		private PrintGoClient _clientToPrint;
 		public Auth()
 		{
 			InitializeComponent();
 			_logger = Registry.GetValue<Logger>();
-			_clientOfServers = Registry.GetValue<Client>();
+			_clientToBackOfServers = Registry.GetValue<ClientToBack>();
 			_clientToPrint = Registry.GetValue<PrintGoClient>();
 		}
 
@@ -57,8 +57,10 @@ namespace DesctopGui
 				textBlockInfo.Text = "Введите электронную почту и пароль";
 				return;
 			}
+
+			var token = _clientToBackOfServers.GetToken(userName, password);
+			UserInfo userInfo = _clientToBackOfServers.GetUserInfo(token).Adapt<UserInfo>();
 			
-			UserInfo userInfo = _clientOfServers.GetUserInfo(userName, password).Adapt<UserInfo>();
 			if (userInfo == null)
 			{
 				_logger.Error("Пользователь не получен", new ArgumentException("Не удалось полчить пользователя"));
@@ -72,7 +74,7 @@ namespace DesctopGui
 				if (userInfo.Balance > 0)
 				{
 					_logger.Information("Try login in print controller");
-					_clientToPrint.LogIn(userInfo);
+					_clientToPrint.LogIn(token);
 					_logger.Information("Logined in print controller");
 					_isAuth = true;
 					if (Registry<Frame, MainWindow>.Get() != null)

@@ -1,5 +1,7 @@
+using BackendClient;
 using ConsoleApp1_2;
 using DreamPlace.Lib.Rx;
+using Mapster;
 
 namespace Project53.New_arhtech
 {
@@ -7,7 +9,9 @@ namespace Project53.New_arhtech
 	{
 		public static Client GetClient()
 		{
-			return Registry.GetValue<Client>(RegistryAddresses.Login);
+			var client = Registry.GetValue<ClientToBack>();
+			var token = Registry.GetValue<string>(RegistryAddresses.Login);
+			return client.GetUserInfo(token).Adapt<Client>();
 		}
 	}
 }

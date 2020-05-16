@@ -1,17 +1,14 @@
-using System;
-using System.Security.Cryptography;
-using System.Text;
 using BackendClient.DateModels;
 using Newtonsoft.Json;
 using RestSharp;
 
 namespace BackendClient
 {
-	public class Client
+	public class ClientToBack
 	{
 		private static string _baseUrl;
 
-		public Client(string baseUrl)
+		public ClientToBack(string baseUrl)
 		{
 			_baseUrl = baseUrl;
 		}
@@ -19,7 +16,7 @@ namespace BackendClient
 		public UserInfo GetUserInfo(string userName, string password)
 		{
 			string token = //WindowVkOAuth.Token ??
-			               GetToken(userName, password)?.access_token;
+			               GetToken(userName, password);
 			return GetUserInfo(token);
 		}
 
@@ -39,7 +36,7 @@ namespace BackendClient
 			return JsonConvert.DeserializeObject<UserInfo>(response.Content);
 		}
 
-		private UserAuthInfo GetToken(string username, string password)
+		public string GetToken(string username, string password)
 		{
 			string api = "auth";
 			var client = new RestClient($"{_baseUrl}/api/{api}");
@@ -49,7 +46,7 @@ namespace BackendClient
 			request.AddHeader("username", username);
 			IRestResponse response = client.Execute(request);
 
-			return JsonConvert.DeserializeObject<UserAuthInfo>(response?.Content);
+			return JsonConvert.DeserializeObject<UserAuthInfo>(response?.Content).access_token;
 		}
 	}
 }
