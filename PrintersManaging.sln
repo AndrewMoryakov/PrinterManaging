@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "Cons
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BackendClient", "BackendClient\BackendClient.csproj", "{CD7F300C-F923-4242-B093-B69C644318D3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataModels", "DataModels\DataModels.csproj", "{CBD757D6-90A1-46A9-A989-9B684A63B17F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +113,14 @@ Global
 		{CD7F300C-F923-4242-B093-B69C644318D3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CD7F300C-F923-4242-B093-B69C644318D3}.Release|x64.ActiveCfg = Release|Any CPU
 		{CD7F300C-F923-4242-B093-B69C644318D3}.Release|x64.Build.0 = Release|Any CPU
+		{CBD757D6-90A1-46A9-A989-9B684A63B17F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBD757D6-90A1-46A9-A989-9B684A63B17F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBD757D6-90A1-46A9-A989-9B684A63B17F}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{CBD757D6-90A1-46A9-A989-9B684A63B17F}.Debug|x64.Build.0 = Debug|Any CPU
+		{CBD757D6-90A1-46A9-A989-9B684A63B17F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBD757D6-90A1-46A9-A989-9B684A63B17F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBD757D6-90A1-46A9-A989-9B684A63B17F}.Release|x64.ActiveCfg = Release|Any CPU
+		{CBD757D6-90A1-46A9-A989-9B684A63B17F}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

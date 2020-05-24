@@ -1,4 +1,5 @@
 using BackendClient.DateModels;
+using DataModels;
 using Newtonsoft.Json;
 using RestSharp;
 
@@ -47,6 +48,24 @@ namespace BackendClient
 			IRestResponse response = client.Execute(request);
 
 			return JsonConvert.DeserializeObject<UserAuthInfo>(response?.Content).access_token;
+		}
+		
+		public static IRestResponse SendPrintedDocumentsOnServer(string token, PrintedDocument[] printedPages)
+		{
+			var client = new RestClient($"{_baseUrl}/api/Account/PrintDocument");
+			var request = new RestRequest(Method.POST);
+			request.AddHeader("cache-control", "no-cache");
+			request.AddHeader("authorization", $"Bearer {token}");
+			request.AddHeader("content-type", "application/json");
+
+			//string parametersForSend = "";
+
+			//foreach (var printedPage in printedPages)
+			//{
+
+			//}
+			request.AddParameter("application/json", JsonConvert.SerializeObject(printedPages), ParameterType.RequestBody);
+			return client.Execute(request);
 		}
 	}
 }

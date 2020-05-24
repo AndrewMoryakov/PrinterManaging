@@ -179,6 +179,10 @@
         <Project>{cd7f300c-f923-4242-b093-b69c644318d3}</Project>
         <Name>BackendClient</Name>
       </ProjectReference>
+      <ProjectReference Include="..\DataModels\DataModels.csproj">
+        <Project>{cbd757d6-90a1-46a9-a989-9b684a63b17f}</Project>
+        <Name>DataModels</Name>
+      </ProjectReference>
       <ProjectReference Include="..\Hook\Hook.csproj">
         <Project>{d72183c4-106e-4de7-8f1b-51c4ad45895d}</Project>
         <Name>Hook</Name>
