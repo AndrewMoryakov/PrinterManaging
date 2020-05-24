@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -17,8 +19,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using WebApplication1.Controllers.Helpers;
 using WebApplication1.DataModel;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace WebApplication1
 {
@@ -96,6 +100,15 @@ namespace WebApplication1
 			services.AddMemoryCache();
 				services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Latest);
 			services.AddControllers();
+			
+			services.AddSwaggerGen(c =>
+			{
+				c.SwaggerDoc("v1", new OpenApiInfo {Title = "P53 Backend api", Version = "v1"});
+				// var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+				// var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+				// c.IncludeXmlComments(xmlPath);
+				// c.EnableAnnotations();
+			});
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -120,6 +133,9 @@ namespace WebApplication1
 
 			// app.UseHttpsRedirection();
 
+			app.UseSwagger();
+			app.UseSwaggerUI(c 
+				=> { c.SwaggerEndpoint("/swagger/v1/swagger.json", "P53 Backend api"); });
 			app.UseRouting();
 
 			app.UseAuthentication();
