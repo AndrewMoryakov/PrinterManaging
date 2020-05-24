@@ -11,7 +11,9 @@ namespace Project53.New_arhtech
 		{
 			var client = Registry.GetValue<ClientToBack>();
 			var token = Registry.GetValue<string>(RegistryAddresses.Login);
-			return client.GetUserInfo(token).Adapt<Client>();
+			var appClient = client.GetUserInfo(token).Adapt<Client>();
+			appClient.Token = token;
+			return appClient;
 		}
 	}
 }
