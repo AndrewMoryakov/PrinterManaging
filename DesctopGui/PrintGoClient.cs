@@ -5,6 +5,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Security.Cryptography;
 using System.Text;
+using System.Threading.Tasks;
 using DesctopGui.DateModels;
 using Newtonsoft.Json;
 using RestSharp;
@@ -17,6 +18,11 @@ namespace DesctopGui
 		public PrintGoClient(string printControllerHost)
 			=> _printControllerHost = printControllerHost;
 
+		/// <summary>
+		/// Обновление баланса
+		/// </summary>
+		/// <remarks>Это может понадобится, если списание произошло на другом клиенте.</remarks>
+		/// <returns></returns>
 		public UserInfo RefrasheBalanse()
 		{
 			var client = new RestClient($"{_printControllerHost}/api/values/RefreshUserInfo");
@@ -43,14 +49,22 @@ namespace DesctopGui
 			return result;
 		}
 
-		public void LogOut()
+		public void LogOut(string token)
 		{
 			var client = new RestClient($"{_printControllerHost}/api/Values/LogOut");
 			var request = new RestRequest(Method.POST);
-			request.AddHeader("cache-control", "no-cache");
 			request.AddHeader("content-type", "application/x-www-form-urlencoded");
-			client.Timeout = 10000;
+			request.AddParameter("token", token);
 			client.Execute(request);
+		}
+		
+		public async Task LogOutAsync(string token)
+		{
+			var client = new RestClient($"{_printControllerHost}/api/Values/LogOut");
+			var request = new RestRequest(Method.POST);
+			request.AddHeader("content-type", "application/x-www-form-urlencoded");
+			request.AddParameter("token", token);
+			await client.ExecuteAsync(request);
 		}
 
 		public void LogIn(string token)
