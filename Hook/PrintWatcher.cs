@@ -7,6 +7,8 @@ using EventHook.Hooks;
 using EventHook.Helpers;
 using EventHook.Hooks.Library;
 using System.Runtime.InteropServices;
+using DreamPlace.Lib.Rx;
+using Serilog.Core;
 
 namespace EventHook
 {
@@ -147,7 +149,7 @@ namespace EventHook
 //				}
 	            var d = PausePrintJob(((PrintQueueHook) sender).SpoolerName, e.JobId);
 	            Console.ForegroundColor = ConsoleColor.Yellow;
-	            Console.WriteLine(d);
+	            Registry.GetValue<Logger>().Debug(d?"HOOK: job paused":"HOOK: job NOT PAUSED");
 	            Console.ForegroundColor = ConsoleColor.White;
 	            
 	            if(d == true)
@@ -170,7 +172,7 @@ namespace EventHook
 		        string jobName = prntJob.Properties["Name"].Value.ToString();
 		        
 		        if(prntJob.Properties["JobStatus"].Value != null)
-					Console.WriteLine(prntJob.Properties["JobStatus"].Value);
+			        Registry.GetValue<Logger>().Debug(prntJob.Properties["JobStatus"].Value.ToString());
 		        
 		        //Job name would be of the format [Printer name], [Job ID]
 		        char[] splitArr = new char[1];

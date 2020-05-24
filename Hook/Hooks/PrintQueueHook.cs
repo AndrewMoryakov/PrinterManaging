@@ -4,8 +4,10 @@ using System.Linq;
 using System.Printing;
 using System.Runtime.InteropServices;
 using System.Threading;
+using DreamPlace.Lib.Rx;
 using EventHook.Hooks.Library;
 using Microsoft.Win32.SafeHandles;
+using Serilog.Core;
 
 namespace EventHook.Hooks
 {
@@ -222,7 +224,7 @@ namespace EventHook.Hooks
 			}
 			else
 			{
-				Console.WriteLine("buffer size required=" + needed);
+				Registry.GetValue<Logger>().Debug("buffer size required=" + needed);
 				IntPtr buffer = Marshal.AllocHGlobal((int)needed);
 				result = GetJob(_printerHandle, jobId, 2, buffer, needed, out needed);
 				JOB_INFO_2 jobInfo = (JOB_INFO_2)Marshal.PtrToStructure(buffer, typeof(JOB_INFO_2));
