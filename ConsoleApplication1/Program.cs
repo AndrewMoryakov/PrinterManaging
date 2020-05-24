@@ -24,12 +24,27 @@ namespace Project53
     internal class Program
     {
         private static Logger _logger;
-        public static List<string> PrintingMsDocs;
         private static BaseValidationOfDoc _validator;
         private static IDisposable _disposableserver;
-        public static Server s;
         private static ClientToBack _clientToBack;
-        
+        public static List<string> PrintingMsDocs;
+        public static Server s;
+
+        public static void Main(string[] args)
+        {
+            Configure();
+            SubscribeOnOwnServerEvents();
+            ProcessWithPrinters();
+
+#if DEBUG
+            _logger.Debug("DEBUG");
+#else
+            _logger.Debug("RELEASE");
+#endif
+
+            Console.ReadKey();
+        }
+
         private static void Configure()
         {
             _validator = new BaseValidationOfDoc();
@@ -38,8 +53,11 @@ namespace Project53
                 .Enrich.WithExceptionDetails()
                 .WriteTo.Console(theme: SystemConsoleTheme.Colored)
                 .WriteTo.File("logs.log")
-                // .MinimumLevel.Verbose()
-                .WriteTo.Telegram("1206276933:AAE5Iinp03S5l5bveJ_s4QjF8YYjuUcankc", "61280592", restrictedToMinimumLevel: LogEventLevel.Error)
+                .MinimumLevel.Information()
+                .WriteTo.Telegram("1206276933:AAE5Iinp03S5l5bveJ_s4QjF8YYjuUcankc", "61280592",
+                    restrictedToMinimumLevel: LogEventLevel.Error)
+                .WriteTo.Telegram("1206276933:AAE5Iinp03S5l5bveJ_s4QjF8YYjuUcankc", "-347387165",
+                    restrictedToMinimumLevel: LogEventLevel.Error)
                 .CreateLogger();
             
             var configuration = GetAppsettingsReader();
@@ -54,7 +72,25 @@ namespace Project53
             
             s = new Server();
             s.Start();
+            
             // _disposableserver = RestFullServer.StartServer();
+        }
+
+        private static void SubscribeOnOwnServerEvents()
+        {
+            Registry.Subscribe<string>(el =>
+            {
+                _logger.Debug("login");
+                continueClicked.TrySetResult(null);
+            }, RegistryAddresses.Login);
+            
+            Registry.Subscribe<string>(el =>
+            {
+                if(el.Value == _client.Token)
+                    _client = null;
+                
+                _logger.Debug("logout");
+            }, RegistryAddresses.Logout);
         }
 
         private static IConfigurationRoot GetAppsettingsReader()
@@ -67,30 +103,13 @@ namespace Project53
             return configuration;
         }
 
-        public static void Main(string[] args)
-        {
-            Configure();
-            ProcessWithPrinters();
-            #if DEBUG
-                _logger.Information("DEBUG");
-                Registry.Subscribe<string>(el =>
-                {
-                    _logger.Information("login");
-                    continueClicked.TrySetResult(null);
-                }, RegistryAddresses.Login);
-            #else
-                _logger.Information("RELEASE");
-            #endif
-            Console.ReadKey();
-        }
-
         private static void ProcessWithPrinters()
         {
             List<string> GetPrinters()
             {
                 var list = Printers.Get().ToList();
-                _logger.Information("Printers");
-                list.ForEach(el => _logger.Information(el));
+                _logger.Debug("Printers");
+                list.ForEach(el => _logger.Debug(el));
                 return list;
             }
             
@@ -121,44 +140,53 @@ namespace Project53
         
         private static TaskCompletionSource<object> continueClicked;
         private static HashSet<string> _jobs = new HashSet<string>();
+        private static Client _client = null;
         private static void Subscriber(JobMeta job)
         {
-            var isPaused = job._job.IsSpooling == false && job._job.IsPaused == true;
-            var alreadyProcessedJob = _jobs.Contains(job.Guid) == true;
-            if (isPaused && !alreadyProcessedJob)
-            {
-                _jobs.Add(job.Guid); //ToDo одно задание сюда попадает множество раз. Для предотвращения кроме имени документа нужно генерировать уникальный хэш
-            }
-            else
-            {
-                // Console.ForegroundColor = ConsoleColor.Cyan;
-                // Console.WriteLine($"Process aborted: {job._job.JobStatus}");
-                // Console.ForegroundColor = ConsoleColor.White;
+            _logger.Verbose("job is here: " + job.DocumentName);
+            if (CanContinueWithJob(job) == false)
                 return;
-            }
             
+            _jobs.Add(job.Guid);
             WriteLogs(job);
-           
+            CanchelIfNotValidJob(job);
+
+            if (_client == null)
+            {
+                LaunchAuthGui().Wait();
+                _client = Auth.GetClient();
+            }
+
+            var usrBalanceAllowPrinting = ClientValidator.CanContinuePrinting(_client, job);
+            WriteLogsAboutJobAndClient(job, _client, usrBalanceAllowPrinting);
+            if (!usrBalanceAllowPrinting)
+            {
+                _logger.Information("Job will be canceled");
+                job._job.Cancel();
+            }
+
+            RunPrintJob(job._job);
+            _jobs.Remove(job.Guid);
+             //RemoveJobIfPaused(job, isPaused);
+        }
+
+        private static void CanchelIfNotValidJob(JobMeta job)
+        {
             var jobIsValid = _validator.ApplyChecks(job);
             if (jobIsValid == false)
                 job.CancelJob();
-            LaunchAuthGui().Wait();
-            
-            Client client = Auth.GetClient();
-            var canBePrinted = ClientValidator.CanContinuePrinting(client, job);
-            if (canBePrinted)
-                RunPrintJob(job._job);
-            else
-                job._job.Cancel();
-            
-            WriteLogsAboutJobAndClient(job, client, canBePrinted);
+        }
 
-            // RemoveJobIfPaused(job, isPaused);
+        private static bool CanContinueWithJob(JobMeta job)
+        {
+            var isPaused = job._job.IsSpooling && job._job.IsPrinting == false
+                           && job._job.IsPaused == true;
+            var alreadyProcessedJob = _jobs.Contains(job.Guid) == true;
+            return isPaused && alreadyProcessedJob == false;
         }
 
         private static async System.Threading.Tasks.Task LaunchAuthGui()
         {
-            _logger.Information("Start gui");
             await GetResults();
             _logger.Information("Get AUTH after waiting!!!!!!");
         }
@@ -168,6 +196,7 @@ namespace Project53
             var startInfo = 
                 new ProcessStartInfo(@"C:\Users\hopt\RiderProjects\PrinterManaging\DesctopGui\bin\Debug\netcoreapp3.1\DesctopGui.exe");
             Process.Start(startInfo);
+            _logger.Information("Gui was started");
             continueClicked = new TaskCompletionSource<object>();
             await continueClicked.Task;
         }
@@ -175,7 +204,7 @@ namespace Project53
         private static void WriteLogsAboutJobAndClient(JobMeta job, Client client, bool canBePrinted)
         {
             _logger.Information($"Client: {client.Email}, balance: {client.Balance}");
-            _logger.Information($"Job guid: {job.Guid}");
+            _logger.Debug($"Job guid: {job.Guid}");
             _logger.Information($"Balance required: {(job.Copies * job.CountOfPages) * 2m}");
             _logger.Information($"Has ability to be printed: {canBePrinted}");
         }
@@ -201,17 +230,19 @@ namespace Project53
         private static void RunPrintJob(PrintSystemJobInfo jobJob)
         {
             jobJob.Resume();
-            _logger.Information("Start printing");
-            _logger.Information("___");
+            _logger.Information("Everething ok, a print was started");
+            _logger.Debug("___");
         }
 
         private static void WriteLogs(JobMeta job)
         {
             _logger.Information($"***********************************************");
-            _logger.Information($"File to print: {job.DocumentName}");
+            _logger.Information("Start job handler");
             _logger.Information($"Job state: {job._job.JobStatus.ToString()}");
-            _logger.Information($"Amount of pages: {job.CountOfPages}");
-            _logger.Information(
+            _logger.Information(job.Guid);
+            _logger.Debug($"File to print: {job.DocumentName}");
+            _logger.Debug($"Amount of pages: {job.CountOfPages}");
+            _logger.Debug(
                 $"Amount of copies: {job._job.HostingPrintQueue.CurrentJobSettings.CurrentPrintTicket.CopyCount}");
         }
     }
