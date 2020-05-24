@@ -56,7 +56,8 @@ namespace Project53.New_arhtech.Http.RedServer
             
             server.Post("/logout", async (req, res) =>
             {
-                Registry.OnNext("", RegistryAddresses.Logout);
+                var token = (await req.GetFormDataAsync())?["token"].ToString();
+                Registry.OnNext( token, RegistryAddresses.Logout);
                 return await res.SendStatus(HttpStatusCode.OK);
             });
             
