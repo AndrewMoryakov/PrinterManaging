@@ -59,6 +59,7 @@ namespace DesctopGui
 			}
 
 			var token = _clientToBackOfServers.GetToken(userName, password);
+			Registry.Public(token, "token");
 			UserInfo userInfo = _clientToBackOfServers.GetUserInfo(token).Adapt<UserInfo>();
 			
 			if (userInfo == null)
