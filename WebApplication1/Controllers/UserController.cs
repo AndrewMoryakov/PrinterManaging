@@ -1,5 +1,7 @@
 #nullable disable
+using System.Linq;
 using System.Threading.Tasks;
+using Mapster;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -17,9 +19,12 @@ namespace WebApplication1.Controllers
 			
 		private readonly IUserService _userService;
 		private readonly ILogger _logger;
+		private readonly ApplicationDbContext _appDbContext;
 
-		public UserController(IUserService userService, ILogger<UserController> logger) =>
-			(_userService, _logger) = (userService, logger);
+		public UserController(
+			IUserService userService,
+			ILogger<UserController> logger, ApplicationDbContext appDbCntxt) =>
+			(_userService, _logger, _appDbContext) = (userService, logger, appDbCntxt);
 
 		[HttpGet]
 		public ActionResult<UserInfoVm> Get()
@@ -37,6 +42,22 @@ namespace WebApplication1.Controllers
 				};
 			
 			return BadRequest();
+		}
+
+		[HttpPut]
+		public ActionResult Update(UserInfoBinding userBinding)
+		{
+			var email = _userService.GetEmailCurrentUser();
+
+			using (var dbContext = new ApplicationDbContext())
+			{
+				var usr = dbContext.Users.FirstOrDefault(el=>el.Email == email);
+				usr = userBinding.Adapt<ApplicationUser>();
+				dbContext.Users.Update(usr);
+				dbContext.SaveChanges();
+			}
+
+			return new OkResult();
 		}
 	}
 }
