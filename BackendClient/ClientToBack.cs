@@ -50,9 +50,9 @@ namespace BackendClient
 			return JsonConvert.DeserializeObject<UserAuthInfo>(response?.Content).access_token;
 		}
 		
-		public static IRestResponse SendPrintedDocumentsOnServer(string token, PrintedDocument[] printedPages)
+		public void SendPrintedDocumentsToBackend(string token, PrintedDocument printedPages)
 		{
-			var client = new RestClient($"{_baseUrl}/api/Account/PrintDocument");
+			var client = new RestClient($"{_baseUrl}/api/PrintDocument");
 			var request = new RestRequest(Method.POST);
 			request.AddHeader("cache-control", "no-cache");
 			request.AddHeader("authorization", $"Bearer {token}");
@@ -65,7 +65,7 @@ namespace BackendClient
 
 			//}
 			request.AddParameter("application/json", JsonConvert.SerializeObject(printedPages), ParameterType.RequestBody);
-			return client.Execute(request);
+			client.Execute(request);
 		}
 	}
 }
