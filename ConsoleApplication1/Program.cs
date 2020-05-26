@@ -6,6 +6,7 @@ using System.Printing;
 using System.Threading.Tasks;
 using BackendClient;
 using ConsoleApp1_2;
+using DataModels;
 using DreamPlace.Lib.Rx;
 using Project53.New_arhtech;
 using Project53.New_arhtech.Http.RedServer;
@@ -21,6 +22,13 @@ using Task = System.Threading.Tasks.Task;
 namespace Project53
 {
     //https://stackoverflow.com/questions/6103705/how-can-i-send-a-file-document-to-the-printer-and-have-it-print
+    //https://www.codeproject.com/Articles/74359/Ask-for-and-receive-change-notifications-from-a-pr
+    //https://www.codeproject.com/Articles/15084/Printers-and-SafeHandles-Part-2
+    //https://docs.microsoft.com/en-us/windows/win32/printdocs/findfirstprinterchangenotification?redirectedfrom=MSDN
+    //https://www.codeproject.com/Articles/6592/A-Simple-Approach-for-Controlling-Print-Jobs-using
+    //https://fooobar.com/questions/6991800/how-to-programmatically-achieve-editing-of-the-spool-file-header-of-the-normal-windows-print-queue-spool-file-before-it-is-sent-to-the-printer
+    //http://www.ghostgum.com.au/software/redmon.htm
+    //https://overcoder.net/q/383542/%D0%B5%D1%81%D1%82%D1%8C-%D0%BB%D0%B8-%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1-%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%B8%D1%82%D1%8C-%D0%B1%D1%8B%D0%BB-%D0%BB%D0%B8-%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81-%D0%BF%D0%B5%D1%87%D0%B0%D1%82%D0%B8-%D1%83%D1%81%D0%BF%D0%B5%D1%88%D0%BD%D1%8B%D0%BC
     internal class Program
     {
         private static Logger _logger;
@@ -53,7 +61,7 @@ namespace Project53
                 .Enrich.WithExceptionDetails()
                 .WriteTo.Console(theme: SystemConsoleTheme.Colored)
                 .WriteTo.File("logs.log")
-                .MinimumLevel.Information()
+                .MinimumLevel.Debug()
                 .WriteTo.Telegram("1206276933:AAE5Iinp03S5l5bveJ_s4QjF8YYjuUcankc", "61280592",
                     restrictedToMinimumLevel: LogEventLevel.Error)
                 .WriteTo.Telegram("1206276933:AAE5Iinp03S5l5bveJ_s4QjF8YYjuUcankc", "-347387165",
@@ -156,6 +164,8 @@ namespace Project53
                 LaunchAuthGui().Wait();
                 _client = Auth.GetClient();
             }
+            //ToDo убрать то, что ниже
+            _client.Balance = 0;
 
             var usrBalanceAllowPrinting = ClientValidator.CanContinuePrinting(_client, job);
             WriteLogsAboutJobAndClient(job, _client, usrBalanceAllowPrinting);
@@ -163,9 +173,10 @@ namespace Project53
             {
                 _logger.Information("Job will be canceled");
                 job._job.Cancel();
+                return;
             }
 
-            RunPrintJob(job._job);
+            RunPrintJob(job);
             _jobs.Remove(job.Guid);
              //RemoveJobIfPaused(job, isPaused);
         }
@@ -203,8 +214,8 @@ namespace Project53
 
         private static void WriteLogsAboutJobAndClient(JobMeta job, Client client, bool canBePrinted)
         {
-            _logger.Information($"Client: {client.Email}, balance: {client.Balance}");
-            _logger.Debug($"Job guid: {job.Guid}");
+            _logger.Information($"Client: {client?.Email}, balance: {client?.Balance}");
+            _logger.Debug($"Job guid: {job?.Guid}");
             _logger.Information($"Balance required: {(job.Copies * job.CountOfPages) * 2m}");
             _logger.Information($"Has ability to be printed: {canBePrinted}");
         }
@@ -227,10 +238,24 @@ namespace Project53
         }
 
         //Todo если этот сервис отключается, то удаляем все задания печати.
-        private static void RunPrintJob(PrintSystemJobInfo jobJob)
+        private static void RunPrintJob(JobMeta jobJob)
         {
-            jobJob.Resume();
-            _logger.Information("Everething ok, a print was started");
+            try
+            {
+                _logger.Information("Everething ok, a print was started");
+                
+                jobJob.Resume();
+                _clientToBack.SendPrintedDocumentsToBackend(_client.Token, 
+                    new PrintedDocument(jobJob.DocumentName, jobJob.CountOfPages));
+                
+                _logger.Debug("Send about printed doc to backend");
+            }
+            catch (Exception ex)
+            {
+                _logger.Error(ex, "Кажется не удалось возобновить задачу.");
+            }
+
+            
             _logger.Debug("___");
         }
 

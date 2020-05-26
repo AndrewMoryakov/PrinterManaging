@@ -20,6 +20,7 @@ namespace EventHook
         public DateTime EventDateTime { get; set; }
         public string PrinterName { get; set; }
         public string AppTitle { get; set; }
+        public string SpoolerName { get; set; }
         public string JobName { get; set; }
         public string UnicJobId { get; set; }
         public int? Pages { get; set; }
@@ -121,7 +122,7 @@ namespace EventHook
             {
                 var hWnd = WindowHelper.GetActiveWindowHandle();
                 var appTitle = WindowHelper.GetWindowText(hWnd);
-                var appName = WindowHelper.GetAppDescription(WindowHelper.GetAppPath(hWnd));
+                // var appName = WindowHelper.GetAppDescription(WindowHelper.GetAppPath(hWnd));
 
 				GetWindowThreadProcessId(hWnd, out int procId);
 
@@ -132,6 +133,7 @@ namespace EventHook
 					{
 						AppTitle = appTitle,
 						UnicJobId = e.UnicIdentOfJob,
+						SpoolerName = ((PrintQueueHook) sender).SpoolerName,
 						JobName = e.JobInfo?.JobName,
 						JobSize = e.JobInfo?.JobSize,
 						EventDateTime = DateTime.Now,
@@ -147,20 +149,24 @@ namespace EventHook
 //				{
 //					
 //				}
-	            var d = PausePrintJob(((PrintQueueHook) sender).SpoolerName, e.JobId);
-	            Console.ForegroundColor = ConsoleColor.Yellow;
-	            Registry.GetValue<Logger>().Debug(d?"HOOK: job paused":"HOOK: job NOT PAUSED");
-	            Console.ForegroundColor = ConsoleColor.White;
-	            
-	            if(d == true)
-					OnPrintEvent?.Invoke(null, new PrintEventArgs() { EventData = printEvent }); //Поставлено на паузу
+	            // var d = PausePrintJob(((PrintQueueHook) sender).SpoolerName, e.JobId.ToString());
+	            // Console.ForegroundColor = ConsoleColor.Yellow;
+	            // Registry.GetValue<Logger>().Debug(d?"HOOK: job paused":"HOOK: job NOT PAUSED");
+	            // Console.ForegroundColor = ConsoleColor.White;
+	            //
+	            // if(d == true)
+					OnPrintEvent?.Invoke(sender, new PrintEventArgs()
+					{
+						JobId = e.JobId,
+						EventData = printEvent
+					}); //Поставлено на паузу
             }
             
             	
             // e.JobInfo?.Pause();
         }
         
-        public static bool PausePrintJob(string printerName, int printJobID)
+        public static bool PausePrintJob(string printerName, string printJobID)
         {
 	        bool isActionPerformed = false;
 	        string searchQuery = "SELECT * FROM Win32_PrintJob";
@@ -169,22 +175,32 @@ namespace EventHook
 	        ManagementObjectCollection prntJobCollection = searchPrintJobs.Get();
 	        foreach(ManagementObject prntJob in prntJobCollection)
 	        {
+		        string jobId = prntJob.Properties["JobId"].Value.ToString();
 		        string jobName = prntJob.Properties["Name"].Value.ToString();
 		        
 		        if(prntJob.Properties["JobStatus"].Value != null)
 			        Registry.GetValue<Logger>().Debug(prntJob.Properties["JobStatus"].Value.ToString());
 		        
-		        //Job name would be of the format [Printer name], [Job ID]
+		        // //Job name would be of the format [Printer name], [Job ID]
 		        char[] splitArr = new char[1];
 		        splitArr[0] = Convert.ToChar(",");
 		        string prnterName = jobName.Split(splitArr)[0];
-		        int prntJobID = Convert.ToInt32(jobName.Split(splitArr)[1]);
-		        string documentName = prntJob.Properties["Document"].Value.ToString();
+		        // int prntJobID = Convert.ToInt32(jobName.Split(splitArr)[1]);
+		        // string documentName = prntJob.Properties["Document"].Value.ToString();
 		        if(String.Compare(prnterName, printerName, true) == 0)
 		        {
-			        if(prntJobID == printJobID)
+			        if(jobId == printJobID)
 			        {
-				        prntJob.InvokeMethod("Pause", null);
+				        try
+				        {
+					        prntJob.InvokeMethod("Pause", null);
+				        }
+				        catch (Exception ex)
+				        {
+					        Registry.GetValue<Logger>().Error(ex,
+						        "Произошла ошибка при ");
+				        }
+
 				        isActionPerformed = true; 
 				        break;
 			        }

@@ -213,9 +213,10 @@ namespace EventHook.Hooks
 		private JobDetail GetJobDetail(uint jobId) 
 		{
 			UInt32 needed = 0;
-			bool result;
+			// bool result;
 			
-			result = GetJob(_printerHandle, jobId, 2, IntPtr.Zero, 0, out needed);
+			var jobResult = 
+				GetJob(_printerHandle, jobId, 2, IntPtr.Zero, 0, out needed);
 			if (Marshal.GetLastWin32Error() != 122)
 			{
 				Console.ForegroundColor = ConsoleColor.Red;
@@ -226,7 +227,7 @@ namespace EventHook.Hooks
 			{
 				Registry.GetValue<Logger>().Debug("buffer size required=" + needed);
 				IntPtr buffer = Marshal.AllocHGlobal((int)needed);
-				result = GetJob(_printerHandle, jobId, 2, buffer, needed, out needed);
+				jobResult = GetJob(_printerHandle, jobId, 2, buffer, needed, out needed);
 				JOB_INFO_2 jobInfo = (JOB_INFO_2)Marshal.PtrToStructure(buffer, typeof(JOB_INFO_2));
 				DEVMODE dMode = (DEVMODE)Marshal.PtrToStructure(jobInfo.pDevMode, typeof(DEVMODE));
 				
@@ -276,7 +277,8 @@ namespace EventHook.Hooks
                                      PRINTER_CHANGES.PRINTER_CHANGE_DELETE_JOB) ||
                                     ((pdwChange & PRINTER_CHANGES.PRINTER_CHANGE_WRITE_JOB) ==
                                      PRINTER_CHANGES.PRINTER_CHANGE_WRITE_JOB);
-            if (!bJobRelatedChange) return;
+            if (!bJobRelatedChange)
+	            return;
 
             #endregion
 
@@ -306,6 +308,11 @@ namespace EventHook.Hooks
 				    )
 				{
                     var jStatus = (JOBSTATUS) Enum.Parse(typeof (JOBSTATUS), data[i].NotifyData.Data.cbBuf.ToString());
+                    if((jStatus & JOBSTATUS.JOB_STATUS_DELETING) != 0
+	                    || (jStatus & JOBSTATUS.JOB_STATUS_DELETED) != 0
+	                    || (jStatus & JOBSTATUS.JOB_STATUS_ERROR) != 0)
+	                    return;
+                    
                     var intJobId = (int) data[i].Id;
                     string strJobName;
                     PrintSystemJobInfo pji = null;
@@ -324,6 +331,9 @@ namespace EventHook.Hooks
                         pji = null;
                         _objJobDict.TryGetValue(intJobId, out strJobName);
                         if (strJobName == null) strJobName = string.Empty;
+                        
+                        Registry.GetValue<Logger>().Error(ex, "When extract job");
+                        return;
                     }
 
                     if (OnJobStatusChange != null)

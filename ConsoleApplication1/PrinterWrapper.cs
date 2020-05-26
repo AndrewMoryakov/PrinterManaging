@@ -1,6 +1,7 @@
 using System;
 using System.Printing;
 using System.Security.Authentication;
+using System.Threading.Tasks;
 using EventHook;
 using Serilog.Core;
 
@@ -38,6 +39,13 @@ namespace Project53.New_arhtech
 
         private void PrintWatcherOnPrintEvent(object sender, PrintEventArgs e)
         {
+            ///ToDo надо добиться того, чтобы приходили только текущие задачи
+            var d = PrintWatcher.PausePrintJob(e.EventData.SpoolerName, e.JobId.ToString());
+            Console.WriteLine(e.EventData.FileName);
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine(d?"HOOK: job paused":"HOOK: job NOT PAUSED");
+            Console.ForegroundColor = ConsoleColor.White;
+            
             try
             {
                 e.EventData.Ji.Refresh();
