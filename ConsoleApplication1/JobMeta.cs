@@ -14,37 +14,37 @@ namespace Project53.New_arhtech
 
     public partial class JobMeta
     {
-        public void CheckJob()
-        {
-            if(_job == null)
-                throw new ArgumentNullException("Задание на печать не инициализировано.");
-        }
+        // public void CheckJob()
+        // {
+        //     if(_job == null)
+        //         throw new ArgumentNullException("Задание на печать не инициализировано.");
+        // }
+        //
+        // public void CancelJob()
+        // {
+        //     CheckJob();
+        //     _job.Cancel();
+        // }
+        //
+        // public void Resume()
+        // {
+        //     CheckJob();
+        //     _job.Resume();
+        // }
 
-        public void CancelJob()
+        public JobMeta(string documentName, string guid, int countOfPages, int copies)
         {
-            CheckJob();
-            _job.Cancel();
-        }
-
-        public void Resume()
-        {
-            CheckJob();
-            _job.Resume();
-        }
-
-        public JobMeta(string documentName, string guid, int countOfPages, int copies, PrintSystemJobInfo job)
-        {
-            _job = job;
+            // _job = job;
             DocumentName = documentName;
             CountOfPages = countOfPages;
             Copies = copies;
             Guid = guid;
         }
 
-        public void ToPause()
-        {
-            CheckJob();
-            _job.Pause();
-        }
+        // public void ToPause()
+        // {
+        //     CheckJob();
+        //     _job.Pause();
+        // }
     }
 }

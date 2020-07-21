@@ -1,6 +1,7 @@
 using System;
 using System.Printing;
 using System.Security.Authentication;
+using System.Threading;
 using System.Threading.Tasks;
 using EventHook;
 using Serilog.Core;
@@ -39,24 +40,29 @@ namespace Project53.New_arhtech
 
         private void PrintWatcherOnPrintEvent(object sender, PrintEventArgs e)
         {
-            ///ToDo надо добиться того, чтобы приходили только текущие задачи
-            var d = PrintWatcher.PausePrintJob(e.EventData.SpoolerName, e.JobId.ToString());
+            // ///ToDo надо добиться того, чтобы приходили только текущие задачи
+            // var d = PrintWatcher.PausePrintJob(e.EventData.SpoolerName, e.JobId.ToString());
             Console.WriteLine(e.EventData.FileName);
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine(d?"HOOK: job paused":"HOOK: job NOT PAUSED");
-            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine($"Thread: {Thread.CurrentThread.ManagedThreadId}");
             
             try
             {
-                e.EventData.Ji.Refresh();
+                Console.WriteLine("1");
+                // e.EventData.Ji.Refresh();
                 if (e.EventData.JobDetail != null && e.EventData.JobDetail.JobInfo2.TotalPages != 0)
+                {
+                    Console.WriteLine("2");
                     _action(new JobMeta(
                         e.EventData.FileName,
                         e.EventData.UnicJobId,
                         (int) e.EventData.JobDetail.JobInfo2.TotalPages,
-                        e.EventData.JobDetail.DevMode.dmCopies,
-                        e.EventData.Ji
+                        e.EventData.JobDetail.DevMode.dmCopies
+                        // e.EventData.Ji
                     ));
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("finish work with job");
+                    Console.ForegroundColor = ConsoleColor.White;
+                }
             }
             catch (Exception ex)
             {

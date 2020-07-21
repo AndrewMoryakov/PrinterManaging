@@ -31,6 +31,7 @@ namespace Project53
     //https://overcoder.net/q/383542/%D0%B5%D1%81%D1%82%D1%8C-%D0%BB%D0%B8-%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1-%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%B8%D1%82%D1%8C-%D0%B1%D1%8B%D0%BB-%D0%BB%D0%B8-%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81-%D0%BF%D0%B5%D1%87%D0%B0%D1%82%D0%B8-%D1%83%D1%81%D0%BF%D0%B5%D1%88%D0%BD%D1%8B%D0%BC
     internal class Program
     {
+        private static IEnumerable<string> _mainPrinters;
         private static Logger _logger;
         private static BaseValidationOfDoc _validator;
         private static IDisposable _disposableserver;
@@ -50,6 +51,7 @@ namespace Project53
             _logger.Debug("RELEASE");
 #endif
 
+            Console.WriteLine("ReadKey");
             Console.ReadKey();
         }
 
@@ -69,6 +71,8 @@ namespace Project53
                 .CreateLogger();
             
             var configuration = GetAppsettingsReader();
+            _mainPrinters = configuration.GetSection("appSettings:mainPrinter")
+                .GetChildren().Select(el=>el.Value);
 
             _clientToBack = new ClientToBack(
                 configuration.GetSection("appSettings:serviceDomain").Value
@@ -116,22 +120,26 @@ namespace Project53
             List<string> GetPrinters()
             {
                 var list = Printers.Get().ToList();
-                _logger.Debug("Printers");
+                _logger.Debug("==All printers==");
                 list.ForEach(el => _logger.Debug(el));
                 return list;
             }
             
             void SubscribePrinters(List<string> supprtedPrinters1)
             {
+                _logger.Debug("==Printers in work==");
                 foreach (var printerName in supprtedPrinters1)
                 {
                     var printer = new PrinterWrapper(printerName, _logger);
                     printer.SubscribeOnPrintEvent(Subscriber);
+                    _logger.Debug(printerName);
                 }
             }
             
             var supprtedPrinters = GetPrinters();
-            SubscribePrinters(supprtedPrinters);
+            var mainPrinters = supprtedPrinters.Intersect(_mainPrinters);
+            SubscribePrinters(mainPrinters.ToList());
+            _logger.Debug("=====");
         }
 
         private void StartOldFunctions()
@@ -151,6 +159,9 @@ namespace Project53
         private static Client _client = null;
         private static void Subscriber(JobMeta job)
         {
+            Console.WriteLine("subscriber");
+            return;
+            
             _logger.Verbose("job is here: " + job.DocumentName);
             if (CanContinueWithJob(job) == false)
                 return;
@@ -159,20 +170,20 @@ namespace Project53
             WriteLogs(job);
             CanchelIfNotValidJob(job);
 
-            if (_client == null)
-            {
-                LaunchAuthGui().Wait();
-                _client = Auth.GetClient();
-            }
-            //ToDo убрать то, что ниже
-            _client.Balance = 0;
+            // if (_client == null)
+            // {
+            //     LaunchAuthGui().Wait();
+            //     _client = Auth.GetClient();
+            // }
+            // //ToDo убрать то, что ниже
+            // _client.Balance = 0;
 
             var usrBalanceAllowPrinting = ClientValidator.CanContinuePrinting(_client, job);
             WriteLogsAboutJobAndClient(job, _client, usrBalanceAllowPrinting);
             if (!usrBalanceAllowPrinting)
             {
                 _logger.Information("Job will be canceled");
-                job._job.Cancel();
+                // job._job.Cancel();
                 return;
             }
 
@@ -184,8 +195,8 @@ namespace Project53
         private static void CanchelIfNotValidJob(JobMeta job)
         {
             var jobIsValid = _validator.ApplyChecks(job);
-            if (jobIsValid == false)
-                job.CancelJob();
+            // if (jobIsValid == false)
+            //     job.CancelJob();
         }
 
         private static bool CanContinueWithJob(JobMeta job)
@@ -244,7 +255,7 @@ namespace Project53
             {
                 _logger.Information("Everething ok, a print was started");
                 
-                jobJob.Resume();
+                // jobJob.Resume();
                 _clientToBack.SendPrintedDocumentsToBackend(_client.Token, 
                     new PrintedDocument(jobJob.DocumentName, jobJob.CountOfPages));
                 

@@ -11,81 +11,85 @@ using Serilog.Core;
 
 namespace EventHook.Hooks
 {
-	[StructLayout(LayoutKind.Sequential, CharSet = CharSet.Auto)]
-	public struct DEVMODE
-	{
-		[MarshalAs(UnmanagedType.ByValTStr, SizeConst = 32)]
-		public string dmDeviceName;
-		public short dmSpecVersion;
-		public short dmDriverVersion;
-		public short dmSize;
-		public short dmDriverExtra;
-		public int dmFields;
-		public short dmOrientation;
-		public short dmPaperSize;
-		public short dmPaperLength;
-		public short dmPaperWidth;
-		public short dmScale;
-		public short dmCopies;
-		public short dmDefaultSource;
-		public short dmPrintQuality;
-		public short dmColor;
-		public short dmDuplex;
-		public short dmYResolution;
-		public short dmTTOption;
-		public short dmCollate;
-		[MarshalAs(UnmanagedType.ByValTStr, SizeConst = 32)]
-		public string dmFormName;
-		public short dmLogPixels;
-		public int dmBitsPerPel;
-		public int dmPelsWidth;
-		public int dmPelsHeight;
-		public int dmDisplayFlags;
-		public int dmDisplayFrequency;
-	}
-	
-	[StructLayout(LayoutKind.Sequential, CharSet = CharSet.Auto)]
-	public struct JOB_INFO_2
-	{
-		public UInt32 JobId;
-		public IntPtr pPrinterName;
-		public IntPtr pMachineName;
-		public IntPtr pUserName;
-		public IntPtr pDocument;
-		public IntPtr pNotifyName;
-		public IntPtr pDatatype;
-		public IntPtr pPrintProcessor;
-		public IntPtr pParameters;
-		public IntPtr pDriverName;
-		public IntPtr pDevMode;
-		public IntPtr pStatus;
-		public IntPtr pSecurityDescriptor;
-		public UInt32 Status;
-		public UInt32 Priority;
-		public UInt32 Position;
-		public UInt32 StartTime;
-		public UInt32 UntilTime;
-		public UInt32 TotalPages;
-		public UInt32 Size;
-		public SYSTEMTIME Submitted;
-		public UInt32 Time;
-		public UInt32 PagesPrinted;
+    [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Auto)]
+    public struct DEVMODE
+    {
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 32)]
+        public string dmDeviceName;
 
-	}
-	
-	public class JobDetail
-	{
-		public JOB_INFO_2 JobInfo2 { get; internal set; }
-		public DEVMODE DevMode { get; internal set; }
-	}
-	
+        public short dmSpecVersion;
+        public short dmDriverVersion;
+        public short dmSize;
+        public short dmDriverExtra;
+        public int dmFields;
+        public short dmOrientation;
+        public short dmPaperSize;
+        public short dmPaperLength;
+        public short dmPaperWidth;
+        public short dmScale;
+        public short dmCopies;
+        public short dmDefaultSource;
+        public short dmPrintQuality;
+        public short dmColor;
+        public short dmDuplex;
+        public short dmYResolution;
+        public short dmTTOption;
+        public short dmCollate;
+
+        [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 32)]
+        public string dmFormName;
+
+        public short dmLogPixels;
+        public int dmBitsPerPel;
+        public int dmPelsWidth;
+        public int dmPelsHeight;
+        public int dmDisplayFlags;
+        public int dmDisplayFrequency;
+    }
+
+    [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Auto)]
+    public struct JOB_INFO_2
+    {
+        public UInt32 JobId;
+        public IntPtr pPrinterName;
+        public IntPtr pMachineName;
+        public IntPtr pUserName;
+        public IntPtr pDocument;
+        public IntPtr pNotifyName;
+        public IntPtr pDatatype;
+        public IntPtr pPrintProcessor;
+        public IntPtr pParameters;
+        public IntPtr pDriverName;
+        public IntPtr pDevMode;
+        public IntPtr pStatus;
+        public IntPtr pSecurityDescriptor;
+        public UInt32 Status;
+        public UInt32 Priority;
+        public UInt32 Position;
+        public UInt32 StartTime;
+        public UInt32 UntilTime;
+        public UInt32 TotalPages;
+        public UInt32 Size;
+        public SYSTEMTIME Submitted;
+        public UInt32 Time;
+        public UInt32 PagesPrinted;
+    }
+
+    public class JobDetail
+    {
+        public JOB_INFO_2 JobInfo2 { get; internal set; }
+        public DEVMODE DevMode { get; internal set; }
+    }
+
     /// <summary>
     ///  //http://www.codeproject.com/Articles/51085/Monitor-jobs-in-a-printer-queue-NET
     /// </summary>
     internal class PrintJobChangeEventArgs : EventArgs
     {
-	    public string UnicIdentOfJob { get; private set; }
-        internal PrintJobChangeEventArgs(int intJobID, string unicJobId, string strJobName, JOBSTATUS jStatus, JobDetail detail, PrintSystemJobInfo objJobInfo)
+        public string UnicIdentOfJob { get; private set; }
+
+        internal PrintJobChangeEventArgs(int intJobID, string unicJobId, string strJobName, JOBSTATUS jStatus,
+            JobDetail detail, PrintSystemJobInfo objJobInfo)
         {
             _jobId = intJobID;
             _jobName = strJobName;
@@ -100,25 +104,26 @@ namespace EventHook.Hooks
             get { return _jobId; }
         }
 
-        internal string JobName
-        {
-            get { return _jobName; }
-        }
+        // internal string JobName
+        // {
+        //     get { return _jobName; }
+        // }
 
         internal JOBSTATUS JobStatus
         {
             get { return _jobStatus; }
         }
 
-        internal PrintSystemJobInfo JobInfo
-        {
-            get { return _jobInfo; }
-        }
+        // internal PrintSystemJobInfo JobInfo
+        // {
+        //     get { return _jobInfo; }
+        // }
 
         private JobDetail _jobDetail;
+
         internal JobDetail JobDetail
         {
-	        get { return _jobDetail; }
+            get { return _jobDetail; }
         }
 
         #region private variables
@@ -175,7 +180,12 @@ namespace EventHook.Hooks
             {
                 //We got a valid Printer handle.  Let us register for change notification....
                 _changeHandle = FindFirstPrinterChangeNotification(_printerHandle,
-                    (int) PRINTER_CHANGES.PRINTER_CHANGE_ALL, 0, _notifyOptions);
+                    (int) (
+                        PRINTER_CHANGES.PRINTER_CHANGE_ALL
+                    //     PRINTER_CHANGES.PRINTER_CHANGE_JOB 
+                    // | PRINTER_CHANGES.PRINTER_CHANGE_ADD_JOB 
+                    // | PRINTER_CHANGES.PRINTER_CHANGE_SET_JOB
+                    ) , 0, _notifyOptions);
                 // We have successfully registered for change notification.  Let us capture the handle...
                 _mrEvent.SafeWaitHandle = new SafeWaitHandle(_changeHandle, true);
 
@@ -187,6 +197,7 @@ namespace EventHook.Hooks
             _spooler = new PrintQueue(new PrintServer(), SpoolerName);
             foreach (var psi in _spooler.GetPrintJobInfoCollection())
             {
+                //ToDo Тут происходит инициализация. ЧТо-то можно сделать. Например удалить на паузе
                 _objJobDict[psi.JobIdentifier] = psi.Name;
             }
         }
@@ -201,61 +212,67 @@ namespace EventHook.Hooks
             {
                 if (_printerHandle != IntPtr.Zero)
                 {
-                    ClosePrinter((int)_printerHandle);
+                    ClosePrinter((int) _printerHandle);
                     _printerHandle = IntPtr.Zero;
                 }
             }
-            catch { }
+            catch
+            {
+            }
         }
 
-		#endregion
+        #endregion
 
-		private JobDetail GetJobDetail(uint jobId) 
-		{
-			UInt32 needed = 0;
-			// bool result;
-			
-			var jobResult = 
-				GetJob(_printerHandle, jobId, 2, IntPtr.Zero, 0, out needed);
-			if (Marshal.GetLastWin32Error() != 122)
-			{
-				Console.ForegroundColor = ConsoleColor.Red;
-				Console.WriteLine("Get Job 1 failure, error code=" + Marshal.GetLastWin32Error());
-				Console.ForegroundColor = ConsoleColor.White;
-			}
-			else
-			{
-				Registry.GetValue<Logger>().Debug("buffer size required=" + needed);
-				IntPtr buffer = Marshal.AllocHGlobal((int)needed);
-				jobResult = GetJob(_printerHandle, jobId, 2, buffer, needed, out needed);
-				JOB_INFO_2 jobInfo = (JOB_INFO_2)Marshal.PtrToStructure(buffer, typeof(JOB_INFO_2));
-				DEVMODE dMode = (DEVMODE)Marshal.PtrToStructure(jobInfo.pDevMode, typeof(DEVMODE));
-				
-				return new JobDetail
-				{
-					JobInfo2 = jobInfo,
-					DevMode = dMode
-				};
+        private JobDetail GetJobDetail(uint jobId)
+        {
+            UInt32 needed = 0;
+            // bool result;
+
+            var jobResult =
+                GetJob(_printerHandle, jobId, 2, IntPtr.Zero, 0, out needed);
+            if (Marshal.GetLastWin32Error() != 122)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Get Job 1 failure, error code=" + Marshal.GetLastWin32Error());
+                Console.ForegroundColor = ConsoleColor.White;
+            }
+            else
+            {
+                Registry.GetValue<Logger>().Debug("buffer size required=" + needed);
+                IntPtr buffer = Marshal.AllocHGlobal((int) needed);
+                jobResult = GetJob(_printerHandle, jobId, 2, buffer, needed, out needed);
+                JOB_INFO_2 jobInfo = (JOB_INFO_2) Marshal.PtrToStructure(buffer, typeof(JOB_INFO_2));
+                DEVMODE dMode = (DEVMODE) Marshal.PtrToStructure(jobInfo.pDevMode, typeof(DEVMODE));
+
+                return new JobDetail
+                {
+                    JobInfo2 = jobInfo,
+                    DevMode = dMode
+                };
 //				Console.ForegroundColor = ConsoleColor.Yellow;
 //				Console.WriteLine("Time now: " + DateTime.Now.ToString("hh:mm:ss"));
 //				Console.ForegroundColor = ConsoleColor.White;
-				//Marshal.FreeHGlobal(buffer);
-			}
+                //Marshal.FreeHGlobal(buffer);
+            }
 
-			return null;
-			//ClosePrinter((int)_printerHandle);
+            return null;
+            //ClosePrinter((int)_printerHandle);
+        }
 
-		}
-		#region Callback Function
+        #region Callback Function
 
-		/// <summary>
-		/// Отлавливается нужное задание и вызывается событие, на которое подписались в вызывающем коде
-		/// </summary>
-		/// <param name="state"></param>
-		/// <param name="timedOut"></param>
-		internal void PrinterNotifyWaitCallback(object state, bool timedOut)
+        /// <summary>
+        /// Отлавливается нужное задание и вызывается событие, на которое подписались в вызывающем коде
+        /// </summary>
+        /// <param name="state"></param>
+        /// <param name="timedOut"></param>
+        internal void PrinterNotifyWaitCallback(object state, bool timedOut)
         {
+            Console.WriteLine("print event");
             if (_printerHandle == IntPtr.Zero) return;
+            // FindClosePrinterChangeNotification(_printerHandle);
+            // Stop();
+            // Start();
 
             #region read notification details
 
@@ -264,7 +281,7 @@ namespace EventHook.Hooks
             IntPtr pNotifyInfo;
             var bResult = FindNextPrinterChangeNotification(_changeHandle, out pdwChange, _notifyOptions,
                 out pNotifyInfo);
-	        _notifyOptions.dwFlags = 0;
+            _notifyOptions.dwFlags = 0;
             //If the Printer Change Notification Call did not give data, exit code
             if ((bResult == false) || (((int) pNotifyInfo) == 0)) return;
 
@@ -278,21 +295,21 @@ namespace EventHook.Hooks
                                     ((pdwChange & PRINTER_CHANGES.PRINTER_CHANGE_WRITE_JOB) ==
                                      PRINTER_CHANGES.PRINTER_CHANGE_WRITE_JOB);
             if (!bJobRelatedChange)
-	            return;
+                return;
 
             #endregion
 
             #region populate Notification Information
 
             //Now, let us initialize and populate the Notify Info data
-            var info = (PRINTER_NOTIFY_INFO) Marshal.PtrToStructure(pNotifyInfo, typeof (PRINTER_NOTIFY_INFO));
-            var pData = (long) pNotifyInfo + (long) Marshal.OffsetOf(typeof (PRINTER_NOTIFY_INFO), "aData");
+            var info = (PRINTER_NOTIFY_INFO) Marshal.PtrToStructure(pNotifyInfo, typeof(PRINTER_NOTIFY_INFO));
+            var pData = (long) pNotifyInfo + (long) Marshal.OffsetOf(typeof(PRINTER_NOTIFY_INFO), "aData");
             var data = new PRINTER_NOTIFY_INFO_DATA[info.Count];
             for (uint i = 0; i < info.Count; i++)
             {
                 data[i] =
-                    (PRINTER_NOTIFY_INFO_DATA) Marshal.PtrToStructure((IntPtr) pData, typeof (PRINTER_NOTIFY_INFO_DATA));
-                pData += Marshal.SizeOf(typeof (PRINTER_NOTIFY_INFO_DATA));
+                    (PRINTER_NOTIFY_INFO_DATA) Marshal.PtrToStructure((IntPtr) pData, typeof(PRINTER_NOTIFY_INFO_DATA));
+                pData += Marshal.SizeOf(typeof(PRINTER_NOTIFY_INFO_DATA));
             }
 
             #endregion
@@ -301,47 +318,36 @@ namespace EventHook.Hooks
 
             for (var i = 0; i < data.Count(); i++)
             {
-				if (data[i].Field == (ushort)PRINTERJOBNOTIFICATIONTYPES.JOB_NOTIFY_FIELD_STATUS
-					&&
-					(data[i].Type == (ushort)PRINTERNOTIFICATIONTYPES.JOB_NOTIFY_TYPE ||
-					data[i].Type == (ushort)PRINTERJOBNOTIFICATIONTYPES.JOB_NOTIFY_FIELD_TOTAL_PAGES)
-				    )
-				{
-                    var jStatus = (JOBSTATUS) Enum.Parse(typeof (JOBSTATUS), data[i].NotifyData.Data.cbBuf.ToString());
-                    if((jStatus & JOBSTATUS.JOB_STATUS_DELETING) != 0
-	                    || (jStatus & JOBSTATUS.JOB_STATUS_DELETED) != 0
-	                    || (jStatus & JOBSTATUS.JOB_STATUS_ERROR) != 0)
-	                    return;
-                    
-                    var intJobId = (int) data[i].Id;
-                    string strJobName;
-                    PrintSystemJobInfo pji = null;
-
-                    try
-                    {
-                        _spooler = new PrintQueue(new PrintServer(), SpoolerName);
-                        pji = _spooler.GetJob(intJobId);
-                        if (!_objJobDict.ContainsKey(intJobId))
-                            _objJobDict[intJobId] = $"'n:{pji.Name}|js:{pji.JobStatus}|pn:{pji.NumberOfPages}|ji:{intJobId}|{Guid.NewGuid().ToString()}'";
-                        strJobName = pji.Name;
-                        pji.Refresh();
-                    }
-                    catch(Exception ex)
-                    {
-                        pji = null;
-                        _objJobDict.TryGetValue(intJobId, out strJobName);
-                        if (strJobName == null) strJobName = string.Empty;
-                        
-                        Registry.GetValue<Logger>().Error(ex, "When extract job");
+                var intJobId = (int) data[i].Id;
+                PrintWatcher.WriteAboutJob(intJobId.ToString());
+                // var pause = PrintWatcher.PausePrintJob(intJobId.ToString());
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                // Console.WriteLine(pause ? "HOOK: job paused" : "HOOK: job NOT PAUSED");
+                Console.WriteLine(i);
+                Console.ForegroundColor = ConsoleColor.White;
+                //
+                if (data[i].Field == (ushort) PRINTERJOBNOTIFICATIONTYPES.JOB_NOTIFY_FIELD_STATUS
+                    &&
+                    (data[i].Type == (ushort) PRINTERNOTIFICATIONTYPES.JOB_NOTIFY_TYPE ||
+                     data[i].Type == (ushort) PRINTERJOBNOTIFICATIONTYPES.JOB_NOTIFY_FIELD_TOTAL_PAGES)
+                )
+                {
+                    var jStatus = (JOBSTATUS) Enum.Parse(typeof(JOBSTATUS), data[i].NotifyData.Data.cbBuf.ToString());
+                    if ((jStatus & JOBSTATUS.JOB_STATUS_DELETING) != 0
+                        || (jStatus & JOBSTATUS.JOB_STATUS_DELETED) != 0
+                        || (jStatus & JOBSTATUS.JOB_STATUS_ERROR) != 0)
                         return;
-                    }
 
+                    Console.WriteLine("pool" + i);
+                    
                     if (OnJobStatusChange != null)
                     {
                         //Let us raise the event calls: pqm_OnJobStatusChange
-                        JobDetail jobDetails = GetJobDetail(data[i].Id);//Get detalis about job
-                        OnJobStatusChange(this, new PrintJobChangeEventArgs(intJobId, _objJobDict[intJobId], strJobName, jStatus, jobDetails, pji)); //Set pause for job
-	                    
+                        JobDetail jobDetails = GetJobDetail(data[i].Id); //Get detalis about job
+                        Console.WriteLine("status: " + jobDetails.JobInfo2.Status);
+                        OnJobStatusChange(this,
+                            new PrintJobChangeEventArgs(intJobId, "", null, jStatus, jobDetails,
+                                null)); //Set pause for job
                     }
                 }
             }
@@ -351,17 +357,18 @@ namespace EventHook.Hooks
             #region reset the Event and wait for the next event
 
             _mrEvent.Reset();
-            _waitHandle = ThreadPool.RegisterWaitForSingleObject(_mrEvent, PrinterNotifyWaitCallback, _mrEvent, -1, true);
+            _waitHandle =
+                ThreadPool.RegisterWaitForSingleObject(_mrEvent, PrinterNotifyWaitCallback, _mrEvent, -1, true);
 
             #endregion
         }
-		
-		#endregion
-		
 
-		#region DLL Import Functions
+        #endregion
 
-		[DllImport("winspool.drv", EntryPoint = "OpenPrinterA", SetLastError = true, CharSet = CharSet.Ansi,
+
+        #region DLL Import Functions
+
+        [DllImport("winspool.drv", EntryPoint = "OpenPrinterA", SetLastError = true, CharSet = CharSet.Ansi,
             ExactSpelling = true, CallingConvention = CallingConvention.StdCall)]
         internal static extern bool OpenPrinter(string pPrinterName,
             out IntPtr phPrinter,
@@ -381,39 +388,49 @@ namespace EventHook.Hooks
             ExactSpelling = true,
             CallingConvention = CallingConvention.StdCall)]
         internal static extern IntPtr FindFirstPrinterChangeNotification
-            ([In] IntPtr hPrinter,
-                [In] int fwFlags,
-                [In] int fwOptions,
-                [In, MarshalAs(UnmanagedType.LPStruct)] PRINTER_NOTIFY_OPTIONS pPrinterNotifyOptions);
+        ([In] IntPtr hPrinter,
+            [In] int fwFlags,
+            [In] int fwOptions,
+            [In, MarshalAs(UnmanagedType.LPStruct)]
+            PRINTER_NOTIFY_OPTIONS pPrinterNotifyOptions);
 
         [DllImport("winspool.drv", EntryPoint = "FindNextPrinterChangeNotification",
             SetLastError = true, CharSet = CharSet.Ansi,
             ExactSpelling = false,
             CallingConvention = CallingConvention.StdCall)]
         internal static extern bool FindNextPrinterChangeNotification
-            ([In] IntPtr hChangeObject,
-                [Out] out int pdwChange,
-                [In, MarshalAs(UnmanagedType.LPStruct)] PRINTER_NOTIFY_OPTIONS pPrinterNotifyOptions,
-                [Out] out IntPtr lppPrinterNotifyInfo
-            );
+        ([In] IntPtr hChangeObject,
+            [Out] out int pdwChange,
+            [In, MarshalAs(UnmanagedType.LPStruct)]
+            PRINTER_NOTIFY_OPTIONS pPrinterNotifyOptions,
+            [Out] out IntPtr lppPrinterNotifyInfo
+        );
 
-		[DllImport("winspool.drv", EntryPoint = "GetJob",
-	SetLastError = true,
-	ExactSpelling = false,
-	CallingConvention = CallingConvention.StdCall)]
-		internal static extern bool GetJob
-		([In] IntPtr hPrinter,
-		[In] UInt32 jobId,
-		[In] UInt32 level,
-		[Out] IntPtr pJob,
-		[In] UInt32 cbBuf,
-		[Out] out UInt32 pcbNeeded
-    );
-		#endregion
+        [DllImport("winspool.drv", EntryPoint = "FindClosePrinterChangeNotification",
+            SetLastError = true, CharSet = CharSet.Unicode,
+            ExactSpelling = false,
+            CallingConvention = CallingConvention.StdCall)]
 
-		#region private variables
+        public static extern bool FindClosePrinterChangeNotification([InAttribute()] IntPtr hChangeObject);
 
-		private IntPtr _printerHandle = IntPtr.Zero;
+        [DllImport("winspool.drv", EntryPoint = "GetJob",
+            SetLastError = true,
+            ExactSpelling = false,
+            CallingConvention = CallingConvention.StdCall)]
+        internal static extern bool GetJob
+        ([In] IntPtr hPrinter,
+            [In] UInt32 jobId,
+            [In] UInt32 level,
+            [Out] IntPtr pJob,
+            [In] UInt32 cbBuf,
+            [Out] out UInt32 pcbNeeded
+        );
+
+        #endregion
+
+        #region private variables
+
+        private IntPtr _printerHandle = IntPtr.Zero;
         internal string SpoolerName;
         private readonly ManualResetEvent _mrEvent = new ManualResetEvent(false);
         private RegisteredWaitHandle _waitHandle;
