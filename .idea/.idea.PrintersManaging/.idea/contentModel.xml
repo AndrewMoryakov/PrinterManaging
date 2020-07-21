@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\hopt\AppData\local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\hopt\AppData\local\JetBrains\Rider2020.1\resharper-host\local\Transient\ReSharperHost\v201\SolutionCaches\_PrintersManaging.-2102449515.00" t="ExcludeRecursive" />
+    <e p="C:\Users\hopt\RiderProjects\PrinterManaging" t="IncludeFlat">
+      <e p="BackendClient" t="IncludeRecursive">
+        <e p="BackendClient.csproj" t="IncludeRecursive" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="ClientToBack.cs" t="Include" />
+        <e p="DateModels" t="Include">
+          <e p="UserAuthInfo.cs" t="Include" />
+          <e p="UserInfo.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.0" t="Include">
+              <e p="BackendClient.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="ConsoleApp1" t="IncludeRecursive">
+        <e p="ConsoleApp1_2.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="ConsoleApp2" t="IncludeRecursive">
+        <e p="ConsoleApp2.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="ConsoleApplication1" t="IncludeRecursive">
+        <e p="App.config" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="Auth.cs" t="Include" />
+        <e p="BaseValidationOfDoc.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="ClientValidator.cs" t="Include" />
+        <e p="ConsoleApplication1.csproj" t="IncludeRecursive" />
+        <e p="JobMeta.cs" t="Include" />
+        <e p="Models" t="Include">
+          <e p="Client.cs" t="Include" />
+          <e p="FileInfoEventArgs.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Printers.cs" t="Include" />
+        <e p="PrinterWrapper.cs" t="Include" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="RedServer" t="Include">
+          <e p="Server.cs" t="Include" />
+        </e>
+        <e p="RegistryAddresses.cs" t="Include" />
+      </e>
+      <e p="DataModels" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="DataModels.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.0" t="Include">
+              <e p="DataModels.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="PrintedDocument.cs" t="Include" />
+      </e>
+      <e p="DesctopGui" t="IncludeRecursive">
+        <e p="App.xaml" t="Include" />
+        <e p="App.xaml.cs" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="AssemblyInfo.cs" t="Include" />
+        <e p="Auth.xaml" t="Include" />
+        <e p="Auth.xaml.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="ButtonDictionatryResource.xaml" t="Include" />
+        <e p="ClearIECookies.cs" t="Include" />
+        <e p="DateModels" t="Include">
+          <e p="UserAuthInfo.cs" t="Include" />
+          <e p="UserInfo.cs" t="Include" />
+        </e>
+        <e p="DesctopGui.csproj" t="IncludeRecursive" />
+        <e p="MainWindow.xaml" t="Include" />
+        <e p="MainWindow.xaml.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="App.g.cs" t="Include" />
+              <e p="Auth.g.cs" t="Include" />
+              <e p="DesctopGui.AssemblyInfo.cs" t="Include" />
+              <e p="MainWindow.g.cs" t="Include" />
+              <e p="Welcome.g.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="PrintGoClient.cs" t="Include" />
+        <e p="StaticExtensions.cs" t="Include" />
+        <e p="Welcome.xaml" t="Include" />
+        <e p="Welcome.xaml.cs" t="Include" />
+      </e>
+      <e p="Dreamdev.Printergo.Server" t="IncludeRecursive">
+        <e p="Dreamdev.Printergo.Server.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="Hook" t="IncludeRecursive">
+        <e p="ApplicationWatcher.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="ClipboardWatcher.cs" t="Include" />
+        <e p="Helpers" t="Include">
+          <e p="SharedMessagePump.cs" t="Include" />
+          <e p="WindowHelper.cs" t="Include" />
+        </e>
+        <e p="Hook.csproj" t="IncludeRecursive" />
+        <e p="Hooks" t="Include">
+          <e p="ClipBoardHook.cs" t="Include" />
+          <e p="KeyboardHook.cs" t="Include" />
+          <e p="Library" t="Include">
+            <e p="Enum.cs" t="Include" />
+            <e p="Msgs.cs" t="Include" />
+            <e p="PrintSpoolAPI.cs" t="Include" />
+            <e p="Procs.cs" t="Include" />
+            <e p="Structs.cs" t="Include" />
+            <e p="User32.cs" t="Include" />
+          </e>
+          <e p="MouseHook.cs" t="Include" />
+          <e p="PrintQueueHook.cs" t="Include" />
+          <e p="ShellHook.cs" t="Include" />
+          <e p="WindowHook.cs" t="Include" />
+        </e>
+        <e p="KeyboardWatcher.cs" t="Include" />
+        <e p="MouseWatcher.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="PrintWatcher.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+      </e>
+      <e p="NUnitTestProject1" t="IncludeRecursive">
+        <e p="NUnitTestProject1.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="PrintersManaging.sln" t="IncludeFlat" />
+      <e p="Project53" t="IncludeRecursive">
+        <e p="Project53_2.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="Project53Core" t="IncludeRecursive">
+        <e p="Project53Core.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="RedHttpServer" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Context.cs" t="Include" />
+        <e p="Extensions" t="Include">
+          <e p="BodyParser.cs" t="Include" />
+          <e p="BodyParserExtension.cs" t="Include" />
+          <e p="JsonConverter.cs" t="Include" />
+          <e p="XmlConverter.cs" t="Include" />
+        </e>
+        <e p="HandlerExceptionEventArgs.cs" t="Include" />
+        <e p="Handlers.cs" t="Include" />
+        <e p="HandlerType.cs" t="Include" />
+        <e p="InContext.cs" t="Include" />
+        <e p="Interfaces" t="Include">
+          <e p="IBodyConverter.cs" t="Include" />
+          <e p="IBodyParser.cs" t="Include" />
+          <e p="IJsonConverter.cs" t="Include" />
+          <e p="IRedExtension.cs" t="Include" />
+          <e p="IRedMiddleware.cs" t="Include" />
+          <e p="IRedWebSocketMiddleware.cs" t="Include" />
+          <e p="IRouter.cs" t="Include" />
+          <e p="IXmlConverter.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="net48" t="Include">
+              <e p="RedHttpServer.AssemblyInfo.cs" t="Include" />
+            </e>
+            <e p="netstandard2.0" t="Include">
+              <e p="RedHttpServer.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="PluginCollection.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="RedHttpServer.cs" t="Include" />
+        <e p="RedHttpServer.csproj" t="IncludeRecursive" />
+        <e p="RedHttpServerException.cs" t="Include" />
+        <e p="RedHttpServerPrivate.cs" t="Include" />
+        <e p="Request.cs" t="Include" />
+        <e p="Response.cs" t="Include" />
+        <e p="Router.cs" t="Include" />
+        <e p="UrlParameters.cs" t="Include" />
+        <e p="WebSocketDialog.cs" t="Include" />
+      </e>
+      <e p="WebApplication1" t="IncludeRecursive">
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="AuthOptions.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Controllers" t="Include">
+          <e p="AuthController.cs" t="Include" />
+          <e p="Helpers" t="Include">
+            <e p="IUserService.cs" t="Include" />
+            <e p="UserHelper.cs" t="Include" />
+          </e>
+          <e p="PrintDocumentController.cs" t="Include" />
+          <e p="UserController.cs" t="Include" />
+        </e>
+        <e p="Data" t="Include">
+          <e p="AppDbContextFactory.cs" t="Include" />
+          <e p="AppDbInit.cs" t="Include" />
+          <e p="ApplicationDbContext.cs" t="Include" />
+          <e p="DataModel" t="Include">
+            <e p="ApplicationUser.cs" t="Include" />
+            <e p="Vm" t="Include">
+              <e p="UserInfoBinding.cs" t="Include" />
+              <e p="UserInfoVm.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Role.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="WebApplication1.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="Startup.cs" t="Include" />
+        <e p="Swagger" t="Include">
+          <e p="SwaggerApiControllerOnlyConvention.cs" t="Include" />
+        </e>
+        <e p="WeatherForecast.cs" t="Include" />
+        <e p="WebApplication1.csproj" t="IncludeRecursive" />
+      </e>
+    </e>
+  </component>
+</project>

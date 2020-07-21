@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="52b8cff4-9c0b-435a-a246-0a7af41c4c5b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/ConsoleApplication1/JobMeta.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/JobMeta.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApplication1/PrinterWrapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/PrinterWrapper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApplication1/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApplication1/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApplication1/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hook/Hooks/PrintQueueHook.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hook/Hooks/PrintQueueHook.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Hook/PrintWatcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Hook/PrintWatcher.cs" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/WebApplication1/Controllers/Helpers/IUserService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApplication1/Controllers/Helpers/UserHelper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Project53/New arhtech/Http/Server/Startup.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Project53/New arhtech/Http/Server/ValuesController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Project53/New arhtech/Http/Server/RestFullServer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApplication1/Data/DataModel/Vm/UserInfoVm.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/D7CF29DB-F9BD-4776-99B0-C8DF8E09ABB7/1/MvcServiceCollectionExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApp1/RegistryAddresses.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BD1B6EA4-F54D-4146-A29C-2A12CD6EC436/a0/da1ebf19/Dictionary`2.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApplication1/Data/DataModel/Vm/UserInfoBinding.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7F49EB8A-FD40-4AA9-AE50-624130FD75FA/3d/50acdf94/PrintQueue.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BD1B6EA4-F54D-4146-A29C-2A12CD6EC436/e0/6b34e346/Console.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DataModels/PrintedDocument.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/C30C9C04-C705-4611-9B86-848BA52DE1DD/12/IWebHostEnvironment.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BD1B6EA4-F54D-4146-A29C-2A12CD6EC436/49/288f8630/Int32.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/16C587A7-3DB3-4A0E-9923-0B93005CA425/1/JsonConfigurationExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1F14CEB8-56C7-46E8-95B8-176FE6CAC57B/7d/d6fd7ecf/SafeWaitHandle.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/RedHttpServer/Context.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApp1/App.config" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Project53/packages.config" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApp1/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BD1B6EA4-F54D-4146-A29C-2A12CD6EC436/24/fec2179d/ExecutionContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/RedHttpServer/RedHttpServer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/RedHttpServer/RedHttpServerPrivate.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BD1B6EA4-F54D-4146-A29C-2A12CD6EC436/6a/ebbed445/_ThreadPoolWaitOrTimerCallback.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApp1/packages.config" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BD1B6EA4-F54D-4146-A29C-2A12CD6EC436/9b/4d0723b0/String.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/RedHttpServer/Extensions/BodyParser.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/RedHttpServer/Extensions/JsonConverter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/RedHttpServer/Extensions/BodyParserExtension.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/RedHttpServer/Properties/AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Hook/ApplicationWatcher.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Hook/packages.config" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApplication1/Properties/AssemblyInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Hook/ClipboardWatcher.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApplication1/RedServer/Server.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Hook/PrintWatcher.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Hook/MouseWatcher.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApplication1/Models/Client.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Hook/KeyboardWatcher.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApplication1/PrinterWrapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApplication1/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApplication1/packages.config" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Project53/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApplication1/Printers.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Project53/Printers.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4A1B28B6-9006-434C-933C-8639DF3D375A/0/LogEventLevel.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApplication1/JobMeta.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Project53/LogMessages.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Project53/TicketRegistry.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApplication1/ClientValidator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Project53/FilesWaitsPrinting.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApplication1/Auth.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApplication1/BaseValidationOfDoc.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Project53/JobController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BackendClient/DateModels/UserInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Project53/SpoolerService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApplication1/App.config" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4A1B28B6-9006-434C-933C-8639DF3D375A/45/LoggerMinimumLevelConfiguration.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Project53/MsWordHandle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BackendClient/DateModels/UserAuthInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Project53/WindowsServiceManaging.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BackendClient/ClientToBack.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DesctopGui/Welcome.xaml.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DesctopGui/AssemblyInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3717BA67-6976-468D-83A4-1023D7C563F9/51/56744805/Registry.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DesctopGui/MainWindow.xaml.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DesctopGui/MainWindow.xaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DesctopGui/PrintGoClient.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DesctopGui/ClearIECookies.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DesctopGui/StaticExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/C33AFD71-6EE0-4892-B8AD-69B81D88AE1C/262/AsyncValueTaskMethodBuilder.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DesctopGui/Welcome.xaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2129F477-54C7-461F-8D1B-C8C5A670FCC9/4d/61f72ad7/Application.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DesctopGui/Auth.xaml.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/C33AFD71-6EE0-4892-B8AD-69B81D88AE1C/1E0/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8971263F-9486-462F-9AA3-92A06EC3B935/3d/2225fe42/EventRoute.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DesctopGui/ButtonDictionatryResource.xaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DesctopGui/Auth.xaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8971263F-9486-462F-9AA3-92A06EC3B935/30/65b0c09b/TraceRoutedEvent.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApplication1/Startup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApplication1/AuthOptions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApplication1/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/NUnitTestProject1/UnitTest1.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Dreamdev.Printergo.Server/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Dreamdev.Printergo.Server/Startup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BD1B6EA4-F54D-4146-A29C-2A12CD6EC436/7e/f92c553e/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Dreamdev.Printergo.Server/WeatherForecast.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApplication1/Swagger/SwaggerApiControllerOnlyConvention.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApplication1/Data/DataModel/PrintedDocument.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApplication1/Controllers/PrintDocumentController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://D:/Documents/Repositories/Red/src/RedHttpServer/RedHttpServerPrivate.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://D:/Documents/Repositories/Red/src/RedHttpServer/RedHttpServer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0D146204-B6C5-4BB8-8269-1AB66FA83874/75/af172abc/IServiceCollection.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://D:/Documents/Repositories/Red/src/RedHttpServer/Context.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://D:/Documents/Repositories/Red/src/RedHttpServer/InContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Hook/Hooks/KeyboardHook.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Hook/Hooks/PrintQueueHook.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Hook/Hooks/WindowHook.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Hook/Helpers/SharedMessagePump.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Hook/Helpers/WindowHelper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApp2/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Project53/Models/FileInfoEventArgs.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApp1/Http/RedServer/Server.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Project53/Properties/AssemblyInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Project53/New arhtech/BaseValidationOfDoc.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Project53/New arhtech/Auth.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApp1/Models/FileInfoEventArgs.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Project53/New arhtech/PrinterWrapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Project53/New arhtech/Client.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Project53/New arhtech/ClientValidator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApp1/Auth.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Project53/New arhtech/JobMeta.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DesctopGui/DateModels/UserInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DesctopGui/DateModels/UserAuthInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApplication1/Data/ApplicationDbContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApplication1/Data/AppDbInit.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApplication1/Controllers/NativeController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApplication1/Controllers/UserController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApplication1/Controllers/ConfirmEmailController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApplication1/Controllers/ResetPasswordController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApplication1/Controllers/AuthController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApplication1/Controllers/OAuthVkController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApplication1/Controllers/WeatherForecastController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Dreamdev.Printergo.Server/Controllers/WeatherForecastController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Hook/Hooks/Library/Msgs.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Hook/Hooks/Library/PrintSpoolAPI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Hook/Hooks/Library/Procs.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1542A513-5D72-47A0-92E8-7662B3BBDFD4/1/MvcServiceCollectionExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/DesctopGui/DateModels/UserInfo.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/ConsoleApplication1.csproj" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/RedServer/Server.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/Models/Client.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/Auth.cs" />
+        <option value="$PROJECT_DIR$/DesctopGui/Auth.xaml.cs" />
+        <option value="$PROJECT_DIR$/DesctopGui/PrintGoClient.cs" />
+        <option value="$PROJECT_DIR$/DesctopGui/Welcome.xaml.cs" />
+        <option value="$PROJECT_DIR$/WebApplication1/Data/DataModel/Vm/UserInfoBinding.cs" />
+        <option value="$PROJECT_DIR$/WebApplication1/Data/DataModel/Settings.cs" />
+        <option value="$PROJECT_DIR$/WebApplication1/appsettings1.json" />
+        <option value="$PROJECT_DIR$/WebApplication1/appsettings.json" />
+        <option value="$PROJECT_DIR$/WebApplication1/Data/DataModel/PrintedDocument.cs" />
+        <option value="$PROJECT_DIR$/WebApplication1/Swagger/SwaggerApiControllerOnlyConvention.cs" />
+        <option value="$PROJECT_DIR$/WebApplication1/Startup.cs" />
+        <option value="$PROJECT_DIR$/WebApplication1/Controllers/PrintDocument.cs" />
+        <option value="$PROJECT_DIR$/WebApplication1/Controllers/UserController.cs" />
+        <option value="$PROJECT_DIR$/DataModels/Class1.cs" />
+        <option value="$PROJECT_DIR$/WebApplication1/Controllers/PrintDocumentController.cs" />
+        <option value="$PROJECT_DIR$/BackendClient/ClientToBack.cs" />
+        <option value="$PROJECT_DIR$/DataModels/PrintedDocument.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/ClientValidator.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/JobMeta.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/PrinterWrapper.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/Program.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApplication1/appsettings.json" />
+        <option value="$PROJECT_DIR$/Hook/PrintWatcher.cs" />
+        <option value="$PROJECT_DIR$/Hook/Hooks/PrintQueueHook.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1bywhQdvIJO7wKNFOTJxKyQwiks" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.5683994" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.4870041" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="XThreadsFramesViewSplitterKey" value="0.26806834" />
+  </component>
+  <component name="RunManager" selected="Compound.P53 &amp; Back">
+    <configuration name="Full start" type="CompoundRunConfigurationType">
+      <toRun name="Console" type="DotNetProject" />
+      <toRun name="web api" type="DotNetProject" />
+      <toRun name="Wpf" type="DotNetProject" />
+      <method v="2" />
+    </configuration>
+    <configuration name="P53 &amp; Back" type="CompoundRunConfigurationType">
+      <toRun name="Console" type="DotNetProject" />
+      <toRun name="web api" type="DotNetProject" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="CompoundRunConfigurationType">
+      <toRun name="Console" type="DotNetProject" />
+      <toRun name="web api" type="DotNetProject" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Console" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/ConsoleApplication1/bin/Debug/ConsoleApplication1.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ConsoleApplication1/bin/Debug" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/ConsoleApplication1/ConsoleApplication1.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="Console" />
+      <option name="PROJECT_TFM" value=".NETFramework,Version=v4.8" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
+    <configuration name="Wpf" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/DesctopGui/bin/Debug/netcoreapp3.1/DesctopGui.dll" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DesctopGui/bin/Debug/netcoreapp3.1" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/DesctopGui/DesctopGui.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value=".NETCoreApp,Version=v3.1" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
+    <configuration name="web api" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/WebApplication1/bin/Debug/netcoreapp3.1/WebApplication1.dll" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/WebApplication1" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/WebApplication1/WebApplication1.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value=".NETCoreApp,Version=v3.1" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue=".NET Project.Console" />
+      <item itemvalue=".NET Project.Wpf" />
+      <item itemvalue=".NET Project.web api" />
+      <item itemvalue="Compound.P53 &amp; Back" />
+      <item itemvalue="Compound.Full start" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="52b8cff4-9c0b-435a-a246-0a7af41c4c5b" name="Default Changelist" comment="" />
+      <created>1589617760385</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1589617760385</updated>
+      <workItem from="1589617768157" duration="12497000" />
+      <workItem from="1589632552884" duration="3673000" />
+      <workItem from="1590226612221" duration="9527000" />
+      <workItem from="1590305572937" duration="56982000" />
+      <workItem from="1590552245674" duration="16060000" />
+      <workItem from="1592453301583" duration="106000" />
+      <workItem from="1592454271354" duration="667000" />
+    </task>
+    <task id="LOCAL-00001" summary="Передаю токен, вместо пользователя. Логирование в телеграм. При попытке напечатать вызывается GUI выполнение приостанавливается.">
+      <created>1589636321646</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1589636321646</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Добавлен appsettings.json с ценой страницы">
+      <created>1590342464444</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1590342464444</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Пользователь содержит токен">
+      <created>1590342492354</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1590342492354</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Публикую токен, чтобы использовать в других местах в приложении. В странице пользователя в GUI работает логаут и используется токен для обновления информации и для логаута">
+      <created>1590342569499</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1590342569499</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Публикую токен при логауте">
+      <created>1590342611281</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1590342611281</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Добавил rxRegistry чтобы писать логи нормально. Потом можно вырезать.">
+      <created>1590342669845</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1590342669845</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Контроллер для работы с напечатанным документом. Обновляю пользователя.">
+      <created>1590342753975</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1590342753975</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Асинхронный метод логаута">
+      <created>1590342783047</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1590342783047</updated>
+    </task>
+    <task id="LOCAL-00009" summary="В основном рефакторинг">
+      <created>1590342810787</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1590342810787</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Логаут работает с токеном">
+      <created>1590342840833</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1590342840833</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Добавил свагер.">
+      <created>1590342859833</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1590342859833</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Отдельная библиотека net standart 2, которая содержит модели данных">
+      <created>1590344314069</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1590344314069</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Поправил вызов АПИ бэкэнда с оповещением о том, что напечатан документ">
+      <created>1590478913876</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1590478913876</updated>
+    </task>
+    <task id="LOCAL-00014" summary="К данным добавлен пустой конструктор">
+      <created>1590478952610</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1590478952610</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Установка задания на паузу вынесено в P53">
+      <created>1590479127199</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1590479127199</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Передаю токен, вместо пользователя. Логирование в телеграм. При попытке напечатать вызывается GUI выполнение приостанавливается." />
+    <MESSAGE value="Добавлен appsettings.json с ценой страницы" />
+    <MESSAGE value="Пользователь содержит токен" />
+    <MESSAGE value="Публикую токен, чтобы использовать в других местах в приложении. В странице пользователя в GUI работает логаут и используется токен для обновления информации и для логаута" />
+    <MESSAGE value="Публикую токен при логауте" />
+    <MESSAGE value="Добавил rxRegistry чтобы писать логи нормально. Потом можно вырезать." />
+    <MESSAGE value="Контроллер для работы с напечатанным документом. Обновляю пользователя." />
+    <MESSAGE value="Асинхронный метод логаута" />
+    <MESSAGE value="В основном рефакторинг" />
+    <MESSAGE value="Логаут работает с токеном" />
+    <MESSAGE value="Добавил свагер." />
+    <MESSAGE value="Отдельная библиотека net standart 2, которая содержит модели данных" />
+    <MESSAGE value="Поправил вызов АПИ бэкэнда с оповещением о том, что напечатан документ" />
+    <MESSAGE value="К данным добавлен пустой конструктор" />
+    <MESSAGE value="Установка задания на паузу вынесено в P53" />
+    <option name="LAST_COMMIT_MESSAGE" value="Установка задания на паузу вынесено в P53" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="175" y="3" width="1361" height="861" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590252764320">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="175" y="3" width="1361" height="861" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.864@0.0.1536.864" timestamp="1590252764320" />
+    <state x="470" y="107" width="1018" height="650" key="#xdebugger.evaluate" timestamp="1590597164281">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="470" y="107" width="1018" height="650" key="#xdebugger.evaluate/0.0.1536.864@0.0.1536.864" timestamp="1590597164281" />
+    <state width="489" height="464" key="DebuggerActiveHint" timestamp="1590597244690">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="489" height="464" key="DebuggerActiveHint/0.0.1536.864@0.0.1536.864" timestamp="1590597244690" />
+    <state width="1493" height="189" key="GridCell.Tab.0.bottom" timestamp="1590603478272">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="189" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1590603478272" />
+    <state width="1493" height="189" key="GridCell.Tab.0.center" timestamp="1590603478272">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="189" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1590603478272" />
+    <state width="1493" height="189" key="GridCell.Tab.0.left" timestamp="1590603478272">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="189" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1590603478272" />
+    <state width="1493" height="189" key="GridCell.Tab.0.right" timestamp="1590603478272">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="189" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1590603478272" />
+    <state width="1493" height="150" key="GridCell.Tab.1.bottom" timestamp="1590597423577">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="150" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1590597423577" />
+    <state width="1493" height="150" key="GridCell.Tab.1.center" timestamp="1590597423577">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="150" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1590597423577" />
+    <state width="1493" height="150" key="GridCell.Tab.1.left" timestamp="1590597423577">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="150" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1590597423577" />
+    <state width="1493" height="150" key="GridCell.Tab.1.right" timestamp="1590597423577">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="150" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1590597423577" />
+    <state width="1493" height="150" key="GridCell.Tab.2.bottom" timestamp="1590597423577">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="150" key="GridCell.Tab.2.bottom/0.0.1536.864@0.0.1536.864" timestamp="1590597423577" />
+    <state width="1493" height="150" key="GridCell.Tab.2.center" timestamp="1590597423577">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="150" key="GridCell.Tab.2.center/0.0.1536.864@0.0.1536.864" timestamp="1590597423577" />
+    <state width="1493" height="150" key="GridCell.Tab.2.left" timestamp="1590597423577">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="150" key="GridCell.Tab.2.left/0.0.1536.864@0.0.1536.864" timestamp="1590597423577" />
+    <state width="1493" height="150" key="GridCell.Tab.2.right" timestamp="1590597423577">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="150" key="GridCell.Tab.2.right/0.0.1536.864@0.0.1536.864" timestamp="1590597423577" />
+    <state width="1493" height="150" key="GridCell.Tab.3.bottom" timestamp="1590597423578">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="150" key="GridCell.Tab.3.bottom/0.0.1536.864@0.0.1536.864" timestamp="1590597423578" />
+    <state width="1493" height="150" key="GridCell.Tab.3.center" timestamp="1590597423578">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="150" key="GridCell.Tab.3.center/0.0.1536.864@0.0.1536.864" timestamp="1590597423578" />
+    <state width="1493" height="150" key="GridCell.Tab.3.left" timestamp="1590597423578">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="150" key="GridCell.Tab.3.left/0.0.1536.864@0.0.1536.864" timestamp="1590597423578" />
+    <state width="1493" height="150" key="GridCell.Tab.3.right" timestamp="1590597423578">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="150" key="GridCell.Tab.3.right/0.0.1536.864@0.0.1536.864" timestamp="1590597423578" />
+    <state width="1493" height="150" key="GridCell.Tab.4.bottom" timestamp="1590597423578">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="150" key="GridCell.Tab.4.bottom/0.0.1536.864@0.0.1536.864" timestamp="1590597423578" />
+    <state width="1493" height="150" key="GridCell.Tab.4.center" timestamp="1590597423578">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="150" key="GridCell.Tab.4.center/0.0.1536.864@0.0.1536.864" timestamp="1590597423578" />
+    <state width="1493" height="150" key="GridCell.Tab.4.left" timestamp="1590597423578">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="150" key="GridCell.Tab.4.left/0.0.1536.864@0.0.1536.864" timestamp="1590597423578" />
+    <state width="1493" height="150" key="GridCell.Tab.4.right" timestamp="1590597423578">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="150" key="GridCell.Tab.4.right/0.0.1536.864@0.0.1536.864" timestamp="1590597423578" />
+    <state x="361" y="164" key="Rider.ProjectTemplateDialog.Size" timestamp="1590344041953">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="361" y="164" key="Rider.ProjectTemplateDialog.Size/0.0.1536.864@0.0.1536.864" timestamp="1590344041953" />
+    <state x="565" y="143" key="RollbackChangesDialog" timestamp="1589189247432">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="565" y="143" key="RollbackChangesDialog/0.0.1536.864@0.0.1536.864" timestamp="1589189247432" />
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1590479130034">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1590479130034" />
+    <state width="775" height="439" key="XDebugger.FullValuePopup" timestamp="1590509554856">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="775" height="439" key="XDebugger.FullValuePopup/0.0.1536.864@0.0.1536.864" timestamp="1590509554856" />
+    <state x="392" y="44" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1590512631258">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="392" y="44" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.864@0.0.1536.864" timestamp="1590512631258" />
+    <state x="449" y="165" width="637" height="558" key="find.popup" timestamp="1590598698010">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="449" y="165" width="637" height="558" key="find.popup/0.0.1536.864@0.0.1536.864" timestamp="1590598698010" />
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1590599041596">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1590599041596" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/ConsoleApplication1/Program.cs</url>
+          <line>237</line>
+          <properties documentPath="$PROJECT_DIR$/ConsoleApplication1/Program.cs" initialLine="186">
+            <startOffsets>
+              <option value="9220" />
+            </startOffsets>
+            <endOffsets>
+              <option value="9243" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/WebApplication1/Controllers/UserController.cs</url>
+          <line>48</line>
+          <properties documentPath="$PROJECT_DIR$/WebApplication1/Controllers/UserController.cs" initialLine="46">
+            <startOffsets>
+              <option value="1238" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1239" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/WebApplication1/Controllers/PrintDocumentController.cs</url>
+          <line>31</line>
+          <properties documentPath="$PROJECT_DIR$/WebApplication1/Controllers/PrintDocumentController.cs" initialLine="31">
+            <startOffsets>
+              <option value="1010" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1011" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Hook/PrintWatcher.cs</url>
+          <line>265</line>
+          <properties documentPath="$PROJECT_DIR$/Hook/PrintWatcher.cs" initialLine="220">
+            <startOffsets>
+              <option value="9726" />
+            </startOffsets>
+            <endOffsets>
+              <option value="9786" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Hook/Hooks/PrintQueueHook.cs</url>
+          <line>320</line>
+          <properties documentPath="$PROJECT_DIR$/Hook/Hooks/PrintQueueHook.cs" initialLine="312">
+            <startOffsets>
+              <option value="10725" />
+            </startOffsets>
+            <endOffsets>
+              <option value="10757" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="80" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo typeName="System.Printing.IndexedProperties.PrintInt32Property" fieldName="Name" />
+        <PinnedItemInfo typeName="System.Collections.DictionaryEntry" fieldName="Key" />
+        <PinnedItemInfo typeName="System.Printing.IndexedProperties.PrintInt32Property" fieldName="Value" />
+        <PinnedItemInfo typeName="System.Printing.IndexedProperties.PrintJobStatusProperty" fieldName="Value" />
+        <PinnedItemInfo typeName="System.Collections.DictionaryEntry" fieldName="Value" />
+        <PinnedItemInfo typeName="System.Management.ManagementObject" fieldName="Path" />
+        <PinnedItemInfo typeName="System.Management.PropertyData" fieldName="Value" />
+        <PinnedItemInfo typeName="EventHook.Hooks.Library.PRINTER_NOTIFY_INFO_DATA" fieldName="Id" />
+        <PinnedItemInfo typeName="System.Printing.PrintServer" fieldName="PropertiesCollection" />
+        <PinnedItemInfo typeName="System.Management.PropertyData" fieldName="Name" />
+      </pinned-members>
+    </pin-to-top-manager>
+  </component>
+</project>
